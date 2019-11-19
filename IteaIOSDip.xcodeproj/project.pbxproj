@@ -124,7 +124,6 @@
 		9717BCFA2381F360000A2357 = {
 			isa = PBXGroup;
 			children = (
-				9717BD1C2381F5FE000A2357 /* begin edti temp */,
 				9717BD052381F360000A2357 /* IteaIOSDip */,
 				9717BD042381F360000A2357 /* Products */,
 			);
@@ -141,14 +140,12 @@
 		9717BD052381F360000A2357 /* IteaIOSDip */ = {
 			isa = PBXGroup;
 			children = (
+				97D66EBA23849A6100C25379 /* TempWorkingFiles */,
 				9717BD062381F360000A2357 /* AppDelegate.swift */,
 				9717BD082381F360000A2357 /* SceneDelegate.swift */,
 				972CB6F22382AAB800E68BAC /* Authorization */,
 				9717BD5123821EAB000A2357 /* Storyboards */,
-				9717BD0A2381F360000A2357 /* ViewController.swift */,
 				9752935B2383D8E300D21703 /* Courses */,
-				9717BD4D23821DFC000A2357 /* ViewController+Extension.swift */,
-				9717BD0C2381F360000A2357 /* Main.storyboard */,
 				9717BD0F2381F361000A2357 /* Assets.xcassets */,
 				9717BD112381F361000A2357 /* LaunchScreen.storyboard */,
 				9717BD142381F361000A2357 /* Info.plist */,
@@ -256,6 +253,17 @@
 			);
 			name = StudentsInit;
 			path = Models;
+			sourceTree = "<group>";
+		};
+		97D66EBA23849A6100C25379 /* TempWorkingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9717BD1C2381F5FE000A2357 /* begin edti temp */,
+				9717BD0A2381F360000A2357 /* ViewController.swift */,
+				9717BD4D23821DFC000A2357 /* ViewController+Extension.swift */,
+				9717BD0C2381F360000A2357 /* Main.storyboard */,
+			);
+			path = TempWorkingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
