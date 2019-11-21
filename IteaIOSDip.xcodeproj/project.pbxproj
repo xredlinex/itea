@@ -232,10 +232,10 @@
 		972CB6F22382AAB800E68BAC /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */,
 				972CB6F32382AB5200E68BAC /* Validation.swift */,
 				972CB6F52382AC2B00E68BAC /* UIModels.swift */,
 				972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */,
-				972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -253,7 +253,6 @@
 		97D66EB92384819300C25379 /* StudentsInit */ = {
 			isa = PBXGroup;
 			children = (
-				97D66EB72384818F00C25379 /* Students.swift */,
 			);
 			name = StudentsInit;
 			path = Models;
@@ -360,7 +359,6 @@
 				972CB6F62382AC2B00E68BAC /* UIModels.swift in Sources */,
 				9717BD3C2381FC5A000A2357 /* PMCourses.swift in Sources */,
 				9717BD262381F98C000A2357 /* c#NetDevelopment.swift in Sources */,
-				97D66EB82384818F00C25379 /* Students.swift in Sources */,
 				9717BD322381FB42000A2357 /* qa.swift in Sources */,
 				97D66EBC2384A2AC00C25379 /* CoursesViewController+Extension.swift in Sources */,
 				9717BD4E23821DFC000A2357 /* ViewController+Extension.swift in Sources */,
