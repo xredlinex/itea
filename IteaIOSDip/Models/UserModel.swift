@@ -13,12 +13,12 @@ class IteaStudent {
     var lastName: String?
     var age: Int?
     var city: String?
-    var birthday: Date?
+    var birthday: String?
     var mail: String?
     var password: String?
     var userPicture: String?
-    var currentCourse: Courses?             /* OBJECT*/
-    var completedCourses: [Courses]?        /* ARRAY OF OBJECTS*/
+    var currentCourse: String?          /* OBJECT*/
+    var completedCourses: [String]?       /* ARRAY OF OBJECTS*/
 }
 
 

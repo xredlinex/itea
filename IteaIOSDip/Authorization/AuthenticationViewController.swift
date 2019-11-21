@@ -20,6 +20,17 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet var showMailValidErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet var showPassValidErrorHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet var showEmailErrorHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var showPasswordEmailHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var showLineRespontMailFieldHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var showLineRespondMailFieldHeightConstraint: NSLayoutConstraint!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
