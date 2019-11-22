@@ -232,10 +232,10 @@
 		972CB6F22382AAB800E68BAC /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */,
 				972CB6F32382AB5200E68BAC /* Validation.swift */,
 				972CB6F52382AC2B00E68BAC /* UIModels.swift */,
 				972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */,
-				972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
