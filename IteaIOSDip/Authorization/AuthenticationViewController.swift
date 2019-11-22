@@ -10,23 +10,20 @@ import UIKit
 
 class AuthenticationViewController: UIViewController {
 
-    @IBOutlet var userNameTextField: UITextField!
-    @IBOutlet var userPasswordTextField: UITextField!
-    @IBOutlet var showHidePasswordButton: UIButton!
-    @IBOutlet var emailValidationErrorTextLabel: UILabel!
-    @IBOutlet var passwordValidationErrorTextLabel: UILabel!
-    @IBOutlet var logInButton: UIButton!
-    @IBOutlet var signUpButton: UIButton!
-    @IBOutlet var showMailValidErrorHeightConstraint: NSLayoutConstraint!
-    @IBOutlet var showPassValidErrorHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var userPasswordTextField: UITextField!
+    @IBOutlet weak var showHidePasswordButton: UIButton!
+    @IBOutlet weak var emailValidationErrorTextLabel: UILabel!
+    @IBOutlet weak var passwordValidationErrorTextLabel: UILabel!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var showMailValidErrorHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var showPassValidErrorHeightConstraint: NSLayoutConstraint!
     
-    @IBOutlet var showEmailErrorHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet var showPasswordEmailHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet var showLineRespontMailFieldHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet var showLineRespondMailFieldHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var showEmailErrorHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var showPasswordEmailHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var showLineRespontMailFieldHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var showLineRespondMailFieldHeightConstraint: NSLayoutConstraint!
     
     
     

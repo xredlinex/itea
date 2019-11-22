@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CourseDirection {
+class CourseFlow {
     var name: String?
     var courses: [Courses]?
     var courseType: String?
