@@ -1,14 +1,14 @@
 //
-//  CourseFilterViewController.swift
+//  ProfileViewController.swift
 //  IteaIOSDip
 //
-//  Created by alexey sorochan on 11/20/19.
+//  Created by alexey sorochan on 11/22/19.
 //  Copyright © 2019 alexey sorochan. All rights reserved.
 //
 
 import UIKit
 
-class CourseFilterViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
