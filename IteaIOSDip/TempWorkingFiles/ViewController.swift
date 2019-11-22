@@ -12,18 +12,11 @@ class ViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
     
-    var courses: [Courses] = []
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      courses = makeQaCourses()
 
-        debugPrint(courses.count)
-        for i in courses {
-            
-            debugPrint(i.courseDescription)
-            debugPrint(i.courseSkills)
-            debugPrint(i.courseProgram)
             
         }
         
@@ -31,10 +24,5 @@ class ViewController: UIViewController {
 
     }
     
-    
-    
-
-    
-}
 
 
