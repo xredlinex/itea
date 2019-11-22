@@ -160,7 +160,6 @@
 				9717BD062381F360000A2357 /* AppDelegate.swift */,
 				9717BD082381F360000A2357 /* SceneDelegate.swift */,
 				972CB6F22382AAB800E68BAC /* Authorization */,
-				9717BD5123821EAB000A2357 /* Storyboards */,
 				97AF59F32387F3F4008E57F2 /* Profile */,
 				9752935B2383D8E300D21703 /* Courses */,
 				97AF5A0123880A18008E57F2 /* CoursesCell */,
@@ -216,13 +215,6 @@
 				9717BD2F2381FB18000A2357 /* webDesign.swift */,
 			);
 			path = Design;
-			sourceTree = "<group>";
-		};
-		9717BD5123821EAB000A2357 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		972CB6EC2382A6E800E68BAC /* Models */ = {
