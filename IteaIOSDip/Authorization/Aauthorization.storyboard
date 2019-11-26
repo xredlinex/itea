@@ -41,7 +41,7 @@
                                                                     <constraint firstAttribute="width" constant="39.5" id="Ise-hp-5Af"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Jr-Zo-WZN">
@@ -63,9 +63,9 @@
                                                             </imageView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFS-PK-Rzi">
                                                                 <rect key="frame" x="10" y="75.5" width="354" height="1"/>
-                                                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="2" id="AKZ-SC-5cz"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="3" id="AKZ-SC-5cz"/>
                                                                     <constraint firstAttribute="height" priority="800" constant="1" id="qoy-gF-5cz"/>
                                                                 </constraints>
                                                             </view>
@@ -113,24 +113,24 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSW-CY-8pw">
-                                                        <rect key="frame" x="20" y="138.5" width="374" height="74"/>
+                                                        <rect key="frame" x="20" y="138.5" width="374" height="78.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhw-RJ-Bk4">
                                                                 <rect key="frame" x="60" y="16.5" width="73" height="16"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXK-LR-dCD">
-                                                                <rect key="frame" x="60" y="37.5" width="304" height="20.5"/>
+                                                                <rect key="frame" x="60" y="37.5" width="304" height="25"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="20.5" id="jKP-Pi-wWO"/>
+                                                                    <constraint firstAttribute="height" constant="25" id="jKP-Pi-wWO"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="validation error label dn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvd-Ua-wi5">
-                                                                <rect key="frame" x="10" y="73" width="354" height="0.0"/>
+                                                                <rect key="frame" x="10" y="77.5" width="354" height="0.0"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="20.5" id="L2l-m7-TKA"/>
                                                                     <constraint firstAttribute="height" priority="800" id="ZhI-y2-mDQ"/>
@@ -140,7 +140,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="lock.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MhK-tc-T9k">
-                                                                <rect key="frame" x="10" y="28.5" width="40" height="39"/>
+                                                                <rect key="frame" x="10" y="30.5" width="40" height="39"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="40" id="aAl-rf-1pZ"/>
@@ -181,11 +181,11 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocy-uy-3aZ">
-                                                                <rect key="frame" x="10" y="71" width="354" height="1"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <rect key="frame" x="10" y="75.5" width="354" height="1"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Rtf-Us-m2j"/>
-                                                                    <constraint firstAttribute="height" constant="1" id="cKk-0Y-Fgb"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="3" id="Rtf-Us-m2j"/>
+                                                                    <constraint firstAttribute="height" priority="800" constant="1" id="cKk-0Y-Fgb"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -294,6 +294,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="BuN-tT-N6N" firstAttribute="height" secondItem="gYv-eV-CB8" secondAttribute="height" id="Acg-GX-579"/>
                                     <constraint firstItem="BuN-tT-N6N" firstAttribute="leading" secondItem="gYv-eV-CB8" secondAttribute="leading" id="KvI-o3-hSy"/>
@@ -304,7 +305,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gYv-eV-CB8" firstAttribute="top" secondItem="Xh3-zb-I4L" secondAttribute="top" id="3Pt-jE-ET4"/>
                             <constraint firstItem="Xh3-zb-I4L" firstAttribute="bottom" secondItem="gYv-eV-CB8" secondAttribute="bottom" id="WVa-Kc-RMl"/>
@@ -315,13 +316,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="x2w-AS-RfD"/>
                     <connections>
+                        <outlet property="bottomHeightConstraint" destination="PSa-UN-jIx" id="YgZ-zZ-6td"/>
                         <outlet property="emailValidationErrorTextLabel" destination="M8E-tY-VIb" id="1Qf-BT-1rt"/>
                         <outlet property="logInButton" destination="YCF-qt-SDA" id="OwM-8R-SD9"/>
                         <outlet property="passwordValidationErrorTextLabel" destination="jvd-Ua-wi5" id="deX-c9-MDD"/>
                         <outlet property="showEmailErrorHeightConstraint" destination="wqh-Oq-KaE" id="fMy-G9-fhG"/>
                         <outlet property="showHidePasswordButton" destination="Pvf-bK-Brv" id="kiH-VQ-m5l"/>
-                        <outlet property="showLineRespondMailFieldHeightConstraint" destination="AKZ-SC-5cz" id="fr1-oS-14V"/>
-                        <outlet property="showLineRespontMailFieldHeightConstraint" destination="AKZ-SC-5cz" id="vfD-X2-a91"/>
+                        <outlet property="showLineRespondPasswordFieldHeightConstraint" destination="Rtf-Us-m2j" id="zFW-RH-3lf"/>
+                        <outlet property="showLineRespontMailFieldHeightConstraint" destination="AKZ-SC-5cz" id="mY8-DS-yc4"/>
                         <outlet property="showMailValidErrorHeightConstraint" destination="TZk-99-cY8" id="sUJ-w0-362"/>
                         <outlet property="showPassValidErrorHeightConstraint" destination="L2l-m7-TKA" id="dMz-4g-6lH"/>
                         <outlet property="showPasswordEmailHeightConstraint" destination="yXu-63-8hl" id="hMT-FV-m7N"/>
