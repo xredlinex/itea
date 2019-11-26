@@ -19,17 +19,11 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var showMailValidErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showPassValidErrorHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var showEmailErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showPasswordEmailHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showLineRespontMailFieldHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showLineRespondPasswordFieldHeightConstraint: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +52,6 @@ class AuthenticationViewController: UIViewController {
     }
     @IBAction func didTapForgotPasswordActionButton(_ sender: Any) {
     }
-    
-    
-    
-    
 }
 
 extension AuthenticationViewController {
@@ -71,7 +61,6 @@ extension AuthenticationViewController {
         self.view.endEditing(true)
     }
 }
-
 
 extension AuthenticationViewController: UITextFieldDelegate {
     
