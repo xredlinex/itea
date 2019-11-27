@@ -31,11 +31,17 @@ func makeMobileCourses() -> CourseFlow {
     
     let androidBase = Courses()
     androidBase.courseName = "Программирование под Android (базовый)"
+    androidBase.courseDescription = androidDescrioption()[0].courseDescriotion
+    androidBase.courseSkills = androidDescrioption()[0].courseSkills
+    androidBase.courseProgram = androidDescrioption()[0].courseProgram
     androidBase.courseImage = "android-base"
     
     let androidAdvanced = Courses()
-    androidBase.courseName = "Программирование под Android (продвинутый)"
-    androidBase.courseImage = "android-adv"
+    androidAdvanced.courseName = "Программирование под Android (продвинутый)"
+    androidAdvanced.courseDescription = androidDescrioption()[1].courseDescriotion
+    androidAdvanced.courseSkills = androidDescrioption()[1].courseSkills
+    androidAdvanced.courseProgram = androidDescrioption()[1].courseProgram
+    androidAdvanced.courseImage = "android-adv"
     
     let android = TypesOfProgrammingFlow()
     android.name = "Android"
@@ -53,5 +59,5 @@ func makeMobileCourses() -> CourseFlow {
     mobile.isProgrammingLanguage = true
     mobile.programmingFlow = [ios, android]
     
-    return mobile
+     return mobile
 }

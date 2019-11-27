@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ios-1-min.png",
+      "filename" : "icoWatchDay.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ios-1-min-1.png",
+      "filename" : "icoWatchDay-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ios-1-min-2.png",
+      "filename" : "icoWatchDay-2.png",
       "scale" : "3x"
     }
   ],

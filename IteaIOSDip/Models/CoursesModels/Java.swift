@@ -11,13 +11,12 @@ import UIKit
 
 func makeJsProgrammingCourses() -> CourseFlow {
  
-     let javaBase = Courses()
-     javaBase.courseName = "Базовый курс Java"
-     javaBase.courseDescription = javaProgrammingCoursesDescrioption()[0].courseDescriotion
-     javaBase.courseSkills = javaProgrammingCoursesDescrioption()[0].courseSkills
-     javaBase.courseProgram = javaProgrammingCoursesDescrioption()[0].courseProgram
-     javaBase.courseImage = "javaBase"
-    
+    let javaBase = Courses()
+    javaBase.courseName = "Базовый курс Java"
+    javaBase.courseDescription = javaProgrammingCoursesDescrioption()[0].courseDescriotion
+    javaBase.courseSkills = javaProgrammingCoursesDescrioption()[0].courseSkills
+    javaBase.courseProgram = javaProgrammingCoursesDescrioption()[0].courseProgram
+    javaBase.courseImage = "javaBase"
     
     let javaAdvanced = Courses()
     javaAdvanced.courseName = "Продвинутый курс Java"

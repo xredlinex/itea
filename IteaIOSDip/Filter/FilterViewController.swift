@@ -16,17 +16,14 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var viewForTypeFilterView: UIView!
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var saveFilterButton: UIButton!
-//    rond view by time
     @IBOutlet weak var nightCheckView: UIView!
     @IBOutlet weak var dayCheckView: UIView!
-//   filter by flow
     @IBOutlet weak var allFlowView: UIView!
     @IBOutlet weak var programmingView: UIView!
     @IBOutlet weak var frontEndView: UIView!
     @IBOutlet weak var designView: UIView!
     @IBOutlet weak var qaView: UIView!
     @IBOutlet weak var otherView: UIView!
-    
     @IBOutlet weak var nightCheckExternalView: UIView!
     @IBOutlet weak var dayCheckExternalView: UIView!
     @IBOutlet weak var allFlowCheckExternalView: UIView!
@@ -35,7 +32,6 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var designCheckExternalView: UIView!
     @IBOutlet weak var qaCheckExternalView: UIView!
     @IBOutlet weak var otherCheckExternalView: UIView!
-    
     @IBOutlet weak var nightCheckInternalView: UIView!
     @IBOutlet weak var dayCheckInternalView: UIView!
     @IBOutlet weak var allFlowCheckInternalView: UIView!
@@ -49,12 +45,16 @@ class FilterViewController: UIViewController {
     var recieveFlowToFilter: [CourseFlow] = []
     var sortbyDate: [CourseFlow] = []
     var sortbyType: [CourseFlow] = []
+    var tempFlow: [CourseFlow] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         flow = recieveFlowToFilter
         setDefaultsFilterCourse(courses: flow)
+        
+
+        
 //  MARK: - MAKE RADIO BUTTONS
         let radioButtons: [UIView] = [nightCheckExternalView,
                                       dayCheckExternalView,
@@ -72,11 +72,21 @@ class FilterViewController: UIViewController {
                                       designCheckInternalView,
                                       qaCheckInternalView,
                                       otherCheckInternalView]
-        
+        let radioTapView: [UIView] = [nightCheckView,
+                                      dayCheckView,
+                                      allFlowView,
+                                      programmingView,
+                                      frontEndView,
+                                      designView,
+                                      qaView,
+                                      otherView]
         for view in radioButtons {
             makeRadioButtons(view: view)
         }
-//        set defaults buttons
+        for view in radioTapView {
+            uiDesignFilterTapRadioBattonsView(view: view)
+        }
+//        set defaults buttons tap
         defaultFilterButtons()
         uidesignFilter()
         
@@ -116,47 +126,62 @@ class FilterViewController: UIViewController {
     }
     
     @IBAction func didTapSaveFilterActionButton(_ sender: Any) {
-        if flow.count == 0 {
-            let filterAlert = UIAlertController(title: "Oooops!", message: "Не найдено курсов с такими параметрами", preferredStyle: .alert)
-            let filterAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
-                self.allFlowCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
-                self.programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-                self.frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-                self.designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-                self.qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-                self.otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-                self.dayCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-                self.nightCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
-            }
-            filterAlert.addAction(filterAction)
-            present(filterAlert, animated: true, completion: nil)
-            setDefaultsFilterCourse(courses: flow)
-        } else {
-            flow = []
-            for courseDay in sortbyDate {
-                for courseFlow in sortbyType {
-                    if courseDay.name == courseFlow.name {
-                        flow.append(courseFlow)
-                    }
-                }
-            }
+        
+//        for items in sortbyType {
+//            debugPrint(items.courses)
+//        }
+        debugPrint("try to save items in sort byu day")
+        for items in sortbyDate {
+            debugPrint(items.name)
         }
-    }
-    
-    func makeRadioButtons(view: UIView) {
-        view.clipsToBounds = true
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.cornerRadius = view.frame.width / 2
+        debugPrint("try to save item in sort buy programming")
+        for item in sortbyType {
+            debugPrint(item.name)
+        }
+        
+        
+        
+        
+        //        if flow.count == 0 {
+//            let filterAlert = UIAlertController(title: "Oooops!", message: "Не найдено курсов с такими параметрами", preferredStyle: .alert)
+//            let filterAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
+//                self.allFlowCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+//                self.programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+//                self.frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+//                self.designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+//                self.qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+//                self.otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+//                self.dayCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+//                self.nightCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+//            }
+//            filterAlert.addAction(filterAction)
+//            present(filterAlert, animated: true, completion: nil)
+//            setDefaultsFilterCourse(courses: recieveFlowToFilter)
+//        } else {
+//            flow = []
+//
+//            for courseDay in sortbyDate {
+//                for courseFlow in sortbyType {
+//                    if courseDay.name == courseFlow.name {
+//                        flow.append(courseFlow)
+//                        let saveFilterAlert = UIAlertController(title: "YES!", message: "Настройки фильтра сохранены!)", preferredStyle: .alert)
+//                        let filterSaveAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
+//                        }
+//                        saveFilterAlert.addAction(filterSaveAction)
+//                        present(saveFilterAlert, animated: true, completion: nil)
+//                        saveFilterButton.setTitle("Сорхранено", for: .normal)
+//                        saveFilterButton.layer.backgroundColor = UIColor.systemGray.cgColor
+//                    }
+//                }
+//            }
+//        }
     }
     
     func defaultFilterButtons() {
-        nightCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        nightCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
     }
-    func selectedItem(view: UIView) {
-        view.layer.backgroundColor = UIColor.black.cgColor
-    }
+    
     
 
 }
@@ -164,12 +189,22 @@ extension FilterViewController {
     
     func setDefaultsFilterCourse(courses: [CourseFlow]) {
         for items in courses {
-                   if items.courseTime == "night" {
-                       sortbyDate.append(items)
-                   }
-               }
-
-               sortbyType = courses
+            if items.courseTime == "night" {
+                sortbyDate.append(items)
+            }
+        }
+        sortbyType = courses
+        
+        debugPrint("курсы по умолчанию зашли если фильтр не сохранен")
+        for items in sortbyDate {
+            debugPrint(items.name)
+        }
+        debugPrint("buy programming")
+        for items in sortbyType {
+            debugPrint(items.name)
+        }
+      
+        
     }
 //    TODO: - MAKE FUNCTIOM FOR BUTTONS CHANGE
 //    func chngeRadioButtons(activeFilter: Bool, notActive: Bool) {
@@ -186,8 +221,6 @@ extension FilterViewController {
 //        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
 //        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
 //    }
-    
-    
 }
 
 
@@ -197,10 +230,12 @@ extension FilterViewController {
 extension FilterViewController {
     
     @objc func didNightTapAction() {
-        sortbyDate = []
-        nightCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+//        BUTTONS
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        nightCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         dayCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-  
+        sortbyDate = []
 
         for  flowItems in flow {
             if flowItems.courseTime == "night" {
@@ -211,11 +246,12 @@ extension FilterViewController {
     
     
     @objc func didDayTapAction() {
-        sortbyDate = []
-        dayCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        dayCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         nightCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-      
-      
+        sortbyDate = []
+
         for flowItems in flow {
             if flowItems.courseTime == "day" {
                 sortbyDate.append(flowItems)
@@ -224,62 +260,61 @@ extension FilterViewController {
     }
     
     @objc func didallFlowAction() {
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        sortbyType = []
         
         for flowItems in flow {
                 sortbyType.append(flowItems)
-            
         }
-
-        
-        
     }
     @objc func didProgramingAction() {
-        sortbyType = []
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
         allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        
+        sortbyType = []
         for flowItems in flow {
             if flowItems.courseType == "programming" {
                 sortbyType.append(flowItems)
             }
         }
- 
-        
     }
     @objc func didFrontEndAction() {
-        sortbyType = []
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
         allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        sortbyType = []
         
         for flowItems in flow {
             if flowItems.courseType == "front" {
                 sortbyType.append(flowItems)
             }
         }
-        
-        
     }
     @objc func didDesignAction() {
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
         sortbyType = []
         allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         
@@ -291,12 +326,14 @@ extension FilterViewController {
         
     }
     @objc func didQaAction() {
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
         sortbyType = []
         allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         
         for flowItems in flow {
@@ -307,13 +344,15 @@ extension FilterViewController {
         debugPrint("tap")
     }
     @objc func didOtherAction() {
+        saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+        saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
         sortbyType = []
         allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
         
         for flowItems in flow {
             if flowItems.courseType == "other" {
@@ -323,5 +362,4 @@ extension FilterViewController {
     }
     
 }
-
-
+// KITCHEN EXTENSION!!!!!!!

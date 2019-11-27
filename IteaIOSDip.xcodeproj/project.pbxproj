@@ -57,6 +57,10 @@
 		977AC378238D71E0003C2800 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36E238D71E0003C2800 /* CoursesViewController.swift */; };
 		977AC37B238D738E003C2800 /* ProgrammingFlowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC379238D738E003C2800 /* ProgrammingFlowTableViewCell.swift */; };
 		977AC37C238D738E003C2800 /* ProgrammingFlowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977AC37A238D738E003C2800 /* ProgrammingFlowTableViewCell.xib */; };
+		977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F115A238E66D6003B522B /* KitModelsDiscr.swift */; };
+		977F1160238E691C003B522B /* KitModelObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F115F238E691C003B522B /* KitModelObj.swift */; };
+		977F1162238E6A02003B522B /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F1161238E6A02003B522B /* Plate.swift */; };
+		977F1164238E6C50003B522B /* Adnroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F1163238E6C50003B522B /* Adnroid.swift */; };
 		978D41B3238E05030093EB34 /* FilterViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D41B2238E05030093EB34 /* FilterViewController+Extension.swift */; };
 		97AF59F22387F3EB008E57F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AF59F12387F3EB008E57F2 /* ProfileViewController.swift */; };
 		97AF59F52387F465008E57F2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AF59F42387F465008E57F2 /* Profile.storyboard */; };
@@ -126,6 +130,10 @@
 		977AC36E238D71E0003C2800 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		977AC379238D738E003C2800 /* ProgrammingFlowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingFlowTableViewCell.swift; sourceTree = "<group>"; };
 		977AC37A238D738E003C2800 /* ProgrammingFlowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammingFlowTableViewCell.xib; sourceTree = "<group>"; };
+		977F115A238E66D6003B522B /* KitModelsDiscr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitModelsDiscr.swift; sourceTree = "<group>"; };
+		977F115F238E691C003B522B /* KitModelObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitModelObj.swift; sourceTree = "<group>"; };
+		977F1161238E6A02003B522B /* Plate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plate.swift; sourceTree = "<group>"; };
+		977F1163238E6C50003B522B /* Adnroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adnroid.swift; sourceTree = "<group>"; };
 		978D41B2238E05030093EB34 /* FilterViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterViewController+Extension.swift"; sourceTree = "<group>"; };
 		97AF59F12387F3EB008E57F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		97AF59F42387F465008E57F2 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				9748B18523894AD300C3CB21 /* Java */,
 				97AF5A1123887BEF008E57F2 /* Mobile */,
 				970EEC7D2382A09F00424F9E /* QA */,
+				977F1165238E6C57003B522B /* A */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 			children = (
 				9717BD062381F360000A2357 /* AppDelegate.swift */,
 				9717BD082381F360000A2357 /* SceneDelegate.swift */,
+				977F115C238E66D9003B522B /* Kitchen */,
 				977AC37E238D8F1E003C2800 /* CustomClass */,
 				972CB6EC2382A6E800E68BAC /* Models */,
 				970EEC7A23829DB700424F9E /* Description */,
@@ -326,6 +336,23 @@
 			path = Models/Courses;
 			sourceTree = "<group>";
 		};
+		977F115C238E66D9003B522B /* Kitchen */ = {
+			isa = PBXGroup;
+			children = (
+				977F115A238E66D6003B522B /* KitModelsDiscr.swift */,
+				977F115F238E691C003B522B /* KitModelObj.swift */,
+				977F1161238E6A02003B522B /* Plate.swift */,
+			);
+			path = Kitchen;
+			sourceTree = "<group>";
+		};
+		977F1165238E6C57003B522B /* A */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = A;
+			sourceTree = "<group>";
+		};
 		97AF59F32387F3F4008E57F2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +376,7 @@
 		97AF5A1123887BEF008E57F2 /* Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				977F1163238E6C50003B522B /* Adnroid.swift */,
 				97AF5A0F23886EFB008E57F2 /* MobileDevelopmentDescription.swift */,
 			);
 			path = Mobile;
@@ -504,6 +532,7 @@
 				972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */,
 				9717BD3A2381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift in Sources */,
 				9717BD4523820328000A2357 /* Cybersecurity.swift in Sources */,
+				977F1160238E691C003B522B /* KitModelObj.swift in Sources */,
 				977AC377238D71E0003C2800 /* CourseFilterViewController.swift in Sources */,
 				9717BD302381FB18000A2357 /* webDesign.swift in Sources */,
 				9717BD072381F360000A2357 /* AppDelegate.swift in Sources */,
@@ -520,6 +549,7 @@
 				9717BD1B2381F467000A2357 /* jsDevelopment.swift in Sources */,
 				9717BD3C2381FC5A000A2357 /* PMCourses.swift in Sources */,
 				9717BD262381F98C000A2357 /* c#NetDevelopment.swift in Sources */,
+				977F1164238E6C50003B522B /* Adnroid.swift in Sources */,
 				977AC372238D71E0003C2800 /* FilterViewController.swift in Sources */,
 				9717BD322381FB42000A2357 /* qaDescription.swift in Sources */,
 				977AC371238D71E0003C2800 /* CourseSignInViewController.swift in Sources */,
@@ -538,6 +568,7 @@
 				9717BD092381F360000A2357 /* SceneDelegate.swift in Sources */,
 				9717BD202381F8CF000A2357 /* javaProgramming.swift in Sources */,
 				97DF63442382979C00C6D5A6 /* FlowCourses.swift in Sources */,
+				977F1162238E6A02003B522B /* Plate.swift in Sources */,
 				977AC364238D705F003C2800 /* FlowViewController.swift in Sources */,
 				97BD3288238D967A002A2F06 /* CoursesCollectionViewCell.swift in Sources */,
 				9748B18923894B0300C3CB21 /* Java.swift in Sources */,
@@ -550,6 +581,7 @@
 				97AF5A1023886EFB008E57F2 /* MobileDevelopmentDescription.swift in Sources */,
 				9717BD4C238219F9000A2357 /* CoursesModel.swift in Sources */,
 				9717BD362381FBDE000A2357 /* DEVOPS.swift in Sources */,
+				977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
