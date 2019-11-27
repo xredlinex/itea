@@ -46,7 +46,7 @@ class CoursesFlowViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Filter", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
         
-        viewController.recieveFlowToFilter = flow
+        viewController.flow = IteaCourse().makeCoursesFlow()
         
         navigationController?.pushViewController(viewController, animated: true)
     }

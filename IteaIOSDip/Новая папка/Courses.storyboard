@@ -19,24 +19,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XlP-9H-AZr">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-tR-Cvf">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h26-PI-clP">
                                         <rect key="frame" x="324" y="0.0" width="90" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_-_Filter-Filters_3844475" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-1X-Bm1">
+                                                <rect key="frame" x="35" y="10" width="40" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="GON-pf-GQr"/>
+                                                    <constraint firstAttribute="height" constant="30" id="p3P-oa-y02"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-tR-Cvf">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapFilterActionButton:" destination="4fs-cM-9nx" eventType="touchUpInside" id="Pta-sY-fdX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="J0j-EE-LmR"/>
+                                            <constraint firstAttribute="width" constant="90" id="DeH-Ts-bGr"/>
+                                            <constraint firstItem="Ezg-tR-Cvf" firstAttribute="leading" secondItem="h26-PI-clP" secondAttribute="leading" id="TZ8-qB-f1J"/>
+                                            <constraint firstItem="Awk-1X-Bm1" firstAttribute="centerX" secondItem="h26-PI-clP" secondAttribute="centerX" constant="10" id="Ycf-f8-LsB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ezg-tR-Cvf" secondAttribute="trailing" id="fBf-l8-1NU"/>
+                                            <constraint firstItem="Ezg-tR-Cvf" firstAttribute="top" secondItem="h26-PI-clP" secondAttribute="top" id="tR3-dy-rsR"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ezg-tR-Cvf" secondAttribute="bottom" id="u4e-eG-DHg"/>
+                                            <constraint firstItem="Awk-1X-Bm1" firstAttribute="centerY" secondItem="h26-PI-clP" secondAttribute="centerY" id="woh-ma-l6z"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Ф и л ь т р">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="didTapFilterActionButton:" destination="4fs-cM-9nx" eventType="touchUpInside" id="Pta-sY-fdX"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-pX-6de">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="knq-Qr-Tak">
-                                                <rect key="frame" x="25" y="11.5" width="40" height="27.5"/>
+                                                <rect key="frame" x="15" y="11.5" width="40" height="27.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="MA7-Sf-Mxu"/>
@@ -60,19 +79,19 @@
                                             <constraint firstAttribute="trailing" secondItem="c1M-pz-sP9" secondAttribute="trailing" id="KlX-LN-3eO"/>
                                             <constraint firstItem="c1M-pz-sP9" firstAttribute="leading" secondItem="1SH-pX-6de" secondAttribute="leading" id="XXW-Jk-4Wi"/>
                                             <constraint firstItem="knq-Qr-Tak" firstAttribute="centerY" secondItem="1SH-pX-6de" secondAttribute="centerY" id="e1B-qy-xkQ"/>
-                                            <constraint firstItem="knq-Qr-Tak" firstAttribute="centerX" secondItem="1SH-pX-6de" secondAttribute="centerX" id="tVj-BK-fDl"/>
+                                            <constraint firstItem="knq-Qr-Tak" firstAttribute="centerX" secondItem="1SH-pX-6de" secondAttribute="centerX" constant="-10" id="tVj-BK-fDl"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="h26-PI-clP" firstAttribute="top" secondItem="XlP-9H-AZr" secondAttribute="top" id="2Fw-tG-J36"/>
                                     <constraint firstAttribute="height" constant="50" id="96e-X3-d2S"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ezg-tR-Cvf" secondAttribute="trailing" id="JU5-b8-bv8"/>
                                     <constraint firstItem="1SH-pX-6de" firstAttribute="leading" secondItem="XlP-9H-AZr" secondAttribute="leading" id="ZZR-aF-9mz"/>
+                                    <constraint firstAttribute="bottom" secondItem="h26-PI-clP" secondAttribute="bottom" id="h79-mP-PtK"/>
+                                    <constraint firstAttribute="trailing" secondItem="h26-PI-clP" secondAttribute="trailing" id="i7J-lu-pIC"/>
                                     <constraint firstAttribute="bottom" secondItem="1SH-pX-6de" secondAttribute="bottom" id="k52-1G-948"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ezg-tR-Cvf" secondAttribute="bottom" id="lqT-ie-zQn"/>
                                     <constraint firstItem="1SH-pX-6de" firstAttribute="top" secondItem="XlP-9H-AZr" secondAttribute="top" id="oRH-d6-uib"/>
-                                    <constraint firstItem="Ezg-tR-Cvf" firstAttribute="top" secondItem="XlP-9H-AZr" secondAttribute="top" id="uaA-9J-RTg"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Yc-8b-hgP">
@@ -204,7 +223,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="izM-pT-05e">
-                                                                <rect key="frame" x="25" y="12.5" width="40" height="25"/>
+                                                                <rect key="frame" x="15" y="12.5" width="40" height="25"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="L9z-Oe-OvA"/>
@@ -225,7 +244,7 @@
                                                             <constraint firstItem="qG8-xa-Vg6" firstAttribute="top" secondItem="w9Z-k4-FCk" secondAttribute="top" id="0YY-Tc-Mjn"/>
                                                             <constraint firstAttribute="width" constant="90" id="1p5-Qc-tS3"/>
                                                             <constraint firstItem="qG8-xa-Vg6" firstAttribute="leading" secondItem="w9Z-k4-FCk" secondAttribute="leading" id="2WV-ea-pEg"/>
-                                                            <constraint firstItem="izM-pT-05e" firstAttribute="centerX" secondItem="w9Z-k4-FCk" secondAttribute="centerX" id="Q9S-27-K12"/>
+                                                            <constraint firstItem="izM-pT-05e" firstAttribute="centerX" secondItem="w9Z-k4-FCk" secondAttribute="centerX" constant="-10" id="Q9S-27-K12"/>
                                                             <constraint firstItem="izM-pT-05e" firstAttribute="centerY" secondItem="w9Z-k4-FCk" secondAttribute="centerY" id="RFS-Et-uiP"/>
                                                             <constraint firstAttribute="bottom" secondItem="qG8-xa-Vg6" secondAttribute="bottom" id="eB6-Lr-6xk"/>
                                                             <constraint firstAttribute="trailing" secondItem="qG8-xa-Vg6" secondAttribute="trailing" id="zM3-cq-Ukb"/>
@@ -1010,6 +1029,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="iconfinder_-_Filter-Filters_3844475" width="512" height="512"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>

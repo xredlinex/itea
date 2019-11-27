@@ -73,8 +73,53 @@ extension FilterViewController {
         view.layer.borderColor = UIColor.white.cgColor
         view.layer.cornerRadius = view.frame.width / 2
     }
+}
+
+//  MARK: - WORK VS FILTER BUTTONS / RESET / DEFAULTS DATA / ETC
+extension FilterViewController {
     
-    func selectedItem(view: UIView) {
-        view.layer.backgroundColor = UIColor.white.cgColor
+    func setDefaultsFilterCourse(courses: [CourseFlow]) {
+        sortbyType = courses
+        for items in courses {
+            if items.courseTime == "night" {
+                sortbyDate.append(items)
+            }
+        }
+    }
+    
+    func defaultFilterButtons() {
+        nightCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        dayCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+    }
+}
+
+//  MARK: - CHANGE SAVE BUTTON
+extension FilterViewController {
+    func filterSaved(state: Bool) {
+        if state == true {
+            saveFilterButton.layer.backgroundColor = UIColor.lightGray.cgColor
+            saveFilterButton.alpha = 0.9
+            saveFilterButton.setTitle("Сохранено", for: .normal)
+        } else {
+            saveFilterButton.setTitle("Сохранить Фильтр", for: .normal)
+            saveFilterButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        }
+    }
+}
+
+//  MARK: - ALERT EXTRNSION
+extension FilterViewController {
+    
+    func filterAlert(title: String, message: String) {
+        let alertFiter = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in}
+        alertFiter.addAction(alertAction)
+        present(alertFiter, animated: true, completion: nil)
     }
 }
