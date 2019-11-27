@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FilterViewController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
@@ -77,6 +78,7 @@ class FilterViewController: UIViewController {
         }
 //        set defaults buttons
         defaultFilterButtons()
+        uidesignFilter()
         
 //  MARK: - SET TAP GESTURE RECOGNIZER
         nightCheckView.isUserInteractionEnabled = true
@@ -321,3 +323,5 @@ extension FilterViewController {
     }
     
 }
+
+

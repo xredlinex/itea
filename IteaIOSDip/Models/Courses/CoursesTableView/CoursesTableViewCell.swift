@@ -38,11 +38,16 @@ extension CoursesTableViewCell {
         courseNameTextLabel.text = courseNameTextLabel.text?.uppercased()
         courseImageView.image = UIImage(named: course.courseImage ?? "noCourseImage")
         
-        courseImageView.contentMode = .scaleToFill
+        
+        courseImageView.clipsToBounds = true
         viewForImageView.clipsToBounds = true
+        courseImageView.layer.cornerRadius = 12
+        
+        courseImageView.contentMode = .scaleAspectFill
+        
         viewForImageView.layer.masksToBounds = false
         viewForImageView.layer.cornerRadius = 12
-        viewForImageView.layer.shadowColor = UIColor.white.cgColor
+        viewForImageView.layer.shadowColor = UIColor.black.cgColor
         viewForImageView.layer.shadowOffset = CGSize(width: 1, height: 1)
         viewForImageView.layer.shadowRadius = 12.0
         viewForImageView.layer.shadowOpacity = 0.2
@@ -51,6 +56,4 @@ extension CoursesTableViewCell {
         
         
     }
-    
-    
 }

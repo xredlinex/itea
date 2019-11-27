@@ -20,11 +20,9 @@ class ProgrammingFlowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        uidesignProgramming()
         
         flow = recieveFlow
-        
-       
-        
         if let checkCourses = flow.programmingFlow {
             typeOfProgramming = checkCourses
         }
@@ -64,9 +62,16 @@ extension ProgrammingFlowViewController: UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        let label = UILabel(frame: view.frame)
+        
+        label.text = flow.name
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = label.text?.uppercased()
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        view.addSubview(label)
         return view
     }
     
@@ -75,7 +80,7 @@ extension ProgrammingFlowViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        debugPrint("tap")
+        tableView.deselectRow(at: indexPath, animated: false)
         
         if let courses = typeOfProgramming[indexPath.row].courses {
             let storyboard = UIStoryboard(name: "Courses", bundle: nil)
@@ -83,8 +88,24 @@ extension ProgrammingFlowViewController: UITableViewDelegate, UITableViewDataSou
             viewController.recieveFlow = flow
             viewController.recieveCourses = courses
             navigationController?.pushViewController(viewController, animated: true)
-            }
         }
     }
+}
     
 
+extension ProgrammingFlowViewController {
+       func uidesignProgramming() {
+    
+            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+            backgroundImage.image = UIImage(named: "onemore")
+            backgroundImage.contentMode = .scaleAspectFill
+                    let backgroundForImage = UIView(frame: UIScreen.main.bounds)
+                    backgroundForImage.backgroundColor = UIColor.init(red: 19/255, green: 58/255, blue: 85/255, alpha: 1)
+                    backgroundForImage.alpha = 0.9
+            view.addSubview(backgroundImage)
+                    view.addSubview(backgroundForImage)
+                    self.view.sendSubviewToBack(backgroundForImage)
+            self.view.sendSubviewToBack(backgroundImage)
+    
+        }
+}

@@ -21,14 +21,15 @@ class CoursesFlowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateCoursesFlowUI()
+        uiDesignCoursesFlow()
         
         if filterFlow.count == 0 {
             flow = IteaCourse().makeCoursesFlow()
         } else {
             flow = filterFlow
         }
-    
+      
+        
         coursesCollectionView.register(UINib(nibName: "CoursesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CoursesCollectionViewCell")
         coursesCollectionView.reloadData()
 
@@ -56,8 +57,7 @@ extension CoursesFlowViewController: UICollectionViewDelegate, UICollectionViewD
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return flow.count
     }
@@ -77,28 +77,6 @@ extension CoursesFlowViewController: UICollectionViewDelegate, UICollectionViewD
         viewController.recieveFlow = flow[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
 }
 
-extension CoursesFlowViewController {
-    
-    func updateCoursesFlowUI() {
-        
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "bg")
-        backgroundImage.contentMode = .scaleAspectFill
-//        let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-//        backgroundForImage.backgroundColor = UIColor.red
-//        backgroundForImage.alpha = 0.8
-        view.addSubview(backgroundImage)
-//        view.addSubview(backgroundForImage)
-//        self.view.sendSubviewToBack(backgroundForImage)
-        self.view.sendSubviewToBack(backgroundImage)
-        
-        
-        
-    }
-    
-    
-    
-}
+

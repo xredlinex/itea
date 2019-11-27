@@ -25,7 +25,7 @@ class CoursesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateCoursesUI()
+        uiDesignCourses()
         flow = recieveFlow
         
         if recieveCourses.count == 0 {
@@ -84,9 +84,9 @@ extension CoursesViewController: UITableViewDelegate, UITableViewDataSource {
         label.text = flow.name ?? ""
         label.textAlignment = .center
         label.textColor = UIColor.white
-        label.layer.backgroundColor = UIColor(red: 46/255, green: 49/255, blue: 66/255, alpha: 1).cgColor
+        label.layer.backgroundColor = UIColor(red: 19/255, green: 58/255, blue: 85/255, alpha: 1).cgColor
 
-        label.font = label.font.withSize(25)
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.text = label.text?.uppercased()
     
         view.addSubview(label)
@@ -128,25 +128,18 @@ extension CoursesViewController: CoursesTableViewCellProtocol {
     
 extension CoursesViewController {
     
-    func updateCoursesUI() {
-        
+    func uiDesignCourses() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "bg")
+        backgroundImage.image = UIImage(named: "backgroundfor")
         backgroundImage.contentMode = .scaleAspectFill
         let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-        backgroundForImage.backgroundColor = UIColor.red
-        backgroundForImage.alpha = 0.1
+        backgroundForImage.backgroundColor = UIColor.init(red: 19/255, green: 58/255, blue: 85/255, alpha: 1)
+        backgroundForImage.alpha = 0.9
         view.addSubview(backgroundImage)
         view.addSubview(backgroundForImage)
         self.view.sendSubviewToBack(backgroundForImage)
         self.view.sendSubviewToBack(backgroundImage)
-        
-        
-        
     }
-    
-    
-    
 }
 
 
