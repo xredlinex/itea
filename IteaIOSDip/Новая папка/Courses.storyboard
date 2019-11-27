@@ -22,7 +22,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h26-PI-clP">
                                         <rect key="frame" x="324" y="0.0" width="90" height="50"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_-_Filter-Filters_3844475" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-1X-Bm1">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-1X-Bm1">
                                                 <rect key="frame" x="35" y="10" width="40" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="GON-pf-GQr"/>
@@ -1029,7 +1029,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
-        <image name="iconfinder_-_Filter-Filters_3844475" width="512" height="512"/>
+        <image name="filter" width="170" height="170"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>

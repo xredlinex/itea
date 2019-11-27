@@ -28,30 +28,26 @@ class CoursesFlowViewController: UIViewController {
         } else {
             flow = filterFlow
         }
-      
-        
+    
         coursesCollectionView.register(UINib(nibName: "CoursesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CoursesCollectionViewCell")
         coursesCollectionView.reloadData()
-
     }
     
     @IBAction func didTapProfileActionButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-        
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     @IBAction func didTapFilterActionButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Filter", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
-        
         viewController.flow = IteaCourse().makeCoursesFlow()
-        
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
+//  MARK: - COLLECTION VIEW - ALL COURSES -
 extension CoursesFlowViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

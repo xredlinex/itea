@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970E7F55238F2B3F00369718 /* FlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E7F54238F2B3F00369718 /* FlowViewController+Extension.swift */; };
 		9717BD072381F360000A2357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD062381F360000A2357 /* AppDelegate.swift */; };
 		9717BD092381F360000A2357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD082381F360000A2357 /* SceneDelegate.swift */; };
 		9717BD0B2381F360000A2357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD0A2381F360000A2357 /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		970E7F54238F2B3F00369718 /* FlowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowViewController+Extension.swift"; sourceTree = "<group>"; };
 		9717BD032381F360000A2357 /* IteaIOSDip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IteaIOSDip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717BD062381F360000A2357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9717BD082381F360000A2357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				977AC357238D705E003C2800 /* CoursesFlowViewController.swift */,
 				977AC366238D71DC003C2800 /* CoursesFlowViewController+Extension.swift */,
 				977AC35C238D705F003C2800 /* FlowViewController.swift */,
+				970E7F54238F2B3F00369718 /* FlowViewController+Extension.swift */,
 				977AC36E238D71E0003C2800 /* CoursesViewController.swift */,
 				97BD3283238D95B4002A2F06 /* CoursesViewController+Extension.swift */,
 				977AC35B238D705E003C2800 /* ProgrammingFlowViewController.swift */,
@@ -544,6 +547,7 @@
 				978D41B3238E05030093EB34 /* FilterViewController+Extension.swift in Sources */,
 				9717BD2C2381F9DE000A2357 /* goDevelopment.swift in Sources */,
 				9717BD49238215B0000A2357 /* UserModel.swift in Sources */,
+				970E7F55238F2B3F00369718 /* FlowViewController+Extension.swift in Sources */,
 				9717BD422381FEC1000A2357 /* CISCO.swift in Sources */,
 				977AC376238D71E0003C2800 /* DetailedCourseViewController.swift in Sources */,
 				9717BD1B2381F467000A2357 /* jsDevelopment.swift in Sources */,
