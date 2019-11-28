@@ -32,6 +32,7 @@ class CourseSignUpViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
     
+    @IBOutlet weak var kommentsTextView: UITextView!
     @IBOutlet weak var nameValidationErrorTextLabel: UILabel!
     @IBOutlet weak var mailValidationErrorTextLabel: UILabel!
     @IBOutlet weak var phoneValidationErrorTextLabel: UILabel!
@@ -44,6 +45,9 @@ class CourseSignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var chekBoxImageView: UIImageView!
+    @IBOutlet weak var privicyTextLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -80,6 +84,11 @@ class CourseSignUpViewController: UIViewController {
         setDefaultLocation(3)
     }
     
+    @IBAction func didTapCheckboxActionButton(_ sender: Any) {
+        chekBoxImageView.image = UIImage(systemName: "checkmark.square")
+        
+//        square
+    }
 }
 
 
@@ -156,17 +165,43 @@ extension CourseSignUpViewController {
         headerLogoImageView.image = UIImage(named: "maxresdefault")
                headerLogoImageView.contentMode = .scaleAspectFill
         
+        signUpButton.clipsToBounds = true
+        signUpButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        signUpButton.layer.cornerRadius = 12.0
+        signUpButton.isOpaque = true
+        signUpButton.layer.masksToBounds = false
+        signUpButton.layer.shadowColor = UIColor.black.cgColor
+        signUpButton.layer.shadowOpacity = 0.5
+        signUpButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+        signUpButton.layer.shadowRadius = 12.0
         
-        
-        
-        
+             chekBoxImageView.image = UIImage(systemName: "square")
+   
+        privicyTextLabel.text = """
+        Подписанием и отправкой настоящей заявки я подтверждаю, что я ознакомлен с
+        Политикой конфиденциальности и принимаю ее условия, включая регламентирующие обработку моих персональных данных, и согласен с ней.
+"""
     }
 }
 //   MARK: - SELECTOR
 extension CourseSignUpViewController {
     
     @objc func keyboardWillHide() {
-        bottomHeightConstraint.constant = 0
+        bottomHeightConstraint.constant = 250
         self.view.endEditing(true)
+    }
+}
+
+
+extension CourseSignUpViewController {
+    
+    func uiCourseSignUpElmnt() {
+        
+        
+               
+             
+        
+        
+        
     }
 }

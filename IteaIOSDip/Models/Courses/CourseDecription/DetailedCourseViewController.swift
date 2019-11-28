@@ -132,7 +132,7 @@ extension DetailedCourseViewController {
             enrollButton.layer.shadowOffset = CGSize(width: 10, height: 10)
             enrollButton.layer.shadowRadius = 12.0
         
-        enrollButton.clipsToBounds = true
+      
         
            courseProgramButton.layer.cornerRadius = 12.0
            courseProgramButton.isOpaque = true
