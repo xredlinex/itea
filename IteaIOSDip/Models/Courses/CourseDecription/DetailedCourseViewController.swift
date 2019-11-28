@@ -50,8 +50,8 @@ class DetailedCourseViewController: UIViewController {
     }
     @IBAction func didTapCourseSignInActionButton(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Courses", bundle: nil)
-               let viewController = storyboard.instantiateViewController(withIdentifier: "CourseSignInViewController") as! CourseSignInViewController
+        let storyboard = UIStoryboard(name: "CourseSignUp", bundle: nil)
+               let viewController = storyboard.instantiateViewController(withIdentifier: "CourseSignUpViewController") as! CourseSignUpViewController
         
                navigationController?.pushViewController(viewController, animated: true)
     }

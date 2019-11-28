@@ -48,7 +48,7 @@
 		977AC364238D705F003C2800 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC35C238D705F003C2800 /* FlowViewController.swift */; };
 		977AC36F238D71E0003C2800 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC365238D71DC003C2800 /* CoursesTableViewCell.swift */; };
 		977AC370238D71E0003C2800 /* CoursesFlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC366238D71DC003C2800 /* CoursesFlowViewController+Extension.swift */; };
-		977AC371238D71E0003C2800 /* CourseSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC367238D71DC003C2800 /* CourseSignInViewController.swift */; };
+		977AC371238D71E0003C2800 /* CourseSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC367238D71DC003C2800 /* CourseSignUpViewController.swift */; };
 		977AC372238D71E0003C2800 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC368238D71DC003C2800 /* FilterViewController.swift */; };
 		977AC373238D71E0003C2800 /* mobileDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC369238D71DD003C2800 /* mobileDevelopment.swift */; };
 		977AC374238D71E0003C2800 /* ProgramCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36A238D71DD003C2800 /* ProgramCourseViewController.swift */; };
@@ -58,6 +58,7 @@
 		977AC378238D71E0003C2800 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36E238D71E0003C2800 /* CoursesViewController.swift */; };
 		977AC37B238D738E003C2800 /* ProgrammingFlowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC379238D738E003C2800 /* ProgrammingFlowTableViewCell.swift */; };
 		977AC37C238D738E003C2800 /* ProgrammingFlowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977AC37A238D738E003C2800 /* ProgrammingFlowTableViewCell.xib */; };
+		977DEE3F238FCB730055D9E9 /* CourseSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977DEE3E238FCB730055D9E9 /* CourseSignUp.storyboard */; };
 		977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F115A238E66D6003B522B /* KitModelsDiscr.swift */; };
 		977F1160238E691C003B522B /* KitModelObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F115F238E691C003B522B /* KitModelObj.swift */; };
 		977F1162238E6A02003B522B /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F1161238E6A02003B522B /* Plate.swift */; };
@@ -122,7 +123,7 @@
 		977AC35C238D705F003C2800 /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlowViewController.swift; path = IteaIOSDip/Models/Courses/FlowViewController.swift; sourceTree = SOURCE_ROOT; };
 		977AC365238D71DC003C2800 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		977AC366238D71DC003C2800 /* CoursesFlowViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoursesFlowViewController+Extension.swift"; sourceTree = "<group>"; };
-		977AC367238D71DC003C2800 /* CourseSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSignInViewController.swift; sourceTree = "<group>"; };
+		977AC367238D71DC003C2800 /* CourseSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSignUpViewController.swift; sourceTree = "<group>"; };
 		977AC368238D71DC003C2800 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		977AC369238D71DD003C2800 /* mobileDevelopment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mobileDevelopment.swift; sourceTree = "<group>"; };
 		977AC36A238D71DD003C2800 /* ProgramCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramCourseViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		977AC36E238D71E0003C2800 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		977AC379238D738E003C2800 /* ProgrammingFlowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingFlowTableViewCell.swift; sourceTree = "<group>"; };
 		977AC37A238D738E003C2800 /* ProgrammingFlowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammingFlowTableViewCell.xib; sourceTree = "<group>"; };
+		977DEE3E238FCB730055D9E9 /* CourseSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseSignUp.storyboard; sourceTree = "<group>"; };
 		977F115A238E66D6003B522B /* KitModelsDiscr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitModelsDiscr.swift; sourceTree = "<group>"; };
 		977F115F238E691C003B522B /* KitModelObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitModelObj.swift; sourceTree = "<group>"; };
 		977F1161238E6A02003B522B /* Plate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plate.swift; sourceTree = "<group>"; };
@@ -415,7 +417,8 @@
 		97BD328C238D986C002A2F06 /* CourseSignUp */ = {
 			isa = PBXGroup;
 			children = (
-				977AC367238D71DC003C2800 /* CourseSignInViewController.swift */,
+				977AC367238D71DC003C2800 /* CourseSignUpViewController.swift */,
+				977DEE3E238FCB730055D9E9 /* CourseSignUp.storyboard */,
 			);
 			path = CourseSignUp;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				97AF59F52387F465008E57F2 /* Profile.storyboard in Resources */,
 				977AC375238D71E0003C2800 /* CoursesTableViewCell.xib in Resources */,
 				97BD328F238D99C0002A2F06 /* Filter.storyboard in Resources */,
+				977DEE3F238FCB730055D9E9 /* CourseSignUp.storyboard in Resources */,
 				9717BD132381F361000A2357 /* LaunchScreen.storyboard in Resources */,
 				9717BD102381F361000A2357 /* Assets.xcassets in Resources */,
 				977AC37C238D738E003C2800 /* ProgrammingFlowTableViewCell.xib in Resources */,
@@ -556,7 +560,7 @@
 				977F1164238E6C50003B522B /* Adnroid.swift in Sources */,
 				977AC372238D71E0003C2800 /* FilterViewController.swift in Sources */,
 				9717BD322381FB42000A2357 /* qaDescription.swift in Sources */,
-				977AC371238D71E0003C2800 /* CourseSignInViewController.swift in Sources */,
+				977AC371238D71E0003C2800 /* CourseSignUpViewController.swift in Sources */,
 				97AF5A0923884716008E57F2 /* LastCoursesViewController.swift in Sources */,
 				977AC374238D71E0003C2800 /* ProgramCourseViewController.swift in Sources */,
 				977AC378238D71E0003C2800 /* CoursesViewController.swift in Sources */,
