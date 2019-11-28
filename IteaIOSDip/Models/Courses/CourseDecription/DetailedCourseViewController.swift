@@ -10,12 +10,12 @@ import UIKit
 
 class DetailedCourseViewController: UIViewController {
     
+    @IBOutlet weak var flowHeaderImageView: UIImageView!
     @IBOutlet weak var courseNameTextLabel: UILabel!
     @IBOutlet weak var courseAboutView: UIView!
     @IBOutlet weak var aboutCourseTextLabel: UILabel!
     @IBOutlet weak var skillsView: UIView!
     @IBOutlet weak var skillsTextLabel: UILabel!
-    
     @IBOutlet weak var enrollButton: UIButton!
     @IBOutlet weak var courseProgramButton: UIButton!
     
@@ -65,7 +65,7 @@ extension DetailedCourseViewController {
         courseNameTextLabel.text = course.courseName
         aboutCourseTextLabel.text = course.courseDescription
         skillsTextLabel.text = course.courseSkills
-    
+        flowHeaderImageView.image = UIImage(named: course.courseHeaderImage ?? "noHeaderImage")
         
     }
     
@@ -83,17 +83,27 @@ extension DetailedCourseViewController {
     
     func updateDetailUI() {
           
-          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-          backgroundImage.image = UIImage(named: "bt")
-          backgroundImage.contentMode = .scaleAspectFill
-          let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-          backgroundForImage.backgroundColor = UIColor.black
-          backgroundForImage.alpha = 0.9
-          view.addSubview(backgroundImage)
-          view.addSubview(backgroundForImage)
-        self.view.sendSubviewToBack(backgroundImage)
-          self.view.sendSubviewToBack(backgroundForImage)
+//          let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//          backgroundImage.image = UIImage(named: "bt")
+//          backgroundImage.contentMode = .scaleAspectFill
+//          let backgroundForImage = UIView(frame: UIScreen.main.bounds)
+//          backgroundForImage.backgroundColor = UIColor.black
+//          backgroundForImage.alpha = 0.9
+//          view.addSubview(backgroundImage)
+//          view.addSubview(backgroundForImage)
+//        self.view.sendSubviewToBack(backgroundImage)
+//          self.view.sendSubviewToBack(backgroundForImage)
           
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+               let backgroundForImage = UIView(frame: UIScreen.main.bounds)
+               backgroundImage.image = UIImage(named: "backgroundfor")
+               backgroundImage.contentMode = .scaleAspectFill
+               backgroundForImage.backgroundColor = UIColor.init(red: 19/255, green: 58/255, blue: 85/255, alpha: 1)
+               backgroundForImage.alpha = 0.9
+               view.addSubview(backgroundImage)
+               view.addSubview(backgroundForImage)
+               self.view.sendSubviewToBack(backgroundForImage)
+               self.view.sendSubviewToBack(backgroundImage)
           
         let blurEffect = UIBlurEffect(style: .prominent)
                  let blurView = UIVisualEffectView(effect: blurEffect)

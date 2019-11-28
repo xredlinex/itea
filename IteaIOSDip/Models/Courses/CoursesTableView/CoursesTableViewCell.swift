@@ -31,20 +31,18 @@ class CoursesTableViewCell: UITableViewCell {
     }
 }
 
+
+//  MARK: 
 extension CoursesTableViewCell {
     
     func updateCourseInfo(course: Courses) {
         courseNameTextLabel.text = course.courseName ?? "-"
         courseNameTextLabel.text = courseNameTextLabel.text?.uppercased()
         courseImageView.image = UIImage(named: course.courseImage ?? "noCourseImage")
-        
-        
         courseImageView.clipsToBounds = true
-        viewForImageView.clipsToBounds = true
         courseImageView.layer.cornerRadius = 12
-        
         courseImageView.contentMode = .scaleAspectFill
-        
+        viewForImageView.clipsToBounds = true
         viewForImageView.layer.masksToBounds = false
         viewForImageView.layer.cornerRadius = 12
         viewForImageView.layer.shadowColor = UIColor.black.cgColor
@@ -52,8 +50,5 @@ extension CoursesTableViewCell {
         viewForImageView.layer.shadowRadius = 12.0
         viewForImageView.layer.shadowOpacity = 0.2
         viewForImageView.layer.backgroundColor = UIColor.lightGray.cgColor
-        
-        
-        
     }
 }

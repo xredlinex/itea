@@ -17,6 +17,8 @@ func makeQaCourses() -> CourseFlow {
     qaBase.courseSkills = qaCoursesDescrioption()[0].courseSkills
     qaBase.courseProgram = qaCoursesDescrioption()[0].courseProgram
     qaBase.courseImage = "qaBase"
+    qaBase.courseHeaderImage = "qaHeader"
+   
 
     let qaAdvanced = Courses()
     qaAdvanced.courseName = "Продвинутый курс QA"
@@ -24,6 +26,7 @@ func makeQaCourses() -> CourseFlow {
     qaAdvanced.courseSkills = qaCoursesDescrioption()[1].courseSkills
     qaAdvanced.courseProgram = qaCoursesDescrioption()[1].courseProgram
     qaAdvanced.courseImage = "qaAdvanced"
+    qaAdvanced.courseHeaderImage = "qaHeader"
      
     let qaAutomation = Courses()
     qaAutomation.courseName = "QA Automation"
@@ -31,6 +34,7 @@ func makeQaCourses() -> CourseFlow {
     qaAutomation.courseSkills = qaCoursesDescrioption()[2].courseSkills
     qaAutomation.courseProgram = qaCoursesDescrioption()[2].courseProgram
     qaAutomation.courseImage = "qaAutomation"
+    qaAutomation.courseHeaderImage = "qaHeader"
         
     let qa = CourseFlow()
     qa.name = "QA Testing"
