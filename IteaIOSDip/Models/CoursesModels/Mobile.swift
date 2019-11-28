@@ -16,6 +16,7 @@ func makeMobileCourses() -> CourseFlow {
     iosBase.courseSkills = mobileCoursesDescrioption()[0].courseSkills
     iosBase.courseProgram = mobileCoursesDescrioption()[0].courseProgram
     iosBase.courseImage = "iosBase"
+    iosBase.courseHeaderImage = "iosHeader"
 
     let iosAdvanced = Courses()
     iosAdvanced.courseName = "Продвинутый курс IOS"
@@ -23,6 +24,7 @@ func makeMobileCourses() -> CourseFlow {
     iosAdvanced.courseSkills = mobileCoursesDescrioption()[1].courseSkills
     iosAdvanced.courseProgram = mobileCoursesDescrioption()[1].courseProgram
     iosAdvanced.courseImage = "iosAdvanced"
+    iosAdvanced.courseHeaderImage = "iosHeader"
     
     let ios = TypesOfProgrammingFlow()
     ios.name = "IOS"
@@ -35,6 +37,7 @@ func makeMobileCourses() -> CourseFlow {
     androidBase.courseSkills = androidDescrioption()[0].courseSkills
     androidBase.courseProgram = androidDescrioption()[0].courseProgram
     androidBase.courseImage = "android-base"
+    androidBase.courseHeaderImage = "androidHeader"
     
     let androidAdvanced = Courses()
     androidAdvanced.courseName = "Программирование под Android (продвинутый)"
@@ -42,6 +45,7 @@ func makeMobileCourses() -> CourseFlow {
     androidAdvanced.courseSkills = androidDescrioption()[1].courseSkills
     androidAdvanced.courseProgram = androidDescrioption()[1].courseProgram
     androidAdvanced.courseImage = "android-adv"
+    androidAdvanced.courseHeaderImage = "androidHeader"
     
     let android = TypesOfProgrammingFlow()
     android.name = "Android"

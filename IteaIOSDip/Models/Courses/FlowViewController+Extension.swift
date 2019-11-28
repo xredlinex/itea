@@ -8,23 +8,19 @@
 
 import UIKit
 
+//  MARK: - UIDESIGN AND ELEMENTS
 extension FlowViewController {
     
     func updateCoursesFlow() {
-        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "bg")
-        backgroundImage.contentMode = .scaleAspectFill
-        
         let blurEffect = UIBlurEffect(style: .regular)
         let blurView = UIVisualEffectView(effect: blurEffect)
+        backgroundImage.image = UIImage(named: "bg")
+        backgroundImage.contentMode = .scaleAspectFill
         blurView.translatesAutoresizingMaskIntoConstraints = false
+        
         descriptionView.insertSubview(blurView, at: 0)
-    
-        
-        
         goToCoursesButton.clipsToBounds = true
-    
         goToCoursesButton.layer.cornerRadius = 12.0
         goToCoursesButton.isOpaque = true
         goToCoursesButton.alpha = 0.8
@@ -34,20 +30,15 @@ extension FlowViewController {
         goToCoursesButton.layer.shadowOffset = CGSize(width: 10, height: 10)
         goToCoursesButton.layer.shadowRadius = 12.0
         
-        NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: descriptionView.heightAnchor), blurView.widthAnchor.constraint(equalTo: descriptionView.widthAnchor),
-        ])
+        NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: descriptionView.heightAnchor),
+                                     blurView.widthAnchor.constraint(equalTo: descriptionView.widthAnchor)])
         let secondBlurView = UIVisualEffectView(effect: blurEffect)
         secondBlurView.translatesAutoresizingMaskIntoConstraints = false
         levelView.insertSubview(secondBlurView, at: 0)
        
-        NSLayoutConstraint.activate([secondBlurView.heightAnchor.constraint(equalTo: levelView.heightAnchor), secondBlurView.widthAnchor.constraint(equalTo: levelView.widthAnchor),
-        ])
-//        let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-//        backgroundForImage.backgroundColor = UIColor.red
-//        backgroundForImage.alpha = 0.8
+        NSLayoutConstraint.activate([secondBlurView.heightAnchor.constraint(equalTo: levelView.heightAnchor),
+                                     secondBlurView.widthAnchor.constraint(equalTo: levelView.widthAnchor)])
         view.addSubview(backgroundImage)
-//        view.addSubview(backgroundForImage)
-//        self.view.sendSubviewToBack(backgroundForImage)
         self.view.sendSubviewToBack(backgroundImage)
     }
 }

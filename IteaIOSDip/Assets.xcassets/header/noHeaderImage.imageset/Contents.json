@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "qa.png",
+      "filename" : "noHeaderImage.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "qa@2x.png",
+      "filename" : "noHeaderImage-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "qa@3x.png",
+      "filename" : "noHeaderImage-2.png",
       "scale" : "3x"
     }
   ],

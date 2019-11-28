@@ -30,9 +30,11 @@ class TypesOfProgrammingFlow {
 class Courses {
     var courseName: String?
     var courseImage: String?
+    var courseHeaderImage: String?
     var courseSkills: String?
     var courseProgram: String?
     var courseDescription: String?
+    
 }
 
 class CoursesTypeDescription {

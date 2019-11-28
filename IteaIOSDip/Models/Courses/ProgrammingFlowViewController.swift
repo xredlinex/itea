@@ -66,7 +66,7 @@ extension ProgrammingFlowViewController: UITableViewDelegate, UITableViewDataSou
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
         let label = UILabel(frame: view.frame)
         
-        label.text = flow.name
+        label.text = "Выберите свой курс" /*flow.name*/
         label.textAlignment = .center
         label.textColor = UIColor.white
         label.text = label.text?.uppercased()

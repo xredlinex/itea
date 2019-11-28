@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "mobile@2x-1.png",
+      "filename" : "iosHeader.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mobile@2x.png",
+      "filename" : "iosHeader@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mobile@3x.png",
+      "filename" : "iosHeader@3x.jpg",
       "scale" : "3x"
     }
   ],

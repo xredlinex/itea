@@ -179,7 +179,6 @@ extension FilterViewController {
         }
     }
     
-    
     @objc func didDayTapAction() {
         filterSaved(state: false)
         sortbyDate = []
@@ -294,5 +293,3 @@ extension FilterViewController {
         }        
     }
 }
-// KITCHEN EXTENSION!!!!!!!
-
