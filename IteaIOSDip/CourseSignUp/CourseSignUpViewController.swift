@@ -23,6 +23,7 @@ class CourseSignUpViewController: UIViewController {
     @IBOutlet weak var firstLocationCheckImageView: UIImageView!
     @IBOutlet weak var secondLocationCheckImageView: UIImageView!
     @IBOutlet weak var thirdLocationCheckImageView: UIImageView!
+    
     @IBOutlet weak var firstLocationTextLabel: UILabel!
     @IBOutlet weak var secondLocationTextLabel: UILabel!
     @IBOutlet weak var thirdLocationTextLabel: UILabel!
@@ -32,19 +33,36 @@ class CourseSignUpViewController: UIViewController {
     @IBOutlet weak var mailTextField: UITextField!
     
     @IBOutlet weak var nameValidationErrorTextLabel: UILabel!
-    @IBOutlet weak var nameTextLabelHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var emailValidationErrorTextLabel: NSLayoutConstraint!
-    @IBOutlet weak var phoneValidationErrorTextLabel: NSLayoutConstraint!
+    @IBOutlet weak var mailValidationErrorTextLabel: UILabel!
+    @IBOutlet weak var phoneValidationErrorTextLabel: UILabel!
+    
+    
+    @IBOutlet weak var nameTextLabelErrorHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var emailTextLabelErrorHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var phoneTextLabelErrorHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         uiCourseSignUp()
         setDefaultLocation(0)
 
-        
+        //  MARK: - TEXT FIELDS
+        let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
+        view.addGestureRecognizer(keyboardHide)
         
         
        
+    }
+    @IBAction func didTapSignUpButton(_ sender: Any) {
+        
+        nameTextLabelErrorHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+        emailTextLabelErrorHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+        phoneTextLabelErrorHeightConstraint.priority = UILayoutPriority(rawValue: 900)
     }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {
@@ -142,5 +160,13 @@ extension CourseSignUpViewController {
         
         
         
+    }
+}
+//   MARK: - SELECTOR
+extension CourseSignUpViewController {
+    
+    @objc func keyboardWillHide() {
+        bottomHeightConstraint.constant = 0
+        self.view.endEditing(true)
     }
 }
