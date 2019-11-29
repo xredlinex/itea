@@ -14,8 +14,9 @@ class IteaCourse {
         let qa = makeQaCourses()
         let mobile = makeMobileCourses()
         let javaProgramming = makeJsProgrammingCourses()
+        let cplus = makeCPlusProgrammingCourses()
         
-        return [mobile, qa, javaProgramming]
+        return [mobile, qa, javaProgramming, cplus]
     }
 }
 

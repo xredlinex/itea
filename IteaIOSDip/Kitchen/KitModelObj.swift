@@ -6,7 +6,7 @@
 //  Copyright © 2019 Nordstrom. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 func makeSomeOtherObj() -> CourseFlow {
  
@@ -16,10 +16,14 @@ func makeSomeOtherObj() -> CourseFlow {
      qaBase.courseSkills = qaCoursesDescrioption()[0].courseSkills
      qaBase.courseProgram = qaCoursesDescrioption()[0].courseProgram
      qaBase.courseImage = "qaBase"
+//     qbase. = "qaBase"
+    
+        
+    
 
      let qaAdvanced = Courses()
      qaAdvanced.courseName = "Продвинутый курс QA"
-     
+//     qbase.courseHeaderImage = "qaBase"
      qaAdvanced.courseDescription = qaCoursesDescrioption()[1].courseDescriotion
      qaAdvanced.courseSkills = qaCoursesDescrioption()[1].courseSkills
      qaAdvanced.courseProgram = qaCoursesDescrioption()[1].courseProgram
