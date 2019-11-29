@@ -11,19 +11,29 @@ import UIKit
 class CourseFlow {
     var name: String?
     var courses: [Courses]?
+    var programmingFlow: [TypesOfProgrammingFlow]?
+    var isProgrammingLanguage: Bool?
     var courseType: String?
     var courseTime: String?
     var coursesImage: String?
     var typeDescription: String?
     var typeLevelDescriptiom: String?
+    var flowHeaderImage: String?
+}
+
+class TypesOfProgrammingFlow {
+    var name: String?
+    var courses: [Courses]?
+    var flowImage: String?
 }
 
 class Courses {
     var courseName: String?
-    var courseDescription: String?
+    var courseImage: String?
+    var courseHeaderImage: String?
     var courseSkills: String?
     var courseProgram: String?
-    var courseImage: String?
+    var courseDescription: String?
     
 }
 
@@ -37,7 +47,3 @@ class CourseDescription: CoursesTypeDescription {
     var courseSkills: String?
     var courseProgram: String?
 }
-
-
-
-
