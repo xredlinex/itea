@@ -86,6 +86,13 @@ extension CourseSignUpViewController: UITextFieldDelegate {
 }
 
 extension CourseSignUpViewController {
+    
+    func signUpCourse(course: Courses, location: String) {
+        kommentsTextView.text = "Я хочу записаться на курсы \(course.courseName ?? ""), локация \(location)"
+    }
+}
+
+extension CourseSignUpViewController {
   
     
     func validateCourseSignUpFields(inputName: String, inputMail: String, inputPhone: String) -> Bool {

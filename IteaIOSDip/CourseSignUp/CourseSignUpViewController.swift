@@ -136,14 +136,6 @@ extension CourseSignUpViewController {
 }
 
 
-extension CourseSignUpViewController {
-    
-    func signUpCourse(course: Courses, location: String) {
-        
-        kommentsTextView.text = "Я хочу записаться на курсы \(course.courseName ?? ""), локация \(location)"
-        
-    }
-}
 
 
 extension CourseSignUpViewController {
@@ -202,7 +194,6 @@ extension CourseSignUpViewController: UITextViewDelegate {
         bottomHeightConstraint.constant = 250
         return true
     }
-
 }
 
 
@@ -211,21 +202,21 @@ extension CourseSignUpViewController {
     
     func uiCourseSignUp() {
         
-                let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-                let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-                let blackBackgound = UIView(frame: UIScreen.main.bounds)
-                backgroundImage.image = UIImage(named: "filterBackground")
-                backgroundImage.contentMode = .scaleAspectFill
-                backgroundForImage.backgroundColor = UIColor.red
-                backgroundForImage.alpha = 0.6
-                blackBackgound.backgroundColor = UIColor.black
-                blackBackgound.alpha = 0.2
-                view.addSubview(backgroundImage)
-                view.addSubview(blackBackgound)
-                view.addSubview(backgroundForImage)
-                self.view.sendSubviewToBack(blackBackgound)
-                self.view.sendSubviewToBack(backgroundForImage)
-                self.view.sendSubviewToBack(backgroundImage)
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        let backgroundForImage = UIView(frame: UIScreen.main.bounds)
+        let blackBackgound = UIView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "filterBackground")
+        backgroundImage.contentMode = .scaleAspectFill
+        backgroundForImage.backgroundColor = UIColor.red
+        backgroundForImage.alpha = 0.6
+        blackBackgound.backgroundColor = UIColor.black
+        blackBackgound.alpha = 0.2
+        view.addSubview(backgroundImage)
+        view.addSubview(blackBackgound)
+        view.addSubview(backgroundForImage)
+        self.view.sendSubviewToBack(blackBackgound)
+        self.view.sendSubviewToBack(backgroundForImage)
+        self.view.sendSubviewToBack(backgroundImage)
         
         headerLogoImageView.image = UIImage(named: "maxresdefault")
                headerLogoImageView.contentMode = .scaleAspectFill
@@ -256,18 +247,3 @@ extension CourseSignUpViewController {
         self.view.endEditing(true)
     }
 }
-
-
-extension CourseSignUpViewController {
-    
-    func uiCourseSignUpElmnt() {
-        
-        
-               
-             
-        
-        
-        
-    }
-}
-
