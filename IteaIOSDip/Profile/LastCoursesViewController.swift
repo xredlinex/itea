@@ -16,7 +16,7 @@ class LastCoursesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        student = iteaStudent()
+//        student = iteaStudent()
         tableView.register(UINib(nibName: "CoursesTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesTableViewCell")
         
         tableView.reloadData()

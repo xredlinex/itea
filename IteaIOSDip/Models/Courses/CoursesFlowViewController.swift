@@ -17,11 +17,14 @@ class CoursesFlowViewController: UIViewController {
     
     var flow: [CourseFlow] = []
     var filterFlow: [CourseFlow] = []
+    var iteaStudent = IteaStudent()
+    var recieveUserInfo = IteaStudent()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         uiDesignCoursesFlow()
+        iteaStudent = recieveUserInfo
         
         if filterFlow.count == 0 {
             flow = IteaCourse().makeCoursesFlow()

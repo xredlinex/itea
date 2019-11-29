@@ -15,25 +15,44 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var showHidePasswordButton: UIButton!
     @IBOutlet weak var emailValidationErrorTextLabel: UILabel!
     @IBOutlet weak var passwordValidationErrorTextLabel: UILabel!
-    @IBOutlet weak var logInButton: UIButton!
-    @IBOutlet weak var signUpButton: UIButton!
+ 
+    @IBOutlet weak var signUpButtonView: UIView!
+    @IBOutlet weak var logInButtonView: UIView!
+    
+    
+    @IBOutlet weak var showMassonsEyeImageView: UIImageView!
     @IBOutlet weak var showMailValidErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showPassValidErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showEmailErrorHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var showPasswordEmailHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var showPasswordErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showLineRespontMailFieldHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showLineRespondPasswordFieldHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var iteaLogoMainView: UIView!
+    @IBOutlet weak var iteaLogoIView: UIView!
+    @IBOutlet weak var iteaLogoTView: UIView!
+    @IBOutlet weak var iteaLogoEView: UIView!
+    
+    var iteaStudents: [IteaStudent] = []
+    var newStudent = IteaStudent()
+    var validationErrors = ValidationErrors()
+    var validation = Validation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateAuthUi()
         
-        let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
-        view.addGestureRecognizer(keyboardHide)
+        let recieveUsers = makeIteaStudents()
+        iteaStudents = checkStudents(students: recieveUsers)
+        
         
         userNameTextField.delegate = self
         userPasswordTextField.delegate = self
+        
+        let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
+        view.addGestureRecognizer(keyboardHide)
+        
+        
         
     }
     
@@ -44,13 +63,55 @@ class AuthenticationViewController: UIViewController {
             userPasswordTextField.text = ""
         }
     
-    @IBAction func didTapShowHideActionbutton(_ sender: Any) {
+    @IBAction func didTapShowPasswordEyeActionButton(_ sender: Any) {
+       showPassword()
     }
+    
+    @IBAction func didTapShowPasswordActionButton(_ sender: Any) {
+        showPassword()
+    }
+    
+
     @IBAction func didTapLoginActionButton(_ sender: Any) {
+        let validation = validateLogin(inputLogin: userNameTextField.text ?? "", inputPassword: userPasswordTextField.text ?? "")
+        if userNameTextField.text != "" && userPasswordTextField.text != "" {
+            if validation == true {
+                if iteaStudents.contains(where: {$0.mail == userNameTextField.text}) {
+                    if iteaStudents.contains(where: {$0.password == userPasswordTextField.text}) {
+                        let stotyboard = UIStoryboard(name: "Courses", bundle: nil)
+                        let viewController = stotyboard.instantiateViewController(withIdentifier: "CoursesFlowViewController") as! CoursesFlowViewController
+                        viewController.recieveUserInfo = studentAuthentication(students: iteaStudents)
+                        navigationController?.pushViewController(viewController, animated: true)
+                    } else {
+                        showAlertErrorAction(title: validationErrors.errorKey(.error), message: validationErrors.errorKey(.invalidPassword))
+                        showValidationErrors(error: .invalidPassword, errorLabel: passwordValidationErrorTextLabel, subLabel: showPassValidErrorHeightConstraint)
+                    }
+                } else {
+                    showAlertErrorAction(title: validationErrors.errorKey(.error), message: validationErrors.errorKey(.noEmail))
+                }
+            } else {
+                showEmailErrorHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+                showValidationErrors(error: .invalidEmail,
+                                     errorLabel: emailValidationErrorTextLabel,
+                                     subLabel: showMailValidErrorHeightConstraint)
+                showPasswordErrorHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+                showValidationErrors(error: .invalidPassword,
+                                     errorLabel: passwordValidationErrorTextLabel,
+                                     subLabel: showPassValidErrorHeightConstraint)
+            }
+        } else {
+            showAlertErrorAction(title: validationErrors.errorKey(.error), message: validationErrors.errorKey(.emptyFields))
+        }
     }
+    
     @IBAction func didTapSignUpActionButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Courses", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        navigationController?.pushViewController(viewController, animated: true)
     }
+    
     @IBAction func didTapForgotPasswordActionButton(_ sender: Any) {
+        showAlertErrorAction(title: "Sorry!", message: "Train Your Brain!")
     }
 }
 
@@ -87,29 +148,16 @@ extension AuthenticationViewController: UITextFieldDelegate {
            switch textField {
            case userNameTextField:
                showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 900)
-               
-               
-               showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showPasswordEmailHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showPassValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+               hideValidationErrors()
             
            case userPasswordTextField:
                userPasswordTextField.text = ""
+               showMassonsEyeImageView.image = UIImage(systemName: "eye.slash")
                showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 900)
-               
-               showPasswordEmailHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showPassValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+               hideValidationErrors()
             
            default:
-            
-               showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showPasswordEmailHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-            
-               showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-               showPassValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+                hideValidationErrors()
            }
        }
     
@@ -127,45 +175,88 @@ extension AuthenticationViewController: UITextFieldDelegate {
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+extension AuthenticationViewController {
+    func showValidationErrors(error: ValidationErrors.ErrorTextEnum, errorLabel: UILabel, subLabel: NSLayoutConstraint) {
+        subLabel.priority = UILayoutPriority(rawValue: 900)
+        errorLabel.text = validationErrors.errorKey(error)
+    }
+}
+extension AuthenticationViewController {
+    
+    func validateLogin(inputLogin: String, inputPassword: String) -> Bool {
+        var validateFields = false
+        if validation.validateMail(mail: inputLogin) == false {
+            emailValidationErrorTextLabel.text = validationErrors.errorKey(.invalidEmail)
+        }
+        if validation.validatePassword(password: inputPassword) == false {
+            passwordValidationErrorTextLabel.text = validationErrors.errorKey(.invalidPassword)
+        }
+        
+        if validation.validateMail(mail: inputLogin) == true && validation.validatePassword(password: inputPassword) == true {
+            validateFields = true
+        }
+        return validateFields
+    }
+}
 
 
 extension AuthenticationViewController {
-    
-        func updateAuthUi() {
-            
-            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-            backgroundImage.image = UIImage(named: "backgroundlogin")
-            backgroundImage.contentMode = .scaleAspectFill
-            let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-            backgroundForImage.backgroundColor = UIColor.red
-            backgroundForImage.alpha = 0.8
-            view.addSubview(backgroundImage)
-            view.addSubview(backgroundForImage)
-            self.view.sendSubviewToBack(backgroundForImage)
-            self.view.sendSubviewToBack(backgroundImage)
-            
-            
+    func showAlertErrorAction(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { (_) in}
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
-
 }
+
+extension AuthenticationViewController{
+    
+    func studentAuthentication(students : [IteaStudent]) -> IteaStudent {
+        var loginStudent = IteaStudent()
+        for user in students {
+            if user.mail == userNameTextField.text {
+                if user.password == userPasswordTextField.text {
+                    loginStudent = user
+                }
+            }
+        }
+        return loginStudent
+    }
+}
+    
+
+extension AuthenticationViewController {
+    func showPassword() {
+        
+        if userPasswordTextField.isSecureTextEntry == true {
+            userPasswordTextField.isSecureTextEntry = false
+            showHidePasswordButton.setTitle("HIDE", for: .normal)
+            showMassonsEyeImageView.image = UIImage(systemName: "eye.slash")
+        } else {
+            userPasswordTextField.isSecureTextEntry = true
+            showHidePasswordButton.setTitle("SHOW", for: .normal)
+            
+            showMassonsEyeImageView.image = UIImage(systemName: "eye")
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

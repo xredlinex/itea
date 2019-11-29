@@ -16,11 +16,16 @@ class ValidationErrors {
         case invalidLastName
         case invalidPhoneNumber
         case invalidEmail
-        case invalidPassword
+        case noEmail
         case emailExists
+        case invalidPassword
         case phoneExists
         case passwordNotMatch
         case invalidFirstNameLastName
+        case emptyFields
+        case error
+        
+
     }
 
     func errorKey(_ error: ErrorTextEnum) -> String {
@@ -33,6 +38,8 @@ class ValidationErrors {
             return "Пожалуйста, введите действительный номер мобильного телефона."
         case .invalidEmail:
             return "Пожалуйста, введите действительный адрес электронной почты."
+        case .noEmail:
+            return "Адрес электронной почты не найден!"
         case .invalidPassword:
             return "Пожалуйста, введите действительный пароль."
         case .emailExists:
@@ -43,7 +50,12 @@ class ValidationErrors {
             return "Не совпадают введеные пароли."
         case .invalidFirstNameLastName:
             return "Пожалуйста, введите правильно имя и фамилию."
+        case .emptyFields:
+            return "Чтоб продолжить заполните все поля!"
+        case .error:
+            return "Ошибка!"
         }
+        
     }
 
 

@@ -25,14 +25,13 @@ class IteaStudent {
 }
 
 
-func iteaStudent() -> IteaStudent {
-        
+func makeIteaStudents() -> [IteaStudent] {
     let student = IteaStudent()
     student.name = "Name"
     student.lastName = "Last NAME"
-   
-    
-    return student
+    student.password = "rediredi"
+    student.mail = "redi@gmail.com"
+    return [student]
 }
 
 
@@ -44,7 +43,6 @@ class StudentCourses {
     init(nextCourse: [Courses], completedCourses: [Courses]) {
         self.nextCourse = nextCourse
         self.completedCourse = completedCourses
-        
     }
 }
 
