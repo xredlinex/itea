@@ -50,8 +50,10 @@ class DetailedCourseViewController: UIViewController {
     }
     @IBAction func didTapCourseSignInActionButton(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Courses", bundle: nil)
-               let viewController = storyboard.instantiateViewController(withIdentifier: "CourseSignInViewController") as! CourseSignInViewController
+        let storyboard = UIStoryboard(name: "CourseSignUp", bundle: nil)
+               let viewController = storyboard.instantiateViewController(withIdentifier: "CourseSignUpViewController") as! CourseSignUpViewController
+        
+        viewController.recieveCourse = course
         
                navigationController?.pushViewController(viewController, animated: true)
     }
@@ -132,7 +134,7 @@ extension DetailedCourseViewController {
             enrollButton.layer.shadowOffset = CGSize(width: 10, height: 10)
             enrollButton.layer.shadowRadius = 12.0
         
-        enrollButton.clipsToBounds = true
+      
         
            courseProgramButton.layer.cornerRadius = 12.0
            courseProgramButton.isOpaque = true
