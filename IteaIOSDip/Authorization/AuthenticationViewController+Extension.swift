@@ -45,9 +45,7 @@ extension AuthenticationViewController {
             iteaLogoEView.layer.borderColor = UIColor.white.cgColor
             iteaLogoEView.layer.borderWidth = 2.0
             
-            
-//           signUpButtonView
-//            logInButtonView
+
             
             let blurEffect = UIBlurEffect(style: .prominent)
                 let logInBlurView = UIVisualEffectView(effect: blurEffect)

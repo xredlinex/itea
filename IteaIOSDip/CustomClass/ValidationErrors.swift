@@ -24,8 +24,6 @@ class ValidationErrors {
         case invalidFirstNameLastName
         case emptyFields
         case error
-        
-
     }
 
     func errorKey(_ error: ErrorTextEnum) -> String {
@@ -55,11 +53,6 @@ class ValidationErrors {
         case .error:
             return "Ошибка!"
         }
-        
     }
-
-
-
-
 }
 

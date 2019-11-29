@@ -15,11 +15,8 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var showHidePasswordButton: UIButton!
     @IBOutlet weak var emailValidationErrorTextLabel: UILabel!
     @IBOutlet weak var passwordValidationErrorTextLabel: UILabel!
- 
     @IBOutlet weak var signUpButtonView: UIView!
     @IBOutlet weak var logInButtonView: UIView!
-    
-    
     @IBOutlet weak var showMassonsEyeImageView: UIImageView!
     @IBOutlet weak var showMailValidErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showPassValidErrorHeightConstraint: NSLayoutConstraint!
@@ -105,7 +102,7 @@ class AuthenticationViewController: UIViewController {
     }
     
     @IBAction func didTapSignUpActionButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Courses", bundle: nil)
+        let storyboard = UIStoryboard(name: "Aauthorization", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         navigationController?.pushViewController(viewController, animated: true)
     }
