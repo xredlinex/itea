@@ -10,6 +10,15 @@ import UIKit
 
 class Validation {
     
+//  MARK: - VALIDATE NAME AND LAST NAME -
+    func validateNameLastName(nameLastName: String) -> Bool {
+        var validate = false
+        if nameLastName.contains(" ") && nameLastName != "" && nameLastName.count > 5{
+            validate = true
+        }
+        return validate
+    }
+    
 //  MARK: - VALIDATE NAME
     func validateName(name: String) -> Bool {
         var validate = false

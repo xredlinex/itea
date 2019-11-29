@@ -209,15 +209,15 @@
                                                             <constraint firstAttribute="bottom" secondItem="QmU-ST-m3W" secondAttribute="bottom" constant="1" id="uxF-HY-B89"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZC-mK-8v3">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZC-mK-8v3">
                                                         <rect key="frame" x="164" y="55" width="230" height="0.0"/>
                                                         <color key="backgroundColor" red="0.88389098639999997" green="0.69457471370000001" blue="0.38424032930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="20" id="l6O-Xy-Hem"/>
-                                                            <constraint firstAttribute="height" priority="800" id="weL-31-WrE"/>
+                                                            <constraint firstAttribute="height" priority="700" id="weL-31-WrE"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjp-Rq-fJc">
@@ -235,7 +235,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -249,14 +249,14 @@
                                                             <constraint firstAttribute="trailing" secondItem="FZv-Ut-ct0" secondAttribute="trailing" constant="5" id="uKl-4z-BED"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-k1-tjm">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-k1-tjm">
                                                         <rect key="frame" x="164" y="125" width="230" height="0.0"/>
                                                         <color key="backgroundColor" red="0.88389098639999997" green="0.69457471370000001" blue="0.38424032930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="20" id="d7J-qz-08o"/>
-                                                            <constraint firstAttribute="height" priority="800" id="iTr-ia-J2I"/>
+                                                            <constraint firstAttribute="height" priority="700" id="iTr-ia-J2I"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -275,7 +275,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,14 +289,14 @@
                                                             <constraint firstAttribute="bottom" secondItem="LmN-Bf-oRj" secondAttribute="bottom" constant="1" id="wKT-Bh-3fN"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85f-iW-LFY">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85f-iW-LFY">
                                                         <rect key="frame" x="164" y="195" width="230" height="0.0"/>
                                                         <color key="backgroundColor" red="0.88389098639999997" green="0.69457471370000001" blue="0.38424032930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="800" id="S6e-Gv-8Ui"/>
+                                                            <constraint firstAttribute="height" priority="700" id="S6e-Gv-8Ui"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="600" constant="20" id="dBm-pz-J31"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -495,7 +495,7 @@
                                                         </constraints>
                                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="done"/>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,14 +592,17 @@
                         <outlet property="mailBorderView" destination="qjp-Rq-fJc" id="5JH-Mj-Q78"/>
                         <outlet property="mailTextField" destination="FZv-Ut-ct0" id="258-WX-V20"/>
                         <outlet property="mailValidationErrorTextLabel" destination="MOD-k1-tjm" id="cGt-r5-MIq"/>
+                        <outlet property="mailWhiteLineView" destination="GdO-CO-sSM" id="0Ld-4M-Sm6"/>
                         <outlet property="nameBorderView" destination="xIj-hp-iNI" id="kvM-an-Ysf"/>
                         <outlet property="nameTextField" destination="Lqt-ME-7rW" id="Gcv-1v-nhm"/>
                         <outlet property="nameTextLabelErrorHeightConstraint" destination="l6O-Xy-Hem" id="9wI-3x-dex"/>
                         <outlet property="nameValidationErrorTextLabel" destination="7ZC-mK-8v3" id="jwh-Yo-u5q"/>
+                        <outlet property="nameWhiteLineView" destination="QmU-ST-m3W" id="JjV-Cu-9cg"/>
                         <outlet property="phoneBorderView" destination="esF-9f-SgD" id="G3n-70-xqy"/>
                         <outlet property="phoneNumberTextField" destination="HPp-fn-W17" id="srh-yS-K6R"/>
                         <outlet property="phoneTextLabelErrorHeightConstraint" destination="dBm-pz-J31" id="g6f-A5-JpW"/>
                         <outlet property="phoneValidationErrorTextLabel" destination="85f-iW-LFY" id="OJf-x4-sLw"/>
+                        <outlet property="phoneWhiteLineView" destination="LmN-Bf-oRj" id="pWK-9M-MB3"/>
                         <outlet property="privicyTextLabel" destination="0LY-93-0ek" id="cIe-bL-3TI"/>
                         <outlet property="secondLocationCheckImageView" destination="3PA-gg-bLX" id="vB9-2T-ZSJ"/>
                         <outlet property="secondLocationTextLabel" destination="4U5-Ss-OGH" id="pmU-zu-9Lj"/>

@@ -53,6 +53,8 @@ class DetailedCourseViewController: UIViewController {
         let storyboard = UIStoryboard(name: "CourseSignUp", bundle: nil)
                let viewController = storyboard.instantiateViewController(withIdentifier: "CourseSignUpViewController") as! CourseSignUpViewController
         
+        viewController.recieveCourse = course
+        
                navigationController?.pushViewController(viewController, animated: true)
     }
 }

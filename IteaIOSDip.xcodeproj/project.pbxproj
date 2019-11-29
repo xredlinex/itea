@@ -41,6 +41,10 @@
 		972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */; };
 		972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */; };
 		972CB6F42382AB5200E68BAC /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F32382AB5200E68BAC /* Validation.swift */; };
+		973DDEC5239082A200FA79ED /* CourseSignUpViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */; };
+		973DDEC92390A26400FA79ED /* ValidationErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 973DDEC82390A26400FA79ED /* ValidationErrors.strings */; };
+		973DDECB2390B1D700FA79ED /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDECA2390B1D700FA79ED /* ValidationErrors.swift */; };
+		973DDECD2390B59D00FA79ED /* Class+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDECC2390B59D00FA79ED /* Class+Extension.swift */; };
 		9748B18423894ACD00C3CB21 /* JavaDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748B18323894ACD00C3CB21 /* JavaDescription.swift */; };
 		9748B18923894B0300C3CB21 /* Java.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748B18823894B0300C3CB21 /* Java.swift */; };
 		977AC35F238D705F003C2800 /* CoursesFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC357238D705E003C2800 /* CoursesFlowViewController.swift */; };
@@ -116,6 +120,10 @@
 		972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		972CB6F32382AB5200E68BAC /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseSignUpViewController+Extension.swift"; sourceTree = "<group>"; };
+		973DDEC82390A26400FA79ED /* ValidationErrors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ValidationErrors.strings; sourceTree = "<group>"; };
+		973DDECA2390B1D700FA79ED /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
+		973DDECC2390B59D00FA79ED /* Class+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Extension.swift"; sourceTree = "<group>"; };
 		9748B18323894ACD00C3CB21 /* JavaDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaDescription.swift; sourceTree = "<group>"; };
 		9748B18823894B0300C3CB21 /* Java.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Java.swift; sourceTree = "<group>"; };
 		977AC357238D705E003C2800 /* CoursesFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesFlowViewController.swift; path = IteaIOSDip/Models/Courses/CoursesFlowViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -214,7 +222,6 @@
 				97BD328D238D98A0002A2F06 /* Filter */,
 				977AC37F238D8FB7003C2800 /* Courses */,
 				97BD328C238D986C002A2F06 /* CourseSignUp */,
-				97D66EBA23849A6100C25379 /* TempWorkingFiles */,
 				9717BD0F2381F361000A2357 /* Assets.xcassets */,
 				9717BD112381F361000A2357 /* LaunchScreen.storyboard */,
 				9717BD142381F361000A2357 /* Info.plist */,
@@ -315,8 +322,9 @@
 		977AC37E238D8F1E003C2800 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
+				973DDECA2390B1D700FA79ED /* ValidationErrors.swift */,
 				972CB6F32382AB5200E68BAC /* Validation.swift */,
-				97BD3290238DA07E002A2F06 /* Kittchen.swift */,
+				973DDECC2390B59D00FA79ED /* Class+Extension.swift */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
@@ -344,8 +352,11 @@
 		977F115C238E66D9003B522B /* Kitchen */ = {
 			isa = PBXGroup;
 			children = (
+				97D66EBA23849A6100C25379 /* TempWorkingFiles */,
 				977F115A238E66D6003B522B /* KitModelsDiscr.swift */,
 				977F115F238E691C003B522B /* KitModelObj.swift */,
+				973DDEC82390A26400FA79ED /* ValidationErrors.strings */,
+				97BD3290238DA07E002A2F06 /* Kittchen.swift */,
 				977F1161238E6A02003B522B /* Plate.swift */,
 			);
 			path = Kitchen;
@@ -418,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				977AC367238D71DC003C2800 /* CourseSignUpViewController.swift */,
+				973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */,
 				977DEE3E238FCB730055D9E9 /* CourseSignUp.storyboard */,
 			);
 			path = CourseSignUp;
@@ -514,6 +526,7 @@
 				977AC375238D71E0003C2800 /* CoursesTableViewCell.xib in Resources */,
 				97BD328F238D99C0002A2F06 /* Filter.storyboard in Resources */,
 				977DEE3F238FCB730055D9E9 /* CourseSignUp.storyboard in Resources */,
+				973DDEC92390A26400FA79ED /* ValidationErrors.strings in Resources */,
 				9717BD132381F361000A2357 /* LaunchScreen.storyboard in Resources */,
 				9717BD102381F361000A2357 /* Assets.xcassets in Resources */,
 				977AC37C238D738E003C2800 /* ProgrammingFlowTableViewCell.xib in Resources */,
@@ -537,6 +550,7 @@
 				9717BD0B2381F360000A2357 /* ViewController.swift in Sources */,
 				9717BD282381F9AF000A2357 /* cPlusPlus.swift in Sources */,
 				972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */,
+				973DDECD2390B59D00FA79ED /* Class+Extension.swift in Sources */,
 				9717BD3A2381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift in Sources */,
 				9717BD4523820328000A2357 /* Cybersecurity.swift in Sources */,
 				977F1160238E691C003B522B /* KitModelObj.swift in Sources */,
@@ -574,8 +588,10 @@
 				977AC36F238D71E0003C2800 /* CoursesTableViewCell.swift in Sources */,
 				97AF59F22387F3EB008E57F2 /* ProfileViewController.swift in Sources */,
 				9717BD092381F360000A2357 /* SceneDelegate.swift in Sources */,
+				973DDEC5239082A200FA79ED /* CourseSignUpViewController+Extension.swift in Sources */,
 				9717BD202381F8CF000A2357 /* javaProgramming.swift in Sources */,
 				97DF63442382979C00C6D5A6 /* FlowCourses.swift in Sources */,
+				973DDECB2390B1D700FA79ED /* ValidationErrors.swift in Sources */,
 				977F1162238E6A02003B522B /* Plate.swift in Sources */,
 				977AC364238D705F003C2800 /* FlowViewController.swift in Sources */,
 				97BD3288238D967A002A2F06 /* CoursesCollectionViewCell.swift in Sources */,
