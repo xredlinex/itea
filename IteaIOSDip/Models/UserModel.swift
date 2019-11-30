@@ -15,9 +15,12 @@ class IteaStudent {
     var city: String?
     var birthday: String?
     var mail: String?
+    var phoneNumber: String?
     var password: String?
     var userPicture: String?
     var studentCourses: [StudentCourses]?
+    var studenCurrentCourse: String?
+    var workPlace: String?
     
     
 //    var nextCourse: [Courses]?  /* OBJECT*/
@@ -38,6 +41,7 @@ func makeIteaStudents() -> [IteaStudent] {
 class StudentCourses {
     var nextCourse: [Courses]?
     var completedCourse: [Courses]?
+    var currentCourse = Courses()
     
     
     init(nextCourse: [Courses], completedCourses: [Courses]) {

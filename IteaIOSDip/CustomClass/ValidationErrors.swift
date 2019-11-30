@@ -24,6 +24,12 @@ class ValidationErrors {
         case invalidFirstNameLastName
         case emptyFields
         case error
+        case validateName
+        case validateLastName
+        case validateMail
+        case validatePhone
+        case validatePassword
+
     }
 
     func errorKey(_ error: ErrorTextEnum) -> String {
@@ -41,7 +47,7 @@ class ValidationErrors {
         case .invalidPassword:
             return "Пожалуйста, введите действительный пароль."
         case .emailExists:
-            return "Эта почта уже зарегистрирована"
+            return "Эта почта уже зарегистрирована."
         case .phoneExists:
             return "Этот номер мобильного телефона уже зарегистрирован. Вы хотели войти? Если вы забыли свой адрес электронной почты или пароль, свяжитесь с нами."
         case .passwordNotMatch:
@@ -52,6 +58,16 @@ class ValidationErrors {
             return "Чтоб продолжить заполните все поля!"
         case .error:
             return "Ошибка!"
+        case .validateName:
+            return "Имя должно быть больше двух символов."
+        case .validateLastName:
+            return "Фамилия должна быть больше двух символов."
+        case .validateMail:
+            return "Поле електронной почты должно содержать в себе @ и домен"
+        case .validatePhone:
+            return "Телефон должен быть не больше и не меньше 12 символов и содержать '+'"
+        case .validatePassword:
+            return "Пароль должен быть меньнеше 16 символов, но и не меньше 6ти"
         }
     }
 }
