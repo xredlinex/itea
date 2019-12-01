@@ -36,7 +36,6 @@ extension UIViewController {
 
 extension UIButton {
     public func iteaButton() {
-//        let button = UIButton(type: .system)
         let button = self
         button.clipsToBounds = true
         button.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
@@ -49,4 +48,7 @@ extension UIButton {
         button.layer.shadowRadius = 12.0
 
     }
+
+    
+    
 }

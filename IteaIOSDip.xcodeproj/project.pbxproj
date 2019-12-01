@@ -406,6 +406,7 @@
 			children = (
 				97DF634523829A2700C6D5A6 /* Qa.swift */,
 				97AF5A1223887C21008E57F2 /* Mobile.swift */,
+				97C8F0912392B2BD000D54D3 /* StudentInit.swift */,
 				9748B18823894B0300C3CB21 /* Java.swift */,
 				97B41F4623911D240025D3C9 /* CplusModel.swift */,
 			);
@@ -471,7 +472,6 @@
 		97D66EB92384819300C25379 /* StudentsInit */ = {
 			isa = PBXGroup;
 			children = (
-				97C8F0912392B2BD000D54D3 /* StudentInit.swift */,
 			);
 			name = StudentsInit;
 			sourceTree = "<group>";

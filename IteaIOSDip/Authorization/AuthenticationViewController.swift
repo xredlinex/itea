@@ -37,6 +37,7 @@ class AuthenticationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundView(image: "backgroundlogin", color: UIColor.red, alpha: 0.8)
         updateAuthUi()
         
         let recieveUsers = makeIteaStudents()

@@ -64,8 +64,6 @@ extension AuthenticationViewController {
                 ])
             
             signUpButtonView.clipsToBounds = true
-            
-            
             signUpButtonView.layer.masksToBounds = false
             signUpButtonView.layer.shadowColor = UIColor.black.cgColor
             signUpButtonView.layer.shadowOpacity = 0.5
@@ -73,7 +71,6 @@ extension AuthenticationViewController {
             signUpButtonView.layer.shadowRadius = 12.0
             
             logInButtonView.clipsToBounds = true
-            
             logInButtonView.layer.masksToBounds = false
             logInButtonView.layer.shadowColor = UIColor.black.cgColor
             logInButtonView.layer.shadowOpacity = 0.5
@@ -81,16 +78,16 @@ extension AuthenticationViewController {
             logInButtonView.layer.shadowRadius = 12.0
             
             
-            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-            backgroundImage.image = UIImage(named: "backgroundlogin")
-            backgroundImage.contentMode = .scaleAspectFill
-            let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-            backgroundForImage.backgroundColor = UIColor.red
-            backgroundForImage.alpha = 0.8
-            view.addSubview(backgroundImage)
-            view.addSubview(backgroundForImage)
-            self.view.sendSubviewToBack(backgroundForImage)
-            self.view.sendSubviewToBack(backgroundImage)
+//            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//            backgroundImage.image = UIImage(named: "backgroundlogin")
+//            backgroundImage.contentMode = .scaleAspectFill
+//            let backgroundForImage = UIView(frame: UIScreen.main.bounds)
+//            backgroundForImage.backgroundColor = UIColor.red
+//            backgroundForImage.alpha = 0.8
+//            view.addSubview(backgroundImage)
+//            view.addSubview(backgroundForImage)
+//            self.view.sendSubviewToBack(backgroundForImage)
+//            self.view.sendSubviewToBack(backgroundImage)
             
             
     }
