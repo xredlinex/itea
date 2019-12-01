@@ -42,6 +42,7 @@ class AuthenticationViewController: UIViewController {
         
         let recieveUsers = makeIteaStudents()
         iteaStudents = checkStudents(students: recieveUsers)
+        iteaStudents.append(newStudent)
         
         
         userNameTextField.delegate = self
@@ -105,6 +106,7 @@ class AuthenticationViewController: UIViewController {
     @IBAction func didTapSignUpActionButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Aauthorization", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        viewController.recieveData = iteaStudents
         navigationController?.pushViewController(viewController, animated: true)
     }
     
