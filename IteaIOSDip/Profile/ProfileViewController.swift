@@ -10,10 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var cancelButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backArrowLeftImageView: UIImageView!
     
+    @IBOutlet weak var profileInfoView: UIView!
     
+    @IBOutlet weak var studentUserBlurImageView: UIImageView!
     
+    @IBOutlet weak var editImageView: UIImageView!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var viewForStudentView: UIView!
     @IBOutlet weak var studentImageView: UIImageView!
@@ -59,11 +65,12 @@ class ProfileViewController: UIViewController {
     var editProfile = false
     var validation = Validation()
     var validationErrors = ValidationErrors()
+    var student: [Courses] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profile = makeIteaStudents()[0]
-
+        backgroundView(image: "profileBg", color: UIColor.red, alpha: 0.7)
         updateProfileUI()
         updateStudentInfo(profile: profile,edit: editProfile, style: .none, color: UIColor.clear)
         
@@ -80,14 +87,32 @@ class ProfileViewController: UIViewController {
         
         let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
         view.addGestureRecognizer(keyboardHide)
-        
+        self.addNextButtonOnKeyboardAge()
+        self.addNextButtonOnKeyboardPhone()
     }
+    
+    func showCancelButton(show: Bool) {
+        if show == true {
+            backButton.isHidden = true
+            cancelButton.isHidden = false
+            backArrowLeftImageView.isHidden = true
+            lastCourseButton.isHidden = true
+        } else {
+            backButton.isHidden = false
+            cancelButton.isHidden = true
+            backArrowLeftImageView.isHidden = false
+            lastCourseButton.isHidden = false
+        }
+    }
+    
     
 
     @IBAction func didTapEditProfileActionButton(_ sender: Any) {
+        showCancelButton(show: true)
         if editProfile == false {
             editProfile = true
-            editProfileButton.setTitle("сохранить", for: .normal)
+            editProfileButton.setTitle("SAVE!", for: .normal)
+            editImageView.isHidden = true
             updateStudentInfo(profile: profile, edit: editProfile, style: .roundedRect, color: UIColor.white)
         } else {
             let validation = validateEditProfile(inputName: nameTextField.text ?? "",
@@ -98,15 +123,19 @@ class ProfileViewController: UIViewController {
             if validation == true {
                 let saveAlertController = UIAlertController(title: "Внимание!", message: "Cохранить внесенные изменения?", preferredStyle: .alert)
                 let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
-                    self.editProfile = false
                     self.saveStudentInfo()
+                    
+                    self.editProfile = false
+                    self.editImageView.isHidden = false
                     self.updateStudentInfo(profile: self.profile, edit: self.editProfile, style: .none, color: UIColor.clear)
-                    self.editProfileButton.setTitle("редактировать", for: .normal)
+                    self.editProfileButton.setTitle("", for: .normal)
+                    self.showCancelButton(show: false)
                 }
                 let cancseAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
                     self.editProfile = false
+                    self.editImageView.isHidden = false
                     self.updateStudentInfo(profile: self.profile, edit: self.editProfile, style: .none, color: UIColor.clear)
-                    self.editProfileButton.setTitle("редактировать", for: .normal)
+                    self.editProfileButton.setTitle("", for: .normal)
                 }
                 saveAlertController.addAction(cancseAction)
                 saveAlertController.addAction(saveAction)
@@ -118,6 +147,13 @@ class ProfileViewController: UIViewController {
             }
         }
     }
+    @IBAction func didTapCancelActionButton(_ sender: Any) {
+       editProfile = false
+       editImageView.isHidden = false
+       editProfileButton.setTitle("", for: .normal)
+       showCancelButton(show: false)
+        updateStudentInfo(profile: profile, edit: editProfile, style: .none, color: UIColor.clear)
+    }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {
         navigationController?.popViewController(animated: false)
@@ -127,7 +163,7 @@ class ProfileViewController: UIViewController {
     @IBAction func didTapLastCourse(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LastCoursesViewController") as! LastCoursesViewController
-        
+        viewController.recieveStudentInfo = profile
         navigationController?.pushViewController(viewController, animated: true)
         
         
@@ -163,6 +199,7 @@ class ProfileViewController: UIViewController {
         
         nameTextField.isEnabled = edit
         lastNameTextField.isEnabled = edit
+        lastNameTextField.textColor = UIColor.black
         ageTextField.isEnabled = edit
         cityTextField.isEnabled = edit
         birhdayTextField.isEnabled = edit
@@ -190,6 +227,17 @@ class ProfileViewController: UIViewController {
         courentCourseTextField.backgroundColor = color
         workPlaceTextField.borderStyle = style
         workPlaceTextField.backgroundColor = color
+        
+        if nameTextField.isEnabled == true {
+            nameTextField.textColor = UIColor.black
+        } else {
+            nameTextField.textColor = UIColor.white
+        }
+        if lastNameTextField.isEnabled == true {
+            lastNameTextField.textColor = UIColor.black
+        } else {
+            lastNameTextField.textColor = UIColor.white
+        }
         
     }
 }
@@ -243,17 +291,23 @@ extension ProfileViewController: UITextFieldDelegate {
         switch textField {
         case nameTextField:
             nameValidationErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            nameValidationTextLabel.text = ""
         case lastNameTextField:
             lastNameValidationHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            lastNameValidationTextLabel.text = ""
         case emailTextField:
             emailValidationErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            emailValidationTextLabel.text = ""
         case phoneTextField:
             phoneValidationErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            phoneValidationTextLabel.text = ""
         default:
             nameValidationErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
         }
         
     }
+    
+    
 }
 
 
@@ -316,8 +370,39 @@ extension ProfileViewController {
         viewForStudentView.layer.shadowOffset = CGSize(width: 3, height: 3)
         viewForStudentView.layer.shadowRadius = 12.0
         viewForStudentView.layer.shadowOpacity = 0.4
+        
+        studentUserBlurImageView.image = UIImage(named: profile.userPicture ?? "noCourseImage")
+        studentUserBlurImageView.contentMode = .scaleAspectFill
+        studentUserBlurImageView.alpha = 0.1
+        
+//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.systemUltraThinMaterialLight)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//               blurEffectView.frame = view.bounds
+//               blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//
+//
+//               let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+//               backgroundImage.image = UIImage(named: backgroundPictureFromUser)
+//               backgroundImage.contentMode = .scaleAspectFill
+//
+//               view.addSubview(blurEffectView)
+//               view.addSubview(backgroundImage)
+//               self.view.sendSubviewToBack(blurEffectView)
+//               self.view.sendSubviewToBack(backgroundImage)
 
-        studentImageView.image = UIImage(named: "noCourseImage")
+        lastCourseButton.clipsToBounds = true
+        lastCourseButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        lastCourseButton.layer.cornerRadius = 12.0
+        lastCourseButton.isOpaque = true
+        lastCourseButton.layer.masksToBounds = false
+        lastCourseButton.layer.shadowColor = UIColor.black.cgColor
+        lastCourseButton.layer.shadowOpacity = 0.5
+        lastCourseButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+        lastCourseButton.layer.shadowRadius = 12.0
+        
+        //
+
+        studentImageView.image = UIImage(named: profile.userPicture ?? "noCourseImage")
         studentImageView.clipsToBounds = true
         studentImageView.contentMode = .scaleAspectFill
         studentImageView.layer.cornerRadius = studentImageView.frame.width / 2
@@ -331,6 +416,26 @@ extension ProfileViewController {
         nameStudentView.layer.shadowOffset = CGSize(width: 10, height: 10)
         nameStudentView.layer.shadowRadius = 30.0
         nameStudentView.layer.shadowOpacity = 0.4
+        
+//        profileInfoView
+        
+        let blurEffect = UIBlurEffect(style: .systemThickMaterialLight)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.clipsToBounds = true
+        blurView.layer.cornerRadius = 12
+        profileInfoView.insertSubview(blurView, at: 0)
+
+        NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: profileInfoView.heightAnchor), blurView.widthAnchor.constraint(equalTo: profileInfoView.widthAnchor),
+        ])
+        
+        profileInfoView.layer.masksToBounds = false
+        profileInfoView.layer.shadowColor = UIColor.black.cgColor
+        profileInfoView.layer.shadowOpacity = 0.3
+        profileInfoView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        profileInfoView.layer.shadowRadius = 6.0
+        
+        
         
     }
 }

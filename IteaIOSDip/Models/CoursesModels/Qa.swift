@@ -19,7 +19,6 @@ func makeQaCourses() -> CourseFlow {
     qaBase.courseImage = "qaBase"
     qaBase.courseHeaderImage = "qaHeader"
    
-
     let qaAdvanced = Courses()
     qaAdvanced.courseName = "Продвинутый курс QA"
     qaAdvanced.courseDescription = qaCoursesDescrioption()[1].courseDescriotion
@@ -35,7 +34,7 @@ func makeQaCourses() -> CourseFlow {
     qaAutomation.courseProgram = qaCoursesDescrioption()[2].courseProgram
     qaAutomation.courseImage = "qaAutomation"
     qaAutomation.courseHeaderImage = "qaHeader"
-        
+    
     let qa = CourseFlow()
     qa.name = "QA Testing"
     qa.courseType = "qa"
@@ -48,4 +47,3 @@ func makeQaCourses() -> CourseFlow {
         
      return qa
 }
-

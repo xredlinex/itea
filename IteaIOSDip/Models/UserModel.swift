@@ -18,48 +18,52 @@ class IteaStudent {
     var phoneNumber: String?
     var password: String?
     var userPicture: String?
-    var studentCourses: [StudentCourses]?
+    var studentNextCourse: String?
     var studenCurrentCourse: String?
+    var studentLastCourses: [String]?
     var workPlace: String?
-    
-    
-//    var nextCourse: [Courses]?  /* OBJECT*/
-//    var completedCourses: [Courses]?       /* ARRAY OF OBJECTS*/
+    var studentCourses: [StudentCourses]?
+
 }
 
-
-func makeIteaStudents() -> [IteaStudent] {
-    let student = IteaStudent()
-    student.name = "Name"
-    student.lastName = "Last NAME"
-    student.password = "rediredi"
-    student.mail = "redi@gmail.com"
-    return [student]
-}
 
 
 class StudentCourses {
-    var nextCourse: [Courses]?
-    var completedCourse: [Courses]?
-    var currentCourse = Courses()
-    
-    
-    init(nextCourse: [Courses], completedCourses: [Courses]) {
-        self.nextCourse = nextCourse
-        self.completedCourse = completedCourses
-    }
+    var courseProgress: String?
+    var courses: [Courses]?
+
 }
 
 
 
 
-//func studentCourse() -> [StudentCourse] {
-//
-//    let nextCourses = StudentCourse()
-//    nextCourses.courses = []
-//    let completedCourse = StudentCourse()
-//    completedCourse.courses = []
-//
-//    return [nextCourses, completedCourse]
-//}
 
+
+
+
+//
+//func coursesList() -> [Courses] {
+//    
+//    var list: [Courses] = []
+//    
+//    list = IteaCourse().makeCoursesFlow()
+//
+//    
+//    
+//    
+//    
+//    return []
+//    
+//    
+//}
+//
+//
+//class StudentFakeCourse {
+//    
+//    
+//    
+//    
+//    
+//    
+//    
+//}

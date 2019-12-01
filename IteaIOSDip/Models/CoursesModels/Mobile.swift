@@ -17,6 +17,7 @@ func makeMobileCourses() -> CourseFlow {
     iosBase.courseProgram = mobileCoursesDescrioption()[0].courseProgram
     iosBase.courseImage = "iosBase"
     iosBase.courseHeaderImage = "iosHeader"
+    iosBase.courseID = "1001"
 
     let iosAdvanced = Courses()
     iosAdvanced.courseName = "Продвинутый курс IOS"
@@ -25,6 +26,7 @@ func makeMobileCourses() -> CourseFlow {
     iosAdvanced.courseProgram = mobileCoursesDescrioption()[1].courseProgram
     iosAdvanced.courseImage = "iosAdvanced"
     iosAdvanced.courseHeaderImage = "iosHeader"
+    iosAdvanced.courseID = "1002"
     
     let ios = TypesOfProgrammingFlow()
     ios.name = "IOS"
