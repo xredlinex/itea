@@ -23,7 +23,6 @@ class CoursesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     @IBAction func didTapDetailedActionButton(_ sender: Any) {
@@ -31,8 +30,7 @@ class CoursesTableViewCell: UITableViewCell {
     }
 }
 
-
-//  MARK: 
+//  MARK: - UPDATE CELL INFO - 
 extension CoursesTableViewCell {
     
     func updateCourseInfo(course: Courses) {

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class FilterViewController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
@@ -87,7 +86,7 @@ class FilterViewController: UIViewController {
             uiDesignFilterTapRadioBattonsView(view: view)
         }
 
-//  MARK: - SET TAP GESTURE RECOGNIZER
+//  MARK: - SET TAP GESTURE RECOGNIZER - 
         nightCheckView.isUserInteractionEnabled = true
         dayCheckView.isUserInteractionEnabled = true
         allFlowView.isUserInteractionEnabled = true

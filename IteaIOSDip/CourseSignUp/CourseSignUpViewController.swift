@@ -8,12 +8,8 @@
 
 import UIKit
 
-
-
-
 class CourseSignUpViewController: UIViewController {
 
-    
     @IBOutlet weak var headerLogoImageView: UIImageView!
     @IBOutlet weak var signInTextLabel: UILabel!
     @IBOutlet weak var nameBorderView: UIView!
@@ -52,14 +48,14 @@ class CourseSignUpViewController: UIViewController {
     var recieveCourse = Courses()
     var validationErrors = ValidationErrors()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         uiCourseSignUp()
+        signUpButton.iteaButton()
+        
         setDefaultLocation(0)
         course = recieveCourse
         signUpCourse(course: course, location: courseLocation)
-
 
 //  MARK: - KEYBOARD HIDE
         let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
@@ -79,14 +75,12 @@ class CourseSignUpViewController: UIViewController {
                                                       inputPhone: phoneNumberTextField.text ?? "")
                 if validate == true {
                     errorAlert(title: "Спасибо", message: "Вы записались на курс \(course.courseName ?? "")!")
-//                    let storyboard = UIStoryboard(name: "Courses", bundle: nil)
-//                    let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesFlowViewController") as! CoursesFlowViewController
-//                    navigationController?.pushViewController(viewController, animated: true)
-                    
+                    let storyboard = UIStoryboard(name: "Courses", bundle: nil)
+                    let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesFlowViewController") as! CoursesFlowViewController
+                    navigationController?.pushViewController(viewController, animated: true)
                 } else {
                     errorAlert(title: "Внимание!", message: validationErrors.errorKey(.validationError))
                 }
-                
             } else {
                 errorAlert(title: "Хотите на курсы?", message: "Заполните все поля")
             }
@@ -94,8 +88,6 @@ class CourseSignUpViewController: UIViewController {
         else {
             errorAlert(title: validationErrors.errorKey(.error), message: validationErrors.errorKey(.invalidPolicy))
         }
-
-    
     }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {
@@ -119,74 +111,11 @@ class CourseSignUpViewController: UIViewController {
     }
 }
 
-extension CourseSignUpViewController {
-    
-    func errorAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
-        }
-        alertController.addAction(alertAction)
-        present(alertController, animated: true, completion: nil)
-        
-        
-        
-    }
-    
-    
-}
 
 
 
 
-extension CourseSignUpViewController {
-    
-    func setDefaultLocation(_ location: Int) {
-       
-        firstLocationTextLabel.text = "Берестейская"
-        secondLocationTextLabel.text = "Позняки"
-        thirdLocationTextLabel.text = "ВДНХ"
-        
-        
-        
-        switch location {
-        case 1:
-            courseLocation = firstLocationTextLabel.text ?? ""
-            firstLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-            secondLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            thirdLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            firstLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
-            secondLocationCheckImageView.image = UIImage(systemName: "circle")
-            thirdLocationCheckImageView.image = UIImage(systemName: "circle")
-        case 2:
-            courseLocation = secondLocationTextLabel.text ?? ""
-            firstLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            secondLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-            thirdLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            firstLocationCheckImageView.image = UIImage(systemName: "circle")
-            secondLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
-            thirdLocationCheckImageView.image = UIImage(systemName: "circle")
-        case 3:
-            courseLocation = thirdLocationTextLabel.text ?? ""
-            firstLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            secondLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            thirdLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-            firstLocationCheckImageView.image = UIImage(systemName: "circle")
-            secondLocationCheckImageView.image = UIImage(systemName: "circle")
-            thirdLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
-        default:
-            courseLocation = firstLocationTextLabel.text ?? ""
-            firstLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-            secondLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            thirdLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
-            firstLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
-            secondLocationCheckImageView.image = UIImage(systemName: "circle")
-            thirdLocationCheckImageView.image = UIImage(systemName: "circle")
-        }
-        kommentsTextView.text = "Я хочу записаться на курсы \(course.courseName ?? ""), локация \(courseLocation)."
-    }
-    
-    
-}
+
 
 extension CourseSignUpViewController: UITextViewDelegate {
 
@@ -220,17 +149,7 @@ extension CourseSignUpViewController {
         
         headerLogoImageView.image = UIImage(named: "maxresdefault")
                headerLogoImageView.contentMode = .scaleAspectFill
-        
-        signUpButton.clipsToBounds = true
-        signUpButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
-        signUpButton.layer.cornerRadius = 12.0
-        signUpButton.isOpaque = true
-        signUpButton.layer.masksToBounds = false
-        signUpButton.layer.shadowColor = UIColor.black.cgColor
-        signUpButton.layer.shadowOpacity = 0.5
-        signUpButton.layer.shadowOffset = CGSize(width: 10, height: 10)
-        signUpButton.layer.shadowRadius = 12.0
-        
+
              chekBoxImageView.image = UIImage(systemName: "square")
    
         privicyTextLabel.text = """

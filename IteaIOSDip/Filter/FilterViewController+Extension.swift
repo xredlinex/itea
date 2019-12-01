@@ -171,7 +171,6 @@ extension FilterViewController {
         qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         
-        
         for flowItems in flow {
             if flowItems.courseType == "front" {
                 sortbyType.append(flowItems)

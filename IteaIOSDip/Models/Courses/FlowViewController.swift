@@ -32,7 +32,10 @@ class FlowViewController: UIViewController {
 
         flow = recieveFlow
         flowDescription(course: flow)
-        updateCoursesFlow()
+        goToCoursesButton.iteaButton()
+        backgroundView(image: "bg", color: UIColor.clear, alpha: 1)
+        descriptionView.blurDetailView()
+        levelView.blurDetailView()
     }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {
@@ -40,7 +43,6 @@ class FlowViewController: UIViewController {
     }
     
     @IBAction func didTapGoToCoursesAction(_ sender: Any) {
-        
         let storyboard = UIStoryboard(name: "Courses", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesViewController") as! CoursesViewController
         viewController.recieveFlow = recieveFlow
@@ -48,7 +50,6 @@ class FlowViewController: UIViewController {
     }
     
     @IBAction func didTapGoToCoursesActionButton(_ sender: Any) {
-        
         if recieveFlow.isProgrammingLanguage == true{
             let storyboard = UIStoryboard(name: "Courses", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "ProgrammingFlowViewController") as! ProgrammingFlowViewController
@@ -59,42 +60,6 @@ class FlowViewController: UIViewController {
             let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesViewController") as! CoursesViewController
             viewController.recieveFlow = recieveFlow
             navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
-}
-
-
-
-//  MARK: - DESCRIPTION COURSE INFO -
-extension FlowViewController {
-
-    func flowDescription(course: CourseFlow) {
-//      flow name
-        flowNameTextLabel.text = flow.name ?? "---"
-        flowNameTextLabel.text = flowNameTextLabel.text?.uppercased()
-        
-//        header image
-        headerCourseImage.contentMode = .scaleAspectFit
-        if let image = flow.flowHeaderImage, image != "" {
-            headerCourseImage.image = UIImage(named: flow.flowHeaderImage ?? "noImage")
-         } else {
-            screenHeaderHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-         }
-        
-//        description
-        if let descript = flow.typeDescription, descript != "" {
-            flowDiscriptionTextLabel.text = descript
-        } else {
-            hideDescriptionHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-            flowDescriptionView.isHidden = true
-        }
-        
-//        level decription
-        if let level = flow.typeLevelDescriptiom, level != "" {
-            flowLevelTextLabel.text = level
-        } else {
-            hideLevelHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-            flowLevelView.isHidden = true
         }
     }
 }

@@ -136,7 +136,56 @@ extension CourseSignUpViewController {
 
 
 
-
+//  MARK: - SET LOCATION / RADIO BUTTONS / ETC
+extension CourseSignUpViewController {
+    
+    func setDefaultLocation(_ location: Int) {
+       
+        firstLocationTextLabel.text = "Берестейская"
+        secondLocationTextLabel.text = "Позняки"
+        thirdLocationTextLabel.text = "ВДНХ"
+        
+        
+        
+        switch location {
+        case 1:
+            courseLocation = firstLocationTextLabel.text ?? ""
+            firstLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+            secondLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            thirdLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            firstLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
+            secondLocationCheckImageView.image = UIImage(systemName: "circle")
+            thirdLocationCheckImageView.image = UIImage(systemName: "circle")
+        case 2:
+            courseLocation = secondLocationTextLabel.text ?? ""
+            firstLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            secondLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+            thirdLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            firstLocationCheckImageView.image = UIImage(systemName: "circle")
+            secondLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
+            thirdLocationCheckImageView.image = UIImage(systemName: "circle")
+        case 3:
+            courseLocation = thirdLocationTextLabel.text ?? ""
+            firstLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            secondLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            thirdLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+            firstLocationCheckImageView.image = UIImage(systemName: "circle")
+            secondLocationCheckImageView.image = UIImage(systemName: "circle")
+            thirdLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
+        default:
+            courseLocation = firstLocationTextLabel.text ?? ""
+            firstLocationTextLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+            secondLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            thirdLocationTextLabel.font = UIFont.systemFont(ofSize: 16)
+            firstLocationCheckImageView.image = UIImage(systemName: "largecircle.fill.circle")
+            secondLocationCheckImageView.image = UIImage(systemName: "circle")
+            thirdLocationCheckImageView.image = UIImage(systemName: "circle")
+        }
+        kommentsTextView.text = "Я хочу записаться на курсы \(course.courseName ?? ""), локация \(courseLocation)."
+    }
+    
+    
+}
 
 
 
@@ -192,4 +241,16 @@ extension CourseSignUpViewController {
     @objc func nextButtonActionPhone() {
            phoneNumberTextField.resignFirstResponder()
        }
+}
+
+//  MARK: - ALERT ACTION -
+extension CourseSignUpViewController {
+    
+    func errorAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
+        }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
 }

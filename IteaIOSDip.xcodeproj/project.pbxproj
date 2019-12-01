@@ -88,6 +88,7 @@
 		97C8F0922392B2BD000D54D3 /* StudentInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8F0912392B2BD000D54D3 /* StudentInit.swift */; };
 		97DF63442382979C00C6D5A6 /* FlowCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF63432382979C00C6D5A6 /* FlowCourses.swift */; };
 		97DF634623829A2700C6D5A6 /* Qa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF634523829A2700C6D5A6 /* Qa.swift */; };
+		97EB1ADE239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		97C8F0912392B2BD000D54D3 /* StudentInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInit.swift; sourceTree = "<group>"; };
 		97DF63432382979C00C6D5A6 /* FlowCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCourses.swift; sourceTree = "<group>"; };
 		97DF634523829A2700C6D5A6 /* Qa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qa.swift; sourceTree = "<group>"; };
+		97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgrammingFlowViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +357,7 @@
 				977AC36E238D71E0003C2800 /* CoursesViewController.swift */,
 				97BD3283238D95B4002A2F06 /* CoursesViewController+Extension.swift */,
 				977AC35B238D705E003C2800 /* ProgrammingFlowViewController.swift */,
+				97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */,
 				97BD3281238D948C002A2F06 /* Courses.storyboard */,
 				97BD328B238D97D2002A2F06 /* CourseDecription */,
 				97BD3285238D9652002A2F06 /* CoursesFlowCell */,
@@ -611,6 +614,7 @@
 				9717BD402381FE40000A2357 /* Management.swift in Sources */,
 				972CB6F42382AB5200E68BAC /* Validation.swift in Sources */,
 				97BD3284238D95B4002A2F06 /* CoursesViewController+Extension.swift in Sources */,
+				97EB1ADE239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift in Sources */,
 				977AC36F238D71E0003C2800 /* CoursesTableViewCell.swift in Sources */,
 				97AF59F22387F3EB008E57F2 /* ProfileViewController.swift in Sources */,
 				9717BD092381F360000A2357 /* SceneDelegate.swift in Sources */,
