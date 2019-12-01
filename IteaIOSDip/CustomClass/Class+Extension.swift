@@ -18,8 +18,6 @@ extension UIColor {
   }
 }
 
-
-
 extension UIViewController {
     func backgroundView(image: String, color: UIColor, alpha: CGFloat) {
         
@@ -33,7 +31,22 @@ extension UIViewController {
         view.addSubview(backgroundForImage)
         self.view.sendSubviewToBack(backgroundForImage)
         self.view.sendSubviewToBack(backgroundImage)
-        
-        
+    }
+}
+
+extension UIButton {
+    public func iteaButton() {
+//        let button = UIButton(type: .system)
+        let button = self
+        button.clipsToBounds = true
+        button.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+        button.layer.cornerRadius = 12.0
+        button.isOpaque = true
+        button.layer.masksToBounds = false
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = CGSize(width: 10, height: 10)
+        button.layer.shadowRadius = 12.0
+
     }
 }

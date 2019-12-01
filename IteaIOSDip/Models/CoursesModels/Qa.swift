@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 func makeQaCourses() -> CourseFlow {
  
     let qaBase = Courses()

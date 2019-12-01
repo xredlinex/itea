@@ -23,47 +23,9 @@ class IteaStudent {
     var studentLastCourses: [String]?
     var workPlace: String?
     var studentCourses: [StudentCourses]?
-
 }
-
-
 
 class StudentCourses {
     var courseProgress: String?
     var courses: [Courses]?
-
 }
-
-
-
-
-
-
-
-
-//
-//func coursesList() -> [Courses] {
-//    
-//    var list: [Courses] = []
-//    
-//    list = IteaCourse().makeCoursesFlow()
-//
-//    
-//    
-//    
-//    
-//    return []
-//    
-//    
-//}
-//
-//
-//class StudentFakeCourse {
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//}

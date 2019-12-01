@@ -11,23 +11,19 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var cancelButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var backArrowLeftImageView: UIImageView!
-    
-    @IBOutlet weak var profileInfoView: UIView!
-    
-    @IBOutlet weak var studentUserBlurImageView: UIImageView!
-    
-    @IBOutlet weak var editImageView: UIImageView!
+    @IBOutlet weak var lastCourseButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var editProfileButton: UIButton!
-    @IBOutlet weak var viewForStudentView: UIView!
+    @IBOutlet weak var backArrowLeftImageView: UIImageView!
+    @IBOutlet weak var studentUserBlurImageView: UIImageView!
     @IBOutlet weak var studentImageView: UIImageView!
+    @IBOutlet weak var profileInfoView: UIView!
+    @IBOutlet weak var viewForStudentView: UIView!
     @IBOutlet weak var nameStudentView: UIView!
+    @IBOutlet weak var editImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var birhdayTextField: UITextField!
@@ -36,21 +32,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var courentCourseTextField: UITextField!
     @IBOutlet weak var workPlaceTextField: UITextField!
     @IBOutlet weak var nameValidationTextLabel: UILabel!
-    
     @IBOutlet weak var lastNameValidationTextLabel: UILabel!
-    
     @IBOutlet weak var ageValidationTextLabel: UILabel!
     @IBOutlet weak var cityValidationTextLabel: UILabel!
     @IBOutlet weak var birthdayValidationTextLabel: UILabel!
     @IBOutlet weak var emailValidationTextLabel: UILabel!
-    @IBOutlet weak var lastCourseButton: UIButton!
     @IBOutlet weak var phoneValidationTextLabel: UILabel!
     @IBOutlet weak var curentCourseValidationTextLabel: UILabel!
     @IBOutlet weak var workPlaceValidationTextLabel: UILabel!
     @IBOutlet weak var nameValidationErrorHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var lastNameValidationHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var ageValidationErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cityValidationErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var birthdayValidationErrorHeightConstraint: NSLayoutConstraint!
@@ -58,22 +49,26 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var phoneValidationErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var currentCourseValidationErrorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var workValidationErrorHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
     
     var profile = IteaStudent()
     var editProfile = false
     var validation = Validation()
     var validationErrors = ValidationErrors()
-    var student: [Courses] = []
+    var flow: [CourseFlow] = []
+    var studentCourses = [StudentCourses]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profile = makeIteaStudents()[0]
+        
+        flow = IteaCourse().makeCoursesFlow()
+        studentCourses = makeStudentCourses(courses: flow, student: profile)
+        updateStudentInfo(profile: profile,edit: editProfile, style: .none, color: UIColor.clear)
         backgroundView(image: "profileBg", color: UIColor.red, alpha: 0.7)
         updateProfileUI()
-        updateStudentInfo(profile: profile,edit: editProfile, style: .none, color: UIColor.clear)
-        
+        lastCourseButton.iteaButton()
+        logOutButton.iteaButton()
         
         nameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -91,22 +86,6 @@ class ProfileViewController: UIViewController {
         self.addNextButtonOnKeyboardPhone()
     }
     
-    func showCancelButton(show: Bool) {
-        if show == true {
-            backButton.isHidden = true
-            cancelButton.isHidden = false
-            backArrowLeftImageView.isHidden = true
-            lastCourseButton.isHidden = true
-        } else {
-            backButton.isHidden = false
-            cancelButton.isHidden = true
-            backArrowLeftImageView.isHidden = false
-            lastCourseButton.isHidden = false
-        }
-    }
-    
-    
-
     @IBAction func didTapEditProfileActionButton(_ sender: Any) {
         showCancelButton(show: true)
         if editProfile == false {
@@ -119,12 +98,10 @@ class ProfileViewController: UIViewController {
                                                             inputLastName: lastNameTextField.text ?? "",
                                                             inputMail: emailTextField.text ?? "",
                                                             inputPhone: phoneTextField.text ?? "")
-            
             if validation == true {
                 let saveAlertController = UIAlertController(title: "Внимание!", message: "Cохранить внесенные изменения?", preferredStyle: .alert)
                 let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
                     self.saveStudentInfo()
-                    
                     self.editProfile = false
                     self.editImageView.isHidden = false
                     self.updateStudentInfo(profile: self.profile, edit: self.editProfile, style: .none, color: UIColor.clear)
@@ -143,15 +120,14 @@ class ProfileViewController: UIViewController {
                 
             } else {
                 showAlertErrorAction(title: "Внимание!", message: "Поля заполнены неправильно!")
-                
             }
         }
     }
     @IBAction func didTapCancelActionButton(_ sender: Any) {
-       editProfile = false
-       editImageView.isHidden = false
-       editProfileButton.setTitle("", for: .normal)
-       showCancelButton(show: false)
+        editProfile = false
+        editImageView.isHidden = false
+        editProfileButton.setTitle("", for: .normal)
+        showCancelButton(show: false)
         updateStudentInfo(profile: profile, edit: editProfile, style: .none, color: UIColor.clear)
     }
     
@@ -159,18 +135,28 @@ class ProfileViewController: UIViewController {
         navigationController?.popViewController(animated: false)
     }
     
-    
     @IBAction func didTapLastCourse(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "LastCoursesViewController") as! LastCoursesViewController
-        viewController.recieveStudentInfo = profile
+        viewController.recieveCourses = studentCourses
         navigationController?.pushViewController(viewController, animated: true)
-        
-        
     }
     
+    @IBAction func didTapLogOutButton(_ sender: Any) {
+        let logOutAlert = UIAlertController(title: "Log Out?", message: "Хотите выйти из аккаунта?", preferredStyle: .alert)
+        let logOutAction = UIAlertAction(title: "Yes", style: .default) { (_) in
+            let storuboard = UIStoryboard(name: "Aauthorization", bundle: nil)
+            let viewController = storuboard.instantiateViewController(withIdentifier: "AuthenticationViewController") as! AuthenticationViewController
+            self.navigationController?.pushViewController(viewController, animated: false)
+        }
+        let cancelAction = UIAlertAction(title: "No", style: .cancel) { (_) in}
+        logOutAlert.addAction(logOutAction)
+        logOutAlert.addAction(cancelAction)
+        present(logOutAlert, animated: true, completion: nil)
+    }
+
+    
     func saveStudentInfo() {
-        
         profile.name = nameTextField.text
         profile.lastName = lastNameTextField.text
         profile.age = Int(ageTextField.text ?? "0")
@@ -180,10 +166,7 @@ class ProfileViewController: UIViewController {
         profile.phoneNumber = phoneTextField.text
         profile.studenCurrentCourse = courentCourseTextField.text
         profile.workPlace = workPlaceTextField.text
-        
     }
-    
-    
     
     func updateStudentInfo(profile: IteaStudent, edit: Bool, style: UITextField.BorderStyle, color: UIColor) {
         
@@ -207,7 +190,6 @@ class ProfileViewController: UIViewController {
         phoneTextField.isEnabled = edit
         courentCourseTextField.isEnabled = edit
         workPlaceTextField.isEnabled = edit
-        
         
         nameTextField.borderStyle = style
         nameTextField.backgroundColor = color
@@ -238,7 +220,6 @@ class ProfileViewController: UIViewController {
         } else {
             lastNameTextField.textColor = UIColor.white
         }
-        
     }
 }
 
@@ -390,15 +371,15 @@ extension ProfileViewController {
 //               self.view.sendSubviewToBack(blurEffectView)
 //               self.view.sendSubviewToBack(backgroundImage)
 
-        lastCourseButton.clipsToBounds = true
-        lastCourseButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
-        lastCourseButton.layer.cornerRadius = 12.0
-        lastCourseButton.isOpaque = true
-        lastCourseButton.layer.masksToBounds = false
-        lastCourseButton.layer.shadowColor = UIColor.black.cgColor
-        lastCourseButton.layer.shadowOpacity = 0.5
-        lastCourseButton.layer.shadowOffset = CGSize(width: 10, height: 10)
-        lastCourseButton.layer.shadowRadius = 12.0
+//        lastCourseButton.clipsToBounds = true
+//        lastCourseButton.layer.backgroundColor = UIColor(red: 111/255, green: 169/255, blue: 145/255, alpha: 1).cgColor
+//        lastCourseButton.layer.cornerRadius = 12.0
+//        lastCourseButton.isOpaque = true
+//        lastCourseButton.layer.masksToBounds = false
+//        lastCourseButton.layer.shadowColor = UIColor.black.cgColor
+//        lastCourseButton.layer.shadowOpacity = 0.5
+//        lastCourseButton.layer.shadowOffset = CGSize(width: 10, height: 10)
+//        lastCourseButton.layer.shadowRadius = 12.0
         
         //
 

@@ -12,14 +12,14 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="eZ0-J1-6Zg" customClass="ProfileViewController" customModule="IteaIOSDip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHH-VE-Jtn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-yB-XHy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="872"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1022"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-TK-FZ4">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="932"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq5-Tk-RZa">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="160"/>
@@ -467,12 +467,26 @@
                                                     <constraint firstItem="a1W-bg-Z5M" firstAttribute="leading" secondItem="wjh-uG-R8D" secondAttribute="leading" id="zek-8W-QGR"/>
                                                 </constraints>
                                             </view>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-lQ-vCJ">
+                                                <rect key="frame" x="117" y="862" width="180" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NPC-gD-v4L"/>
+                                                </constraints>
+                                                <state key="normal" title="Log Out!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapLogOutButton:" destination="eZ0-J1-6Zg" eventType="touchUpInside" id="AAc-Tr-p02"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="gpN-oQ-hw4" secondAttribute="bottom" constant="20" id="2EM-yq-EYm"/>
+                                            <constraint firstItem="sCY-lQ-vCJ" firstAttribute="trailing" secondItem="gpN-oQ-hw4" secondAttribute="trailing" id="2eB-Kz-Mtw"/>
                                             <constraint firstAttribute="trailing" secondItem="kub-l8-sY2" secondAttribute="trailing" id="2vu-bt-D7s"/>
                                             <constraint firstItem="3YP-fa-nUK" firstAttribute="top" secondItem="Yq5-Tk-RZa" secondAttribute="bottom" constant="18" id="5Nd-k0-EhO"/>
+                                            <constraint firstItem="sCY-lQ-vCJ" firstAttribute="leading" secondItem="gpN-oQ-hw4" secondAttribute="leading" id="FaG-lU-XRw"/>
+                                            <constraint firstAttribute="bottom" secondItem="sCY-lQ-vCJ" secondAttribute="bottom" constant="30" id="H4w-Jr-OKP"/>
                                             <constraint firstItem="Mw7-yP-3bL" firstAttribute="trailing" secondItem="3YP-fa-nUK" secondAttribute="trailing" id="X3m-aZ-ZlC"/>
                                             <constraint firstItem="Yq5-Tk-RZa" firstAttribute="top" secondItem="kub-l8-sY2" secondAttribute="bottom" id="YW1-v1-0Wq"/>
                                             <constraint firstItem="Mw7-yP-3bL" firstAttribute="leading" secondItem="3YP-fa-nUK" secondAttribute="leading" id="cI6-tY-xaq"/>
@@ -485,6 +499,7 @@
                                             <constraint firstItem="Yq5-Tk-RZa" firstAttribute="leading" secondItem="lfn-TK-FZ4" secondAttribute="leading" id="sHh-DN-3JU"/>
                                             <constraint firstItem="gpN-oQ-hw4" firstAttribute="centerX" secondItem="lfn-TK-FZ4" secondAttribute="centerX" id="v4j-bv-7Xf"/>
                                             <constraint firstItem="kub-l8-sY2" firstAttribute="top" secondItem="lfn-TK-FZ4" secondAttribute="top" id="vPq-MF-Hwd"/>
+                                            <constraint firstItem="sCY-lQ-vCJ" firstAttribute="top" secondItem="gpN-oQ-hw4" secondAttribute="bottom" constant="30" id="xQY-dG-XyD"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -507,7 +522,7 @@
                         <viewLayoutGuide key="safeArea" id="0MW-hZ-pTm"/>
                     </view>
                     <navigationItem key="navigationItem" id="fVd-FC-ccG"/>
-                    <size key="freeformSize" width="414" height="950"/>
+                    <size key="freeformSize" width="414" height="1100"/>
                     <connections>
                         <outlet property="ageTextField" destination="Yat-b4-ido" id="hsD-J0-3ya"/>
                         <outlet property="ageValidationErrorHeightConstraint" destination="8OE-yr-RAO" id="Bbe-2I-1jC"/>
@@ -534,6 +549,7 @@
                         <outlet property="lastNameTextField" destination="7gs-nf-5Ck" id="HwR-Iz-Ysp"/>
                         <outlet property="lastNameValidationHeightConstraint" destination="UM9-fX-Vb7" id="sxY-ju-1E7"/>
                         <outlet property="lastNameValidationTextLabel" destination="k4K-zn-5l7" id="iiP-JX-2xp"/>
+                        <outlet property="logOutButton" destination="sCY-lQ-vCJ" id="e3h-PA-nCX"/>
                         <outlet property="nameStudentView" destination="3YP-fa-nUK" id="g0u-Sn-45T"/>
                         <outlet property="nameTextField" destination="6ni-xN-Wbr" id="zDR-2N-veJ"/>
                         <outlet property="nameValidationErrorHeightConstraint" destination="pSF-9t-Tsf" id="mAc-HA-302"/>
@@ -630,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naa-kv-qb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2163.768115942029" y="56.919642857142854"/>
+            <point key="canvasLocation" x="1601" y="57"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qSO-Kn-7sA">
