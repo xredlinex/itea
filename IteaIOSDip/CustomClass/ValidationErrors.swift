@@ -29,7 +29,8 @@ class ValidationErrors {
         case validateMail
         case validatePhone
         case validatePassword
-
+        case validationError
+        case invalidPolicy
     }
 
     func errorKey(_ error: ErrorTextEnum) -> String {
@@ -68,6 +69,10 @@ class ValidationErrors {
             return "Телефон должен быть не больше и не меньше 12 символов и содержать '+'"
         case .validatePassword:
             return "Пароль должен быть меньнеше 16 символов, но и не меньше 6ти"
+        case .validationError:
+            return "Ошибка валидации полей! Будьте внимательней!"
+        case .invalidPolicy:
+            return "Oзнакомтесь с политекой конфиденциальности"
         }
     }
 }

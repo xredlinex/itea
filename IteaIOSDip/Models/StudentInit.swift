@@ -18,6 +18,6 @@ func makeIteaStudents() -> [IteaStudent] {
     student.studentNextCourse = "1002"
     student.studenCurrentCourse = "1001"
     student.userPicture = "redi"
-    
+    student.phoneNumber = "+380630771072"
     return [student]
 }

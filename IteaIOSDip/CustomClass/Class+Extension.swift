@@ -46,9 +46,23 @@ extension UIButton {
         button.layer.shadowOpacity = 0.5
         button.layer.shadowOffset = CGSize(width: 10, height: 10)
         button.layer.shadowRadius = 12.0
-
     }
-
-    
-    
 }
+
+extension UIView {
+    public func blurbuttons() {
+        let view = self
+        let blurEffect = UIBlurEffect(style: .prominent)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        view.insertSubview(blurView, at: 0)
+        blurView.clipsToBounds = true
+        blurView.layer.cornerRadius = 12.0
+        NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
+                                    blurView.widthAnchor.constraint(equalTo: view.widthAnchor)])
+    }
+}
+
+
+
+

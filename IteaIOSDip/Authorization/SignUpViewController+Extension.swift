@@ -9,7 +9,120 @@
 import Foundation
 import UIKit
 
+//  MARK: - ADD NEW STUDENT EXTENSION
+extension SignUpViewController {
+    func addNewStudent (inputName: String, inputLastName: String, inputAge: Int, inputMail: String, inputPhone: String, inputCity: String, inputPassword: String) -> IteaStudent {
+        let newStudent = IteaStudent()
+        newStudent.name = inputName
+        newStudent.lastName = inputLastName
+        newStudent.age = inputAge
+        newStudent.mail = inputMail
+        newStudent.phoneNumber = inputPhone
+        newStudent.city = inputCity
+        newStudent.password = inputPassword
+        return newStudent
+    }
+}
 
+//  MARK: - TEXT FIELDS DELEGATE -
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        bottomHeightConstraint.constant = 250
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField:
+            lastNameTextField.becomeFirstResponder()
+        case lastNameTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            phoneTextField.becomeFirstResponder()
+        case phoneTextField:
+            ageTextField.becomeFirstResponder()
+        case ageTextField:
+            cityTextField.becomeFirstResponder()
+        case cityTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            confirmPasswordTextField.becomeFirstResponder()
+        case confirmPasswordTextField:
+            confirmPasswordTextField.resignFirstResponder()
+            bottomHeightConstraint.constant = 0
+        default:
+            nameTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case nameTextField:
+            nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            nameErrorTextLabel.text = ""
+        case lastNameTextField:
+            lastNameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            lastNameErrorTextLabel.text = ""
+        case emailTextField:
+            emailWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            emailErrorTextLabel.text = ""
+        case phoneTextField:
+            phoneWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            phoneErrorTextLabel.text = ""
+        case ageTextField:
+            ageWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+        case cityTextField:
+            cityWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            cityErrorTextLabel.text = ""
+        case passwordTextField:
+            passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            passwordErrorTextLabel.text = ""
+        case confirmPasswordTextField:
+            passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            confirmPasswordErrorTextLabel.text = ""
+        default:
+            nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField {
+        case nameTextField:
+            nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case lastNameTextField:
+            lastNameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case emailTextField:
+            emailWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case phoneTextField:
+            phoneWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case ageTextField:
+            ageWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case cityTextField:
+            cityWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case passwordTextField:
+            passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        case confirmPasswordTextField:
+            passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        default:
+            nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+        }
+    }
+}
+
+//  MARK: - UNIVERSAL ALERT ACTION
+extension SignUpViewController {
+    func errorAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel) { (_) in
+        }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+}
+
+//  MARK: - VALIDATION EXTENSION -
 extension SignUpViewController {
     
     func validateError() {
@@ -49,5 +162,63 @@ extension SignUpViewController {
             validateFields = true
         }
         return validateFields
+    }
+}
+
+//  MARK: - ADD BUTTONS TO NUM KEYBOARDS TYPE - 
+extension SignUpViewController {
+    func addNextButtonOnKeyboardAge() {
+        let nextToolBar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        nextToolBar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let next = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextButtonActionAge))
+        
+        let item = [flexSpace, next]
+        nextToolBar.items = item
+        nextToolBar.sizeToFit()
+        ageTextField.inputAccessoryView = nextToolBar
+        }
+    
+    func addNextButtonOnKeyboardPhone() {
+        
+        let nextToolBar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        nextToolBar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let next = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextButtonActionPhone))
+        
+        let item = [flexSpace, next]
+        nextToolBar.items = item
+        nextToolBar.sizeToFit()
+        phoneTextField.inputAccessoryView = nextToolBar
+    }
+    
+    @objc func nextButtonActionAge(){
+        emailTextField.becomeFirstResponder()
+    }
+        
+    @objc func nextButtonActionPhone() {
+        cityTextField.becomeFirstResponder()
+    }
+}
+
+//  MARK: - USER INTEFACE UI / BUTTONS / VIEW / TEXT / IMAGES -
+extension SignUpViewController {
+    func updateSignUpUI() {
+        nameImageView.image = UIImage(systemName: "person")
+        lastNameImageView.image = UIImage(systemName: "person.2.fill")
+        ageImageView.image = UIImage(systemName: "calendar")
+        emailImageView.image = UIImage(systemName: "envelope")
+        phoneImageView.image = UIImage(systemName: "phone.down")
+        cityImageView.image = UIImage(systemName: "map")
+        passwordImageView.image = UIImage(systemName: "lock")
+        confirmPasswordImageView.image = UIImage(systemName: "hand.raised")
+        
+        policyTextLabel.text = """
+        Подписанием и отправкой настоящей заявки я подтверждаю, что я ознакомлен с
+        Политикой конфиденциальности и принимаю ее условия, включая регламентирующие обработку моих персональных данных, и согласен с ней.
+        """
+        policyImageView.image = UIImage(systemName: "square")
     }
 }

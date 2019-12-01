@@ -8,25 +8,10 @@
 
 import UIKit
 
-//  MARK: - UIELEMENTS DESIGN BUTTONS / VIEW/ MAKE RADIO BUTTONS / VC BACKGROUNDS
+//  MARK: - UIELEMENTS DESIGN BUTTONS / VIEW/ MAKE RADIO BUTTONS / VC BACKGROUNDS -
 extension FilterViewController {
     
     func uidesignFilter() {
-//        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//        let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-//        let blackBackgound = UIView(frame: UIScreen.main.bounds)
-//        backgroundImage.image = UIImage(named: "filterBackground")
-//        backgroundImage.contentMode = .scaleAspectFill
-//        backgroundForImage.backgroundColor = UIColor.red
-//        backgroundForImage.alpha = 0.7
-//        blackBackgound.backgroundColor = UIColor.black
-//        blackBackgound.alpha = 0.2
-//        view.addSubview(backgroundImage)
-//        view.addSubview(blackBackgound)
-//        view.addSubview(backgroundForImage)
-//        self.view.sendSubviewToBack(blackBackgound)
-//        self.view.sendSubviewToBack(backgroundForImage)
-//        self.view.sendSubviewToBack(backgroundImage)
                 
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.systemUltraThinMaterialLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -56,15 +41,6 @@ extension FilterViewController {
         view.layer.shadowOpacity = 0.5
         view.layer.shadowOffset = CGSize(width: 10, height: 10)
         view.layer.shadowRadius = 12.0
-        
-        saveFilterButton.clipsToBounds = true
-        saveFilterButton.layer.cornerRadius = 12.0
-        saveFilterButton.isOpaque = true
-        saveFilterButton.layer.masksToBounds = false
-        saveFilterButton.layer.shadowColor = UIColor.black.cgColor
-        saveFilterButton.layer.shadowOpacity = 0.5
-        saveFilterButton.layer.shadowOffset = CGSize(width: 10, height: 10)
-        saveFilterButton.layer.shadowRadius = 12.0
     }
     
     func makeRadioButtons(view: UIView) {
@@ -99,7 +75,7 @@ extension FilterViewController {
     }
 }
 
-//  MARK: - CHANGE SAVE BUTTON
+//  MARK: - CHANGE SAVE BUTTON -
 extension FilterViewController {
     func filterSaved(state: Bool) {
         if state == true {
@@ -113,7 +89,7 @@ extension FilterViewController {
     }
 }
 
-//  MARK: - ALERT EXTRNSION
+//  MARK: - ALERT EXTRNSION - 
 extension FilterViewController {
     
     func filterAlert(title: String, message: String) {
@@ -121,5 +97,136 @@ extension FilterViewController {
         let alertAction = UIAlertAction(title: "OK", style: .default) { (_) in}
         alertFiter.addAction(alertAction)
         present(alertFiter, animated: true, completion: nil)
+    }
+}
+
+//  MARK: - RADIO BUTTONS TAP ETC -
+extension FilterViewController {
+    
+    @objc func didNightTapAction() {
+        filterSaved(state: false)
+        sortbyDate = []
+        nightCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        dayCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+
+        for  flowItems in flow {
+            if flowItems.courseTime == "night" {
+                sortbyDate.append(flowItems)
+            }
+        }
+    }
+    
+    @objc func didDayTapAction() {
+        filterSaved(state: false)
+        sortbyDate = []
+        dayCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        nightCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        
+        for flowItems in flow {
+            if flowItems.courseTime == "day" {
+                sortbyDate.append(flowItems)
+            }
+        }
+    }
+    
+    @objc func didallFlowAction() {
+        filterSaved(state: false)
+        sortbyType = []
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        
+        for flowItems in flow {
+                sortbyType.append(flowItems)
+        }
+    }
+    
+    @objc func didProgramingAction() {
+        filterSaved(state: false)
+        sortbyType = []
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        
+        for flowItems in flow {
+            if flowItems.courseType == "programming" {
+                sortbyType.append(flowItems)
+            }
+        }
+    }
+    
+    @objc func didFrontEndAction() {
+        filterSaved(state: false)
+        sortbyType = []
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        
+        
+        for flowItems in flow {
+            if flowItems.courseType == "front" {
+                sortbyType.append(flowItems)
+            }
+        }
+    }
+    
+    @objc func didDesignAction() {
+        filterSaved(state: false)
+        sortbyType = []
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        
+        for flowItems in flow {
+            if flowItems.courseType == "design" {
+                sortbyType.append(flowItems)
+            }
+        }
+    }
+    
+    @objc func didQaAction() {
+        filterSaved(state: false)
+        sortbyType = []
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+
+        for flowItems in flow {
+            if flowItems.courseType == "qa" {
+                sortbyType.append(flowItems)
+            }
+        }
+    }
+    
+    @objc func didOtherAction() {
+        filterSaved(state: false)
+        sortbyType = []
+        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
+        otherCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
+        
+        for flowItems in flow {
+            if flowItems.courseType == "other" {
+                sortbyType.append(flowItems)
+            }
+        }
     }
 }

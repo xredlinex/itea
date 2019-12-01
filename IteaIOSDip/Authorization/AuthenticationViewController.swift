@@ -39,28 +39,25 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         backgroundView(image: "backgroundlogin", color: UIColor.red, alpha: 0.8)
         updateAuthUi()
+        signUpButtonView.blurbuttons()
+        logInButtonView.blurbuttons()
         
         let recieveUsers = makeIteaStudents()
         iteaStudents = checkStudents(students: recieveUsers)
         iteaStudents.append(newStudent)
-        
         
         userNameTextField.delegate = self
         userPasswordTextField.delegate = self
         
         let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
         view.addGestureRecognizer(keyboardHide)
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(true)
-            
-            userNameTextField.text = ""
-            userPasswordTextField.text = ""
-        }
+        super.viewWillAppear(true)
+        userNameTextField.text = ""
+        userPasswordTextField.text = ""
+    }
     
     @IBAction func didTapShowPasswordEyeActionButton(_ sender: Any) {
        showPassword()
@@ -70,7 +67,6 @@ class AuthenticationViewController: UIViewController {
         showPassword()
     }
     
-
     @IBAction func didTapLoginActionButton(_ sender: Any) {
         let validation = validateLogin(inputLogin: userNameTextField.text ?? "", inputPassword: userPasswordTextField.text ?? "")
         if userNameTextField.text != "" && userPasswordTextField.text != "" {
@@ -116,131 +112,20 @@ class AuthenticationViewController: UIViewController {
 }
 
 extension AuthenticationViewController {
-    
     @objc func keyboardWillHide() {
         bottomHeightConstraint.constant = 0
         self.view.endEditing(true)
     }
 }
 
-extension AuthenticationViewController: UITextFieldDelegate {
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        bottomHeightConstraint.constant = 250
-        return true
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           
-           switch textField {
-           case userNameTextField:
-               userPasswordTextField.becomeFirstResponder()
-           case userPasswordTextField:
-               userPasswordTextField.resignFirstResponder()
-               bottomHeightConstraint.constant = 0
-           default:
-               userNameTextField.becomeFirstResponder()
-           }
-           return true
-       }
-       
-       func textFieldDidBeginEditing(_ textField: UITextField) {
-           switch textField {
-           case userNameTextField:
-               showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 900)
-               hideValidationErrors()
-            
-           case userPasswordTextField:
-               userPasswordTextField.text = ""
-               showMassonsEyeImageView.image = UIImage(systemName: "eye.slash")
-               showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 900)
-               hideValidationErrors()
-            
-           default:
-                hideValidationErrors()
-           }
-       }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        switch textField {
-        case userNameTextField:
-            showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-        case userPasswordTextField:
-            showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-        default:
-            showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-            showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
-        }
-    }
-    
-    
-}
-extension AuthenticationViewController {
-    func showValidationErrors(error: ValidationErrors.ErrorTextEnum, errorLabel: UILabel, subLabel: NSLayoutConstraint) {
-        subLabel.priority = UILayoutPriority(rawValue: 900)
-        errorLabel.text = validationErrors.errorKey(error)
-    }
-}
-extension AuthenticationViewController {
-    
-    func validateLogin(inputLogin: String, inputPassword: String) -> Bool {
-        var validateFields = false
-        if validation.validateMail(mail: inputLogin) == false {
-            emailValidationErrorTextLabel.text = validationErrors.errorKey(.invalidEmail)
-        }
-        if validation.validatePassword(password: inputPassword) == false {
-            passwordValidationErrorTextLabel.text = validationErrors.errorKey(.invalidPassword)
-        }
-        
-        if validation.validateMail(mail: inputLogin) == true && validation.validatePassword(password: inputPassword) == true {
-            validateFields = true
-        }
-        return validateFields
-    }
-}
 
 
-extension AuthenticationViewController {
-    func showAlertErrorAction(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel) { (_) in}
-        alertController.addAction(alertAction)
-        present(alertController, animated: true, completion: nil)
-    }
-}
 
-extension AuthenticationViewController{
-    
-    func studentAuthentication(students : [IteaStudent]) -> IteaStudent {
-        var loginStudent = IteaStudent()
-        for user in students {
-            if user.mail == userNameTextField.text {
-                if user.password == userPasswordTextField.text {
-                    loginStudent = user
-                }
-            }
-        }
-        return loginStudent
-    }
-}
+
+
     
 
-extension AuthenticationViewController {
-    func showPassword() {
-        
-        if userPasswordTextField.isSecureTextEntry == true {
-            userPasswordTextField.isSecureTextEntry = false
-            showHidePasswordButton.setTitle("HIDE", for: .normal)
-            showMassonsEyeImageView.image = UIImage(systemName: "eye.slash")
-        } else {
-            userPasswordTextField.isSecureTextEntry = true
-            showHidePasswordButton.setTitle("SHOW", for: .normal)
-            
-            showMassonsEyeImageView.image = UIImage(systemName: "eye")
-        }
-        
-    }
-}
+
 
 
 

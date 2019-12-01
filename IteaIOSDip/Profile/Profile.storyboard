@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1022"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfn-TK-FZ4">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="932"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq5-Tk-RZa">
                                                 <rect key="frame" x="0.0" y="50" width="414" height="160"/>
@@ -149,7 +149,7 @@
                                                 </constraints>
                                             </view>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpN-oQ-hw4">
-                                                <rect key="frame" x="117" y="792" width="180" height="40"/>
+                                                <rect key="frame" x="117" y="806" width="180" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="Hov-4f-xDE"/>
                                                     <constraint firstAttribute="height" constant="40" id="Ncj-2Z-yFq"/>
@@ -468,7 +468,7 @@
                                                 </constraints>
                                             </view>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-lQ-vCJ">
-                                                <rect key="frame" x="117" y="862" width="180" height="40"/>
+                                                <rect key="frame" x="117" y="876" width="180" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="NPC-gD-v4L"/>
                                                 </constraints>
@@ -495,7 +495,7 @@
                                             <constraint firstAttribute="trailing" secondItem="3YP-fa-nUK" secondAttribute="trailing" constant="20" id="laD-4a-GXG"/>
                                             <constraint firstAttribute="trailing" secondItem="Yq5-Tk-RZa" secondAttribute="trailing" id="oXc-Qj-TNA"/>
                                             <constraint firstItem="3YP-fa-nUK" firstAttribute="leading" secondItem="lfn-TK-FZ4" secondAttribute="leading" constant="20" id="q7n-dT-e3V"/>
-                                            <constraint firstItem="gpN-oQ-hw4" firstAttribute="top" secondItem="Mw7-yP-3bL" secondAttribute="bottom" constant="20" id="qLn-pM-ACk"/>
+                                            <constraint firstItem="gpN-oQ-hw4" firstAttribute="top" secondItem="Mw7-yP-3bL" secondAttribute="bottom" constant="34" id="qLn-pM-ACk"/>
                                             <constraint firstItem="Yq5-Tk-RZa" firstAttribute="leading" secondItem="lfn-TK-FZ4" secondAttribute="leading" id="sHh-DN-3JU"/>
                                             <constraint firstItem="gpN-oQ-hw4" firstAttribute="centerX" secondItem="lfn-TK-FZ4" secondAttribute="centerX" id="v4j-bv-7Xf"/>
                                             <constraint firstItem="kub-l8-sY2" firstAttribute="top" secondItem="lfn-TK-FZ4" secondAttribute="top" id="vPq-MF-Hwd"/>

@@ -59,11 +59,11 @@ import Foundation
 //    
 //}
 
-
-  validate = validateFields(inputName: nameTextField.text ?? "",
-                                          inputLastName: lastNameTextField.text ?? "",
-                                          inputEmail: emailTextField.text ?? "",
-                                          inputPhone: phoneTextField.text ?? "",
-                                          inputPassword: passwordTextField.text ?? "")
-               
-                
+//
+//  validate = validateFields(inputName: nameTextField.text ?? "",
+//                                          inputLastName: lastNameTextField.text ?? "",
+//                                          inputEmail: emailTextField.text ?? "",
+//                                          inputPhone: phoneTextField.text ?? "",
+//                                          inputPassword: passwordTextField.text ?? "")
+//               
+//                

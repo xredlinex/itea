@@ -84,7 +84,7 @@ class CourseSignUpViewController: UIViewController {
 //                    navigationController?.pushViewController(viewController, animated: true)
                     
                 } else {
-                    errorAlert(title: "Внимание!", message: "Ошибка валидации полей, будьте внимательней)")
+                    errorAlert(title: "Внимание!", message: validationErrors.errorKey(.validationError))
                 }
                 
             } else {
@@ -92,7 +92,7 @@ class CourseSignUpViewController: UIViewController {
             }
         }
         else {
-            errorAlert(title: "", message: "Oзнакомтесь с политекой конфиденциальности")
+            errorAlert(title: validationErrors.errorKey(.error), message: validationErrors.errorKey(.invalidPolicy))
         }
 
     
