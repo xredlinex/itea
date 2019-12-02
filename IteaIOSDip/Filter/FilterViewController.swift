@@ -39,20 +39,24 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var designCheckInternalView: UIView!
     @IBOutlet weak var qaCheckInternalView: UIView!
     @IBOutlet weak var otherCheckInternalView: UIView!
+    @IBOutlet weak var resetFilterButton: UIButton!
     
     var flow: [CourseFlow] = []
     var sortbyDate: [CourseFlow] = []
     var sortbyType: [CourseFlow] = []
     var filterFlow: [CourseFlow] = []
+    var setDaultOfDefailts: [CourseFlow] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDaultOfDefailts = flow
 //      recieve course data
         setDefaultsFilterCourse(courses: flow)
 //      set defaults buttons tap FUNC
         defaultFilterButtons()
         uidesignFilter()
         saveFilterButton.iteaButton()
+        resetFilterButton.iteaButton()
 
 //  MARK: - MAKE RADIO BUTTONS
         let radioButtons: [UIView] = [nightCheckExternalView,
@@ -138,5 +142,17 @@ class FilterViewController: UIViewController {
             filterAlert(title: "Ooops!", message: "Не найдено курсов с такими параметрами")
             defaultFilterButtons()
         }
+    }
+    
+    @IBAction func didTapResetFilterActionButton(_ sender: Any) {
+        let resetFilterAlert = UIAlertController(title: "Фильтр", message: "Сбросить настройки Фильтра?", preferredStyle: .alert)
+        let resetAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.flow = self.setDaultOfDefailts
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+        }
+        resetFilterAlert.addAction(resetAction)
+        resetFilterAlert.addAction(cancel)
+        present(resetFilterAlert, animated: true, completion: nil)
     }
 }

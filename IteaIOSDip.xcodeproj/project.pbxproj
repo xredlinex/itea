@@ -10,33 +10,11 @@
 		970E7F55238F2B3F00369718 /* FlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E7F54238F2B3F00369718 /* FlowViewController+Extension.swift */; };
 		9717BD072381F360000A2357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD062381F360000A2357 /* AppDelegate.swift */; };
 		9717BD092381F360000A2357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD082381F360000A2357 /* SceneDelegate.swift */; };
-		9717BD0B2381F360000A2357 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD0A2381F360000A2357 /* ViewController.swift */; };
-		9717BD0E2381F360000A2357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9717BD0C2381F360000A2357 /* Main.storyboard */; };
 		9717BD102381F361000A2357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9717BD0F2381F361000A2357 /* Assets.xcassets */; };
 		9717BD132381F361000A2357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9717BD112381F361000A2357 /* LaunchScreen.storyboard */; };
-		9717BD1B2381F467000A2357 /* jsDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD1A2381F467000A2357 /* jsDevelopment.swift */; };
-		9717BD1E2381F862000A2357 /* php.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD1D2381F862000A2357 /* php.swift */; };
-		9717BD202381F8CF000A2357 /* javaProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD1F2381F8CF000A2357 /* javaProgramming.swift */; };
-		9717BD222381F8FF000A2357 /* python.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD212381F8FF000A2357 /* python.swift */; };
-		9717BD242381F93A000A2357 /* dataScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD232381F93A000A2357 /* dataScience.swift */; };
-		9717BD262381F98C000A2357 /* c#NetDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD252381F98C000A2357 /* c#NetDevelopment.swift */; };
-		9717BD282381F9AF000A2357 /* cPlusPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD272381F9AF000A2357 /* cPlusPlus.swift */; };
-		9717BD2C2381F9DE000A2357 /* goDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD2B2381F9DE000A2357 /* goDevelopment.swift */; };
-		9717BD2E2381FA96000A2357 /* frontendDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD2D2381FA96000A2357 /* frontendDevelopment.swift */; };
-		9717BD302381FB18000A2357 /* webDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD2F2381FB18000A2357 /* webDesign.swift */; };
 		9717BD322381FB42000A2357 /* qaDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD312381FB42000A2357 /* qaDescription.swift */; };
-		9717BD342381FBBE000A2357 /* GAMEDEVELOPMENT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD332381FBBE000A2357 /* GAMEDEVELOPMENT.swift */; };
-		9717BD362381FBDE000A2357 /* DEVOPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD352381FBDE000A2357 /* DEVOPS.swift */; };
-		9717BD382381FBF6000A2357 /* DIGITALMARKETING.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD372381FBF6000A2357 /* DIGITALMARKETING.swift */; };
-		9717BD3A2381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD392381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift */; };
-		9717BD3C2381FC5A000A2357 /* PMCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD3B2381FC5A000A2357 /* PMCourses.swift */; };
-		9717BD3E2381FC73000A2357 /* VideoEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD3D2381FC73000A2357 /* VideoEditing.swift */; };
-		9717BD402381FE40000A2357 /* Management.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD3F2381FE40000A2357 /* Management.swift */; };
-		9717BD422381FEC1000A2357 /* CISCO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD412381FEC0000A2357 /* CISCO.swift */; };
-		9717BD4523820328000A2357 /* Cybersecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD4423820328000A2357 /* Cybersecurity.swift */; };
 		9717BD49238215B0000A2357 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD48238215B0000A2357 /* UserModel.swift */; };
 		9717BD4C238219F9000A2357 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD4B238219F9000A2357 /* CoursesModel.swift */; };
-		9717BD4E23821DFC000A2357 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717BD4D23821DFC000A2357 /* ViewController+Extension.swift */; };
 		9717BD5023821EA3000A2357 /* Aauthorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9717BD4F23821EA3000A2357 /* Aauthorization.storyboard */; };
 		972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */; };
 		972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */; };
@@ -48,6 +26,12 @@
 		9748B18423894ACD00C3CB21 /* JavaDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748B18323894ACD00C3CB21 /* JavaDescription.swift */; };
 		9748B18923894B0300C3CB21 /* Java.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748B18823894B0300C3CB21 /* Java.swift */; };
 		9753FE0E2393538A002541B7 /* ListCoursesViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753FE0D2393538A002541B7 /* ListCoursesViewController+Extension.swift */; };
+		9769314223947AA00048792F /* JavaScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769314123947AA00048792F /* JavaScript.swift */; };
+		9769314423947B510048792F /* JavaScriptDescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769314323947B510048792F /* JavaScriptDescript.swift */; };
+		97693147239488110048792F /* React.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97693146239488110048792F /* React.swift */; };
+		9769314923948C6E0048792F /* Angular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769314823948C6E0048792F /* Angular.swift */; };
+		9769314D2394962E0048792F /* FrontEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769314C2394962E0048792F /* FrontEnd.swift */; };
+		9769314F239496EC0048792F /* Front.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769314E239496EC0048792F /* Front.swift */; };
 		977AC35F238D705F003C2800 /* CoursesFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC357238D705E003C2800 /* CoursesFlowViewController.swift */; };
 		977AC363238D705F003C2800 /* ProgrammingFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC35B238D705E003C2800 /* ProgrammingFlowViewController.swift */; };
 		977AC364238D705F003C2800 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC35C238D705F003C2800 /* FlowViewController.swift */; };
@@ -55,18 +39,16 @@
 		977AC370238D71E0003C2800 /* CoursesFlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC366238D71DC003C2800 /* CoursesFlowViewController+Extension.swift */; };
 		977AC371238D71E0003C2800 /* CourseSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC367238D71DC003C2800 /* CourseSignUpViewController.swift */; };
 		977AC372238D71E0003C2800 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC368238D71DC003C2800 /* FilterViewController.swift */; };
-		977AC373238D71E0003C2800 /* mobileDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC369238D71DD003C2800 /* mobileDevelopment.swift */; };
 		977AC374238D71E0003C2800 /* ProgramCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36A238D71DD003C2800 /* ProgramCourseViewController.swift */; };
 		977AC375238D71E0003C2800 /* CoursesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977AC36B238D71DF003C2800 /* CoursesTableViewCell.xib */; };
 		977AC376238D71E0003C2800 /* DetailedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36C238D71E0003C2800 /* DetailedCourseViewController.swift */; };
-		977AC377238D71E0003C2800 /* CourseFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36D238D71E0003C2800 /* CourseFilterViewController.swift */; };
 		977AC378238D71E0003C2800 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC36E238D71E0003C2800 /* CoursesViewController.swift */; };
 		977AC37B238D738E003C2800 /* ProgrammingFlowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977AC379238D738E003C2800 /* ProgrammingFlowTableViewCell.swift */; };
 		977AC37C238D738E003C2800 /* ProgrammingFlowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977AC37A238D738E003C2800 /* ProgrammingFlowTableViewCell.xib */; };
 		977DEE3F238FCB730055D9E9 /* CourseSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977DEE3E238FCB730055D9E9 /* CourseSignUp.storyboard */; };
 		977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F115A238E66D6003B522B /* KitModelsDiscr.swift */; };
 		977F1160238E691C003B522B /* KitModelObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F115F238E691C003B522B /* KitModelObj.swift */; };
-		977F1162238E6A02003B522B /* Plate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F1161238E6A02003B522B /* Plate.swift */; };
+		977F1162238E6A02003B522B /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F1161238E6A02003B522B /* Factory.swift */; };
 		977F1164238E6C50003B522B /* Adnroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F1163238E6C50003B522B /* Adnroid.swift */; };
 		978D41B3238E05030093EB34 /* FilterViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978D41B2238E05030093EB34 /* FilterViewController+Extension.swift */; };
 		97AF59F22387F3EB008E57F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AF59F12387F3EB008E57F2 /* ProfileViewController.swift */; };
@@ -96,34 +78,12 @@
 		9717BD032381F360000A2357 /* IteaIOSDip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IteaIOSDip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9717BD062381F360000A2357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9717BD082381F360000A2357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9717BD0A2381F360000A2357 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9717BD0D2381F360000A2357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9717BD0F2381F361000A2357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9717BD122381F361000A2357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9717BD142381F361000A2357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9717BD1A2381F467000A2357 /* jsDevelopment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsDevelopment.swift; sourceTree = "<group>"; };
-		9717BD1D2381F862000A2357 /* php.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = php.swift; sourceTree = "<group>"; };
-		9717BD1F2381F8CF000A2357 /* javaProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = javaProgramming.swift; sourceTree = "<group>"; };
-		9717BD212381F8FF000A2357 /* python.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = python.swift; sourceTree = "<group>"; };
-		9717BD232381F93A000A2357 /* dataScience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataScience.swift; sourceTree = "<group>"; };
-		9717BD252381F98C000A2357 /* c#NetDevelopment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "c#NetDevelopment.swift"; sourceTree = "<group>"; };
-		9717BD272381F9AF000A2357 /* cPlusPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cPlusPlus.swift; sourceTree = "<group>"; };
-		9717BD2B2381F9DE000A2357 /* goDevelopment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goDevelopment.swift; sourceTree = "<group>"; };
-		9717BD2D2381FA96000A2357 /* frontendDevelopment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frontendDevelopment.swift; sourceTree = "<group>"; };
-		9717BD2F2381FB18000A2357 /* webDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webDesign.swift; sourceTree = "<group>"; };
 		9717BD312381FB42000A2357 /* qaDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qaDescription.swift; sourceTree = "<group>"; };
-		9717BD332381FBBE000A2357 /* GAMEDEVELOPMENT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMEDEVELOPMENT.swift; sourceTree = "<group>"; };
-		9717BD352381FBDE000A2357 /* DEVOPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEVOPS.swift; sourceTree = "<group>"; };
-		9717BD372381FBF6000A2357 /* DIGITALMARKETING.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIGITALMARKETING.swift; sourceTree = "<group>"; };
-		9717BD392381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUMANRESOURCEMANAGEMENT.swift; sourceTree = "<group>"; };
-		9717BD3B2381FC5A000A2357 /* PMCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMCourses.swift; sourceTree = "<group>"; };
-		9717BD3D2381FC73000A2357 /* VideoEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditing.swift; sourceTree = "<group>"; };
-		9717BD3F2381FE40000A2357 /* Management.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Management.swift; sourceTree = "<group>"; };
-		9717BD412381FEC0000A2357 /* CISCO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CISCO.swift; sourceTree = "<group>"; };
-		9717BD4423820328000A2357 /* Cybersecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cybersecurity.swift; sourceTree = "<group>"; };
 		9717BD48238215B0000A2357 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9717BD4B238219F9000A2357 /* CoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
-		9717BD4D23821DFC000A2357 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		9717BD4F23821EA3000A2357 /* Aauthorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Aauthorization.storyboard; sourceTree = "<group>"; };
 		972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +95,12 @@
 		9748B18323894ACD00C3CB21 /* JavaDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaDescription.swift; sourceTree = "<group>"; };
 		9748B18823894B0300C3CB21 /* Java.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Java.swift; sourceTree = "<group>"; };
 		9753FE0D2393538A002541B7 /* ListCoursesViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListCoursesViewController+Extension.swift"; sourceTree = "<group>"; };
+		9769314123947AA00048792F /* JavaScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScript.swift; sourceTree = "<group>"; };
+		9769314323947B510048792F /* JavaScriptDescript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptDescript.swift; sourceTree = "<group>"; };
+		97693146239488110048792F /* React.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = React.swift; sourceTree = "<group>"; };
+		9769314823948C6E0048792F /* Angular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angular.swift; sourceTree = "<group>"; };
+		9769314C2394962E0048792F /* FrontEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontEnd.swift; sourceTree = "<group>"; };
+		9769314E239496EC0048792F /* Front.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Front.swift; sourceTree = "<group>"; };
 		977AC357238D705E003C2800 /* CoursesFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesFlowViewController.swift; path = IteaIOSDip/Models/Courses/CoursesFlowViewController.swift; sourceTree = SOURCE_ROOT; };
 		977AC35B238D705E003C2800 /* ProgrammingFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgrammingFlowViewController.swift; path = IteaIOSDip/Models/Courses/ProgrammingFlowViewController.swift; sourceTree = SOURCE_ROOT; };
 		977AC35C238D705F003C2800 /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlowViewController.swift; path = IteaIOSDip/Models/Courses/FlowViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -142,18 +108,16 @@
 		977AC366238D71DC003C2800 /* CoursesFlowViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoursesFlowViewController+Extension.swift"; sourceTree = "<group>"; };
 		977AC367238D71DC003C2800 /* CourseSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSignUpViewController.swift; sourceTree = "<group>"; };
 		977AC368238D71DC003C2800 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		977AC369238D71DD003C2800 /* mobileDevelopment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mobileDevelopment.swift; sourceTree = "<group>"; };
 		977AC36A238D71DD003C2800 /* ProgramCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramCourseViewController.swift; sourceTree = "<group>"; };
 		977AC36B238D71DF003C2800 /* CoursesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursesTableViewCell.xib; sourceTree = "<group>"; };
 		977AC36C238D71E0003C2800 /* DetailedCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCourseViewController.swift; sourceTree = "<group>"; };
-		977AC36D238D71E0003C2800 /* CourseFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFilterViewController.swift; sourceTree = "<group>"; };
 		977AC36E238D71E0003C2800 /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		977AC379238D738E003C2800 /* ProgrammingFlowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingFlowTableViewCell.swift; sourceTree = "<group>"; };
 		977AC37A238D738E003C2800 /* ProgrammingFlowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgrammingFlowTableViewCell.xib; sourceTree = "<group>"; };
 		977DEE3E238FCB730055D9E9 /* CourseSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseSignUp.storyboard; sourceTree = "<group>"; };
 		977F115A238E66D6003B522B /* KitModelsDiscr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitModelsDiscr.swift; sourceTree = "<group>"; };
 		977F115F238E691C003B522B /* KitModelObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitModelObj.swift; sourceTree = "<group>"; };
-		977F1161238E6A02003B522B /* Plate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plate.swift; sourceTree = "<group>"; };
+		977F1161238E6A02003B522B /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		977F1163238E6C50003B522B /* Adnroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adnroid.swift; sourceTree = "<group>"; };
 		978D41B2238E05030093EB34 /* FilterViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterViewController+Extension.swift"; sourceTree = "<group>"; };
 		97AF59F12387F3EB008E57F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +160,8 @@
 				97AF5A1123887BEF008E57F2 /* Mobile */,
 				970EEC7D2382A09F00424F9E /* QA */,
 				977F1165238E6C57003B522B /* Cplus */,
+				9769314523947B560048792F /* JavaScript */,
+				97693150239496F30048792F /* Frontend */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -245,49 +211,6 @@
 			path = IteaIOSDip;
 			sourceTree = "<group>";
 		};
-		9717BD1C2381F5FE000A2357 /* begin edti temp */ = {
-			isa = PBXGroup;
-			children = (
-				977AC36D238D71E0003C2800 /* CourseFilterViewController.swift */,
-				9717BD1A2381F467000A2357 /* jsDevelopment.swift */,
-				9717BD2D2381FA96000A2357 /* frontendDevelopment.swift */,
-				9717BD4723820418000A2357 /* Design */,
-				9717BD43238201FD000A2357 /* Other */,
-				9717BD1D2381F862000A2357 /* php.swift */,
-				9717BD1F2381F8CF000A2357 /* javaProgramming.swift */,
-				9717BD212381F8FF000A2357 /* python.swift */,
-				9717BD232381F93A000A2357 /* dataScience.swift */,
-				9717BD252381F98C000A2357 /* c#NetDevelopment.swift */,
-				9717BD272381F9AF000A2357 /* cPlusPlus.swift */,
-				9717BD2B2381F9DE000A2357 /* goDevelopment.swift */,
-			);
-			path = "begin edti temp";
-			sourceTree = "<group>";
-		};
-		9717BD43238201FD000A2357 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				9717BD332381FBBE000A2357 /* GAMEDEVELOPMENT.swift */,
-				9717BD352381FBDE000A2357 /* DEVOPS.swift */,
-				9717BD372381FBF6000A2357 /* DIGITALMARKETING.swift */,
-				9717BD392381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift */,
-				9717BD3B2381FC5A000A2357 /* PMCourses.swift */,
-				9717BD3D2381FC73000A2357 /* VideoEditing.swift */,
-				9717BD412381FEC0000A2357 /* CISCO.swift */,
-				9717BD3F2381FE40000A2357 /* Management.swift */,
-				9717BD4423820328000A2357 /* Cybersecurity.swift */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		9717BD4723820418000A2357 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-				9717BD2F2381FB18000A2357 /* webDesign.swift */,
-			);
-			path = Design;
-			sourceTree = "<group>";
-		};
 		972CB6EC2382A6E800E68BAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +249,24 @@
 				9748B18323894ACD00C3CB21 /* JavaDescription.swift */,
 			);
 			path = Java;
+			sourceTree = "<group>";
+		};
+		9769314523947B560048792F /* JavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				9769314323947B510048792F /* JavaScriptDescript.swift */,
+				97693146239488110048792F /* React.swift */,
+				9769314823948C6E0048792F /* Angular.swift */,
+			);
+			path = JavaScript;
+			sourceTree = "<group>";
+		};
+		97693150239496F30048792F /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				9769314E239496EC0048792F /* Front.swift */,
+			);
+			path = Frontend;
 			sourceTree = "<group>";
 		};
 		977AC37D238D7392003C2800 /* ProgramingFlowCell */ = {
@@ -371,12 +312,11 @@
 		977F115C238E66D9003B522B /* Kitchen */ = {
 			isa = PBXGroup;
 			children = (
-				97D66EBA23849A6100C25379 /* TempWorkingFiles */,
 				977F115A238E66D6003B522B /* KitModelsDiscr.swift */,
 				977F115F238E691C003B522B /* KitModelObj.swift */,
 				973DDEC82390A26400FA79ED /* ValidationErrors.strings */,
 				97BD3290238DA07E002A2F06 /* Kittchen.swift */,
-				977F1161238E6A02003B522B /* Plate.swift */,
+				977F1161238E6A02003B522B /* Factory.swift */,
 			);
 			path = Kitchen;
 			sourceTree = "<group>";
@@ -408,6 +348,8 @@
 				97AF5A1223887C21008E57F2 /* Mobile.swift */,
 				9748B18823894B0300C3CB21 /* Java.swift */,
 				97B41F4623911D240025D3C9 /* CplusModel.swift */,
+				9769314123947AA00048792F /* JavaScript.swift */,
+				9769314C2394962E0048792F /* FrontEnd.swift */,
 			);
 			path = CoursesModels;
 			sourceTree = "<group>";
@@ -474,18 +416,6 @@
 				97C8F0912392B2BD000D54D3 /* StudentInit.swift */,
 			);
 			name = StudentsInit;
-			sourceTree = "<group>";
-		};
-		97D66EBA23849A6100C25379 /* TempWorkingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				977AC369238D71DD003C2800 /* mobileDevelopment.swift */,
-				9717BD1C2381F5FE000A2357 /* begin edti temp */,
-				9717BD0A2381F360000A2357 /* ViewController.swift */,
-				9717BD4D23821DFC000A2357 /* ViewController+Extension.swift */,
-				9717BD0C2381F360000A2357 /* Main.storyboard */,
-			);
-			path = TempWorkingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,7 +487,6 @@
 				97BD3282238D948C002A2F06 /* Courses.storyboard in Resources */,
 				97BD3289238D967A002A2F06 /* CoursesCollectionViewCell.xib in Resources */,
 				9717BD5023821EA3000A2357 /* Aauthorization.storyboard in Resources */,
-				9717BD0E2381F360000A2357 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,35 +500,27 @@
 				97BD3291238DA07E002A2F06 /* Kittchen.swift in Sources */,
 				977AC370238D71E0003C2800 /* CoursesFlowViewController+Extension.swift in Sources */,
 				977AC35F238D705F003C2800 /* CoursesFlowViewController.swift in Sources */,
-				9717BD0B2381F360000A2357 /* ViewController.swift in Sources */,
-				9717BD282381F9AF000A2357 /* cPlusPlus.swift in Sources */,
 				972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */,
+				9769314923948C6E0048792F /* Angular.swift in Sources */,
 				973DDECD2390B59D00FA79ED /* Class+Extension.swift in Sources */,
-				9717BD3A2381FC21000A2357 /* HUMANRESOURCEMANAGEMENT.swift in Sources */,
-				9717BD4523820328000A2357 /* Cybersecurity.swift in Sources */,
 				977F1160238E691C003B522B /* KitModelObj.swift in Sources */,
-				977AC377238D71E0003C2800 /* CourseFilterViewController.swift in Sources */,
-				9717BD302381FB18000A2357 /* webDesign.swift in Sources */,
+				9769314F239496EC0048792F /* Front.swift in Sources */,
 				9717BD072381F360000A2357 /* AppDelegate.swift in Sources */,
+				97693147239488110048792F /* React.swift in Sources */,
+				9769314D2394962E0048792F /* FrontEnd.swift in Sources */,
 				97DF634623829A2700C6D5A6 /* Qa.swift in Sources */,
 				977AC37B238D738E003C2800 /* ProgrammingFlowTableViewCell.swift in Sources */,
-				9717BD3E2381FC73000A2357 /* VideoEditing.swift in Sources */,
 				97B41F4723911D240025D3C9 /* CplusModel.swift in Sources */,
 				972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */,
 				97B41F4B23914E5A0025D3C9 /* AuthenticationViewController+Extension.swift in Sources */,
 				9748B18423894ACD00C3CB21 /* JavaDescription.swift in Sources */,
 				9753FE0E2393538A002541B7 /* ListCoursesViewController+Extension.swift in Sources */,
 				978D41B3238E05030093EB34 /* FilterViewController+Extension.swift in Sources */,
-				9717BD2C2381F9DE000A2357 /* goDevelopment.swift in Sources */,
 				97B41F4D2391BFCE0025D3C9 /* SignUpViewController+Extension.swift in Sources */,
 				97C8F08B239284A4000D54D3 /* ProfileViewController+Extension.swift in Sources */,
 				9717BD49238215B0000A2357 /* UserModel.swift in Sources */,
 				970E7F55238F2B3F00369718 /* FlowViewController+Extension.swift in Sources */,
-				9717BD422381FEC1000A2357 /* CISCO.swift in Sources */,
 				977AC376238D71E0003C2800 /* DetailedCourseViewController.swift in Sources */,
-				9717BD1B2381F467000A2357 /* jsDevelopment.swift in Sources */,
-				9717BD3C2381FC5A000A2357 /* PMCourses.swift in Sources */,
-				9717BD262381F98C000A2357 /* c#NetDevelopment.swift in Sources */,
 				977F1164238E6C50003B522B /* Adnroid.swift in Sources */,
 				977AC372238D71E0003C2800 /* FilterViewController.swift in Sources */,
 				9717BD322381FB42000A2357 /* qaDescription.swift in Sources */,
@@ -607,11 +528,6 @@
 				97AF5A0923884716008E57F2 /* LastCoursesViewController.swift in Sources */,
 				977AC374238D71E0003C2800 /* ProgramCourseViewController.swift in Sources */,
 				977AC378238D71E0003C2800 /* CoursesViewController.swift in Sources */,
-				9717BD4E23821DFC000A2357 /* ViewController+Extension.swift in Sources */,
-				9717BD1E2381F862000A2357 /* php.swift in Sources */,
-				9717BD2E2381FA96000A2357 /* frontendDevelopment.swift in Sources */,
-				977AC373238D71E0003C2800 /* mobileDevelopment.swift in Sources */,
-				9717BD402381FE40000A2357 /* Management.swift in Sources */,
 				972CB6F42382AB5200E68BAC /* Validation.swift in Sources */,
 				97BD3284238D95B4002A2F06 /* CoursesViewController+Extension.swift in Sources */,
 				97EB1ADE239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift in Sources */,
@@ -620,23 +536,19 @@
 				9717BD092381F360000A2357 /* SceneDelegate.swift in Sources */,
 				97B41F49239124980025D3C9 /* Cplus.swift in Sources */,
 				973DDEC5239082A200FA79ED /* CourseSignUpViewController+Extension.swift in Sources */,
-				9717BD202381F8CF000A2357 /* javaProgramming.swift in Sources */,
 				97DF63442382979C00C6D5A6 /* FlowCourses.swift in Sources */,
 				973DDECB2390B1D700FA79ED /* ValidationErrors.swift in Sources */,
-				977F1162238E6A02003B522B /* Plate.swift in Sources */,
+				977F1162238E6A02003B522B /* Factory.swift in Sources */,
+				9769314423947B510048792F /* JavaScriptDescript.swift in Sources */,
 				977AC364238D705F003C2800 /* FlowViewController.swift in Sources */,
 				97BD3288238D967A002A2F06 /* CoursesCollectionViewCell.swift in Sources */,
 				9748B18923894B0300C3CB21 /* Java.swift in Sources */,
-				9717BD382381FBF6000A2357 /* DIGITALMARKETING.swift in Sources */,
-				9717BD342381FBBE000A2357 /* GAMEDEVELOPMENT.swift in Sources */,
-				9717BD242381F93A000A2357 /* dataScience.swift in Sources */,
+				9769314223947AA00048792F /* JavaScript.swift in Sources */,
 				977AC363238D705F003C2800 /* ProgrammingFlowViewController.swift in Sources */,
 				97AF5A1323887C21008E57F2 /* Mobile.swift in Sources */,
-				9717BD222381F8FF000A2357 /* python.swift in Sources */,
 				97AF5A1023886EFB008E57F2 /* MobileDevelopmentDescription.swift in Sources */,
 				97C8F0922392B2BD000D54D3 /* StudentInit.swift in Sources */,
 				9717BD4C238219F9000A2357 /* CoursesModel.swift in Sources */,
-				9717BD362381FBDE000A2357 /* DEVOPS.swift in Sources */,
 				977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,14 +556,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9717BD0C2381F360000A2357 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9717BD0D2381F360000A2357 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9717BD112381F361000A2357 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

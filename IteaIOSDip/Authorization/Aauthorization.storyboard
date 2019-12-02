@@ -189,6 +189,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="Mbe-Z0-h9Y"/>
                                                                 </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                             </textField>
@@ -270,6 +271,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="jKP-Pi-wWO"/>
                                                                 </constraints>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                                             </textField>

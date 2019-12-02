@@ -17,9 +17,7 @@ func makeSomeOtherObj() -> CourseFlow {
      qaBase.courseProgram = qaCoursesDescrioption()[0].courseProgram
      qaBase.courseImage = "qaBase"
 //     qbase. = "qaBase"
-    
-        
-    
+
 
      let qaAdvanced = Courses()
      qaAdvanced.courseName = "Продвинутый курс QA"

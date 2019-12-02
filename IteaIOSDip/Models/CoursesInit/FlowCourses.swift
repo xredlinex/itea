@@ -15,8 +15,10 @@ class IteaCourse {
         let mobile = makeMobileCourses()
         let javaProgramming = makeJsProgrammingCourses()
         let cplus = makeCPlusProgrammingCourses()
+        let javaScript = makeJavaScriptCourses()
+        let frontEnd = makeFrontEndCourses()
         
-        return [mobile, qa, javaProgramming, cplus]
+        return [mobile, qa, javaProgramming, cplus, javaScript, frontEnd]
     }
 }
 

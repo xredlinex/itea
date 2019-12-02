@@ -51,6 +51,7 @@ class CourseSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiCourseSignUp()
+        backgroundView(image: "filterBackground", color: UIColor.red, alpha: 0.6)
         signUpButton.iteaButton()
         
         setDefaultLocation(0)
@@ -64,8 +65,8 @@ class CourseSignUpViewController: UIViewController {
         mailTextField.delegate = self
         phoneNumberTextField.delegate = self
         self.addNextButtonOnKeyboardPhone()
-       
     }
+    
     @IBAction func didTapSignUpButton(_ sender: Any) {
         
         if checkPolicuy == true {
@@ -74,15 +75,15 @@ class CourseSignUpViewController: UIViewController {
                                                       inputMail: mailTextField.text ?? "",
                                                       inputPhone: phoneNumberTextField.text ?? "")
                 if validate == true {
-                    errorAlert(title: "Спасибо", message: "Вы записались на курс \(course.courseName ?? "")!")
                     let storyboard = UIStoryboard(name: "Courses", bundle: nil)
                     let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesFlowViewController") as! CoursesFlowViewController
+                    errorAlert(title: "Спасибо", message: "Вы записались на курс \(course.courseName ?? "")!")
                     navigationController?.pushViewController(viewController, animated: true)
                 } else {
                     errorAlert(title: "Внимание!", message: validationErrors.errorKey(.validationError))
                 }
             } else {
-                errorAlert(title: "Хотите на курсы?", message: "Заполните все поля")
+                errorAlert(title: "Хотите на курсы?", message: "Заполните все поля!")
             }
         }
         else {
@@ -111,56 +112,21 @@ class CourseSignUpViewController: UIViewController {
     }
 }
 
-
-
-
-
-
-
-extension CourseSignUpViewController: UITextViewDelegate {
-
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        bottomHeightConstraint.constant = 250
-        return true
-    }
-}
-
-
-
+//  MARK: - UPDATE UI AND INFO
 extension CourseSignUpViewController {
-    
     func uiCourseSignUp() {
-        
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        let backgroundForImage = UIView(frame: UIScreen.main.bounds)
-        let blackBackgound = UIView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "filterBackground")
-        backgroundImage.contentMode = .scaleAspectFill
-        backgroundForImage.backgroundColor = UIColor.red
-        backgroundForImage.alpha = 0.6
-        blackBackgound.backgroundColor = UIColor.black
-        blackBackgound.alpha = 0.2
-        view.addSubview(backgroundImage)
-        view.addSubview(blackBackgound)
-        view.addSubview(backgroundForImage)
-        self.view.sendSubviewToBack(blackBackgound)
-        self.view.sendSubviewToBack(backgroundForImage)
-        self.view.sendSubviewToBack(backgroundImage)
-        
         headerLogoImageView.image = UIImage(named: "maxresdefault")
-               headerLogoImageView.contentMode = .scaleAspectFill
-
-             chekBoxImageView.image = UIImage(systemName: "square")
-   
+        headerLogoImageView.contentMode = .scaleAspectFill
+        chekBoxImageView.image = UIImage(systemName: "square")
         privicyTextLabel.text = """
         Подписанием и отправкой настоящей заявки я подтверждаю, что я ознакомлен с
         Политикой конфиденциальности и принимаю ее условия, включая регламентирующие обработку моих персональных данных, и согласен с ней.
-"""
+        """
     }
 }
+
 //   MARK: - SELECTOR
 extension CourseSignUpViewController {
-    
     @objc func keyboardWillHide() {
         bottomHeightConstraint.constant = 0
         self.view.endEditing(true)

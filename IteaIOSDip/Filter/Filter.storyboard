@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="972"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vW3-sm-XxZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="830"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="910"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-R6-A83">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -630,10 +630,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0j-cr-TVO">
-                                                <rect key="frame" x="0.0" y="771" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="771" width="414" height="130"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tF-mN-iAi">
-                                                        <rect key="frame" x="117" y="5" width="180" height="40"/>
+                                                        <rect key="frame" x="117" y="15" width="180" height="40"/>
                                                         <color key="backgroundColor" red="0.43646144869999998" green="0.66428458690000003" blue="0.56861746310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="GCR-1h-kR3"/>
@@ -646,12 +646,31 @@
                                                             <action selector="didTapSaveFilterActionButton:" destination="lvn-Oe-cWO" eventType="touchUpInside" id="ug8-7n-RJc"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-0P-Hno">
+                                                        <rect key="frame" x="117" y="75" width="180" height="40"/>
+                                                        <color key="backgroundColor" red="0.43646144869999998" green="0.66428458690000003" blue="0.56861746310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="HpX-bH-cYP"/>
+                                                            <constraint firstAttribute="width" constant="180" id="cAt-P4-Z7b"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Сбросить Фильтр">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapResetFilterActionButton:" destination="lvn-Oe-cWO" eventType="touchUpInside" id="ySa-rh-Kw4"/>
+                                                            <action selector="didTapSaveFilterActionButton:" destination="lvn-Oe-cWO" eventType="touchUpInside" id="oNG-9N-hYa"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="7tF-mN-iAi" firstAttribute="centerY" secondItem="N0j-cr-TVO" secondAttribute="centerY" id="7hJ-Cp-MoT"/>
-                                                    <constraint firstAttribute="height" constant="50" id="ho1-pz-8pQ"/>
+                                                    <constraint firstItem="PL3-0P-Hno" firstAttribute="top" secondItem="7tF-mN-iAi" secondAttribute="bottom" constant="20" id="OW2-kt-6cg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="PL3-0P-Hno" secondAttribute="bottom" constant="15" id="U5h-GM-hU3"/>
+                                                    <constraint firstItem="7tF-mN-iAi" firstAttribute="top" secondItem="N0j-cr-TVO" secondAttribute="top" constant="15" id="Y7A-If-bpM"/>
+                                                    <constraint firstAttribute="height" constant="130" id="ho1-pz-8pQ"/>
                                                     <constraint firstItem="7tF-mN-iAi" firstAttribute="centerX" secondItem="N0j-cr-TVO" secondAttribute="centerX" id="kQz-Eb-qjV"/>
+                                                    <constraint firstItem="PL3-0P-Hno" firstAttribute="leading" secondItem="7tF-mN-iAi" secondAttribute="leading" id="tuu-25-pXZ"/>
+                                                    <constraint firstItem="PL3-0P-Hno" firstAttribute="trailing" secondItem="7tF-mN-iAi" secondAttribute="trailing" id="yON-Kt-5wq"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -720,6 +739,7 @@
                         <outlet property="qaCheckExternalView" destination="dvJ-LC-vYb" id="df2-7Y-oK4"/>
                         <outlet property="qaCheckInternalView" destination="wEl-bU-X3g" id="Yyj-Yu-Pjy"/>
                         <outlet property="qaView" destination="Wgm-Qn-LAs" id="W7Y-ed-t3m"/>
+                        <outlet property="resetFilterButton" destination="PL3-0P-Hno" id="Fy0-No-xUh"/>
                         <outlet property="saveFilterButton" destination="7tF-mN-iAi" id="jTN-Qw-nTA"/>
                         <outlet property="viewForTimeFilterView" destination="zC3-0H-0h9" id="DEq-OY-ggn"/>
                         <outlet property="viewForTypeFilterView" destination="9FC-Ui-OvB" id="xVt-Jk-Pgx"/>

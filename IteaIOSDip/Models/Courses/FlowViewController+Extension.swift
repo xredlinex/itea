@@ -12,9 +12,11 @@ import UIKit
 extension FlowViewController {
 
     func flowDescription(course: CourseFlow) {
+        
 //      flow name
         flowNameTextLabel.text = flow.name ?? "---"
         flowNameTextLabel.text = flowNameTextLabel.text?.uppercased()
+        
 //        header image
         headerCourseImage.contentMode = .scaleAspectFit
         if let image = flow.flowHeaderImage, image != "" {
@@ -22,6 +24,7 @@ extension FlowViewController {
          } else {
             screenHeaderHeightConstraint.priority = UILayoutPriority(rawValue: 600)
          }
+        
 //        description
         if let descript = flow.typeDescription, descript != "" {
             flowDiscriptionTextLabel.text = descript
@@ -29,6 +32,7 @@ extension FlowViewController {
             hideDescriptionHeightConstraint.priority = UILayoutPriority(rawValue: 600)
             flowDescriptionView.isHidden = true
         }
+        
 //        level decription
         if let level = flow.typeLevelDescriptiom, level != "" {
             flowLevelTextLabel.text = level

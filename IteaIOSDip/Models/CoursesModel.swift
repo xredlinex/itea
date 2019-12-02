@@ -35,7 +35,6 @@ class Courses {
     var courseProgram: String?
     var courseDescription: String?
     var courseID: String?
-    
 }
 
 class CoursesTypeDescription {
