@@ -14,6 +14,7 @@ class CourseFlow {
     var programmingFlow: [TypesOfProgrammingFlow]?
     var isProgrammingLanguage: Bool?
     var courseType: String?
+    var courseSecondType : String?
     var courseTime: String?
     var coursesImage: String?
     var typeDescription: String?

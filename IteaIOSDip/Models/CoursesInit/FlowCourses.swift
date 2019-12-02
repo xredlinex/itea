@@ -18,8 +18,9 @@ class IteaCourse {
         let javaScript = makeJavaScriptCourses()
         let frontEnd = makeFrontEndCourses()
         let php = makePhpCourseFlow()
+        let design = makeWebDesign()
         
-        return [mobile, qa, javaProgramming, cplus, javaScript, frontEnd, php]
+        return [mobile, qa, javaProgramming, cplus, javaScript, frontEnd, php, design]
     }
 }
 

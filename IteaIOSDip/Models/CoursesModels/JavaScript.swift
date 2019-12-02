@@ -120,6 +120,7 @@ func makeJavaScriptCourses() -> CourseFlow {
     let js = CourseFlow()
     js.name = "JS DEVELOPMENT"
     js.courseType = "programming"
+    js.courseSecondType = "front"
     js.courseTime = "night"
     js.coursesImage = "roadmap_javascript"
     js.flowHeaderImage = "roadmap_javascript"

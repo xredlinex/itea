@@ -21,6 +21,8 @@
 		972CB6F42382AB5200E68BAC /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F32382AB5200E68BAC /* Validation.swift */; };
 		9739FF37239507D700F0620D /* PhpDescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF36239507D700F0620D /* PhpDescript.swift */; };
 		9739FF3A23950A8400F0620D /* Php.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3923950A8400F0620D /* Php.swift */; };
+		9739FF3C23951B6C00F0620D /* WebDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3B23951B6C00F0620D /* WebDesign.swift */; };
+		9739FF3F23951F3200F0620D /* WebDes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3E23951F3200F0620D /* WebDes.swift */; };
 		973DDEC5239082A200FA79ED /* CourseSignUpViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */; };
 		973DDEC92390A26400FA79ED /* ValidationErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 973DDEC82390A26400FA79ED /* ValidationErrors.strings */; };
 		973DDECB2390B1D700FA79ED /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDECA2390B1D700FA79ED /* ValidationErrors.swift */; };
@@ -92,6 +94,8 @@
 		972CB6F32382AB5200E68BAC /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		9739FF36239507D700F0620D /* PhpDescript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhpDescript.swift; sourceTree = "<group>"; };
 		9739FF3923950A8400F0620D /* Php.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Php.swift; sourceTree = "<group>"; };
+		9739FF3B23951B6C00F0620D /* WebDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDesign.swift; sourceTree = "<group>"; };
+		9739FF3E23951F3200F0620D /* WebDes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDes.swift; sourceTree = "<group>"; };
 		973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseSignUpViewController+Extension.swift"; sourceTree = "<group>"; };
 		973DDEC82390A26400FA79ED /* ValidationErrors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ValidationErrors.strings; sourceTree = "<group>"; };
 		973DDECA2390B1D700FA79ED /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				9769314523947B560048792F /* JavaScript */,
 				97693150239496F30048792F /* Frontend */,
 				9739FF38239507FB00F0620D /* Php */,
+				9739FF3D23951B7100F0620D /* WebDesign */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -254,6 +259,14 @@
 				9739FF36239507D700F0620D /* PhpDescript.swift */,
 			);
 			path = Php;
+			sourceTree = "<group>";
+		};
+		9739FF3D23951B7100F0620D /* WebDesign */ = {
+			isa = PBXGroup;
+			children = (
+				9739FF3B23951B6C00F0620D /* WebDesign.swift */,
+			);
+			path = WebDesign;
 			sourceTree = "<group>";
 		};
 		9748B18523894AD300C3CB21 /* Java */ = {
@@ -364,6 +377,7 @@
 				9769314123947AA00048792F /* JavaScript.swift */,
 				9769314C2394962E0048792F /* FrontEnd.swift */,
 				9739FF3923950A8400F0620D /* Php.swift */,
+				9739FF3E23951F3200F0620D /* WebDes.swift */,
 			);
 			path = CoursesModels;
 			sourceTree = "<group>";
@@ -561,11 +575,13 @@
 				9748B18923894B0300C3CB21 /* Java.swift in Sources */,
 				9769314223947AA00048792F /* JavaScript.swift in Sources */,
 				977AC363238D705F003C2800 /* ProgrammingFlowViewController.swift in Sources */,
+				9739FF3C23951B6C00F0620D /* WebDesign.swift in Sources */,
 				97AF5A1323887C21008E57F2 /* Mobile.swift in Sources */,
 				97AF5A1023886EFB008E57F2 /* MobileDevelopmentDescription.swift in Sources */,
 				97C8F0922392B2BD000D54D3 /* StudentInit.swift in Sources */,
 				9717BD4C238219F9000A2357 /* CoursesModel.swift in Sources */,
 				977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */,
+				9739FF3F23951F3200F0620D /* WebDes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

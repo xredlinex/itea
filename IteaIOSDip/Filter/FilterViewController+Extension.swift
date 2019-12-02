@@ -172,7 +172,7 @@ extension FilterViewController {
         otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
         
         for flowItems in flow {
-            if flowItems.courseType == "front" {
+            if flowItems.courseType == "front" || flowItems.courseSecondType == "front" {
                 sortbyType.append(flowItems)
             }
         }
