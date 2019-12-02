@@ -100,6 +100,8 @@ extension AuthenticationViewController: UITextFieldDelegate {
 extension AuthenticationViewController {
     
     func hideValidationErrors() {
+        emailValidationErrorTextLabel.text = ""
+        passwordValidationErrorTextLabel.text = ""
         showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
         showPassValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
         showEmailErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)

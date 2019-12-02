@@ -37,12 +37,12 @@ extension SignUpViewController: UITextFieldDelegate {
         case nameTextField:
             lastNameTextField.becomeFirstResponder()
         case lastNameTextField:
+            ageTextField.becomeFirstResponder()
+        case ageTextField:
             emailTextField.becomeFirstResponder()
         case emailTextField:
             phoneTextField.becomeFirstResponder()
         case phoneTextField:
-            ageTextField.becomeFirstResponder()
-        case ageTextField:
             cityTextField.becomeFirstResponder()
         case cityTextField:
             passwordTextField.becomeFirstResponder()
@@ -61,26 +61,34 @@ extension SignUpViewController: UITextFieldDelegate {
         switch textField {
         case nameTextField:
             nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            nameImageView.image = UIImage(systemName: "person.fill")
             nameErrorTextLabel.text = ""
         case lastNameTextField:
             lastNameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            lastNameImageView.image = UIImage(systemName: "person.2.fill")
             lastNameErrorTextLabel.text = ""
         case emailTextField:
             emailWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            emailImageView.image = UIImage(systemName: "envelope.fill")
             emailErrorTextLabel.text = ""
         case phoneTextField:
             phoneWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            phoneImageView.image = UIImage(systemName: "phone.down.fill")
             phoneErrorTextLabel.text = ""
         case ageTextField:
             ageWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            ageImageView.image = UIImage(systemName: "calendar.circle.fill")
         case cityTextField:
             cityWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            cityImageView.image = UIImage(systemName: "map.fill")
             cityErrorTextLabel.text = ""
         case passwordTextField:
             passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            passwordImageView.image = UIImage(systemName: "lock.fill")
             passwordErrorTextLabel.text = ""
         case confirmPasswordTextField:
             passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            confirmPasswordImageView.image = UIImage(systemName: "hand.raised.fill")
             confirmPasswordErrorTextLabel.text = ""
         default:
             nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
@@ -91,22 +99,31 @@ extension SignUpViewController: UITextFieldDelegate {
         switch textField {
         case nameTextField:
             nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            nameImageView.image = UIImage(systemName: "person")
         case lastNameTextField:
             lastNameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            lastNameImageView.image = UIImage(systemName: "person.2")
         case emailTextField:
             emailWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            emailImageView.image = UIImage(systemName: "envelope")
         case phoneTextField:
             phoneWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+             phoneImageView.image = UIImage(systemName: "phone.down")
         case ageTextField:
             ageWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            ageImageView.image = UIImage(systemName: "calendar")
         case cityTextField:
             cityWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            cityImageView.image = UIImage(systemName: "map")
         case passwordTextField:
             passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            passwordImageView.image = UIImage(systemName: "lock")
         case confirmPasswordTextField:
             passwordWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+             confirmPasswordImageView.image = UIImage(systemName: "hand.raised")
         default:
             nameWhiteHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            
         }
     }
 }
@@ -207,13 +224,14 @@ extension SignUpViewController {
 extension SignUpViewController {
     func updateSignUpUI() {
         nameImageView.image = UIImage(systemName: "person")
-        lastNameImageView.image = UIImage(systemName: "person.2.fill")
+        lastNameImageView.image = UIImage(systemName: "person.2")
         ageImageView.image = UIImage(systemName: "calendar")
         emailImageView.image = UIImage(systemName: "envelope")
         phoneImageView.image = UIImage(systemName: "phone.down")
         cityImageView.image = UIImage(systemName: "map")
         passwordImageView.image = UIImage(systemName: "lock")
         confirmPasswordImageView.image = UIImage(systemName: "hand.raised")
+        
         
         policyTextLabel.text = """
         Подписанием и отправкой настоящей заявки я подтверждаю, что я ознакомлен с

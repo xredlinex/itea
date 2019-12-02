@@ -89,6 +89,8 @@ class SignUpViewController: UIViewController {
 
         let keyboardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
         view.addGestureRecognizer(keyboardHide)
+        addNextButtonOnKeyboardAge()
+        addNextButtonOnKeyboardPhone()
     }
     
     @IBAction func didTapGoBackActionButton(_ sender: Any) {
