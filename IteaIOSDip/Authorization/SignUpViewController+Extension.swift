@@ -232,7 +232,6 @@ extension SignUpViewController {
         passwordImageView.image = UIImage(systemName: "lock")
         confirmPasswordImageView.image = UIImage(systemName: "hand.raised")
         
-        
         policyTextLabel.text = """
         Подписанием и отправкой настоящей заявки я подтверждаю, что я ознакомлен с
         Политикой конфиденциальности и принимаю ее условия, включая регламентирующие обработку моих персональных данных, и согласен с ней.

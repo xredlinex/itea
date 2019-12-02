@@ -78,6 +78,7 @@
 		97DC34A22395427D0080E20E /* DataScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34A12395427D0080E20E /* DataScience.swift */; };
 		97DC34A6239548260080E20E /* CsharpDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34A5239548260080E20E /* CsharpDescription.swift */; };
 		97DC34A923954A2E0080E20E /* Csharp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34A823954A2E0080E20E /* Csharp.swift */; };
+		97DC34AB239560360080E20E /* HumanResourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34AA239560360080E20E /* HumanResourses.swift */; };
 		97DF63442382979C00C6D5A6 /* FlowCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF63432382979C00C6D5A6 /* FlowCourses.swift */; };
 		97DF634623829A2700C6D5A6 /* Qa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF634523829A2700C6D5A6 /* Qa.swift */; };
 		97EB1ADE239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */; };
@@ -157,6 +158,7 @@
 		97DC34A12395427D0080E20E /* DataScience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScience.swift; sourceTree = "<group>"; };
 		97DC34A5239548260080E20E /* CsharpDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsharpDescription.swift; sourceTree = "<group>"; };
 		97DC34A823954A2E0080E20E /* Csharp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Csharp.swift; sourceTree = "<group>"; };
+		97DC34AA239560360080E20E /* HumanResourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanResourses.swift; sourceTree = "<group>"; };
 		97DF63432382979C00C6D5A6 /* FlowCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCourses.swift; sourceTree = "<group>"; };
 		97DF634523829A2700C6D5A6 /* Qa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qa.swift; sourceTree = "<group>"; };
 		97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgrammingFlowViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				9739FF4223952E2600F0620D /* Python */,
 				9739FF4723953D5200F0620D /* MachineLern */,
 				97DC34A7239548290080E20E /* C4 */,
+				97DC34AC2395603D0080E20E /* HumanRes */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -504,6 +507,14 @@
 			path = C4;
 			sourceTree = "<group>";
 		};
+		97DC34AC2395603D0080E20E /* HumanRes */ = {
+			isa = PBXGroup;
+			children = (
+				97DC34AA239560360080E20E /* HumanResourses.swift */,
+			);
+			path = HumanRes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,6 +645,7 @@
 				977F1162238E6A02003B522B /* Factory.swift in Sources */,
 				9769314423947B510048792F /* JavaScriptDescript.swift in Sources */,
 				977AC364238D705F003C2800 /* FlowViewController.swift in Sources */,
+				97DC34AB239560360080E20E /* HumanResourses.swift in Sources */,
 				97BD3288238D967A002A2F06 /* CoursesCollectionViewCell.swift in Sources */,
 				97DC34A22395427D0080E20E /* DataScience.swift in Sources */,
 				9748B18923894B0300C3CB21 /* Java.swift in Sources */,

@@ -639,6 +639,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="Vjv-5C-Ojb"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                     </textField>
@@ -705,6 +706,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="Aip-Nd-6QR"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                     </textField>
@@ -771,6 +773,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="ajc-Nz-LV4"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next"/>
                                                     </textField>
@@ -837,6 +840,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="q4k-k3-e78"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                     </textField>
@@ -903,6 +907,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="7eJ-yN-lR5"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" returnKeyType="next"/>
                                                     </textField>
@@ -969,6 +974,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="8qg-41-0l5"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                     </textField>
@@ -1027,6 +1033,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="IR9-Yz-ygw"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                                                     </textField>
@@ -1126,6 +1133,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="OYQ-jc-yKT"/>
                                                         </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                                     </textField>
