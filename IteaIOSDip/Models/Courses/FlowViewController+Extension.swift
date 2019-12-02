@@ -8,37 +8,37 @@
 
 import UIKit
 
-//  MARK: - UIDESIGN AND ELEMENTS
+//  MARK: - DESCRIPTION COURSE INFO -
 extension FlowViewController {
-    
-    func updateCoursesFlow() {
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        let blurEffect = UIBlurEffect(style: .regular)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        backgroundImage.image = UIImage(named: "bg")
-        backgroundImage.contentMode = .scaleAspectFill
-        blurView.translatesAutoresizingMaskIntoConstraints = false
+
+    func flowDescription(course: CourseFlow) {
         
-        descriptionView.insertSubview(blurView, at: 0)
-        goToCoursesButton.clipsToBounds = true
-        goToCoursesButton.layer.cornerRadius = 12.0
-        goToCoursesButton.isOpaque = true
-        goToCoursesButton.alpha = 0.8
-        goToCoursesButton.layer.masksToBounds = false
-        goToCoursesButton.layer.shadowColor = UIColor.black.cgColor
-        goToCoursesButton.layer.shadowOpacity = 0.5
-        goToCoursesButton.layer.shadowOffset = CGSize(width: 10, height: 10)
-        goToCoursesButton.layer.shadowRadius = 12.0
+//      flow name
+        flowNameTextLabel.text = flow.name ?? "---"
+        flowNameTextLabel.text = flowNameTextLabel.text?.uppercased()
         
-        NSLayoutConstraint.activate([blurView.heightAnchor.constraint(equalTo: descriptionView.heightAnchor),
-                                     blurView.widthAnchor.constraint(equalTo: descriptionView.widthAnchor)])
-        let secondBlurView = UIVisualEffectView(effect: blurEffect)
-        secondBlurView.translatesAutoresizingMaskIntoConstraints = false
-        levelView.insertSubview(secondBlurView, at: 0)
-       
-        NSLayoutConstraint.activate([secondBlurView.heightAnchor.constraint(equalTo: levelView.heightAnchor),
-                                     secondBlurView.widthAnchor.constraint(equalTo: levelView.widthAnchor)])
-        view.addSubview(backgroundImage)
-        self.view.sendSubviewToBack(backgroundImage)
+//        header image
+        headerCourseImage.contentMode = .scaleAspectFit
+        if let image = flow.flowHeaderImage, image != "" {
+            headerCourseImage.image = UIImage(named: flow.flowHeaderImage ?? "noImage")
+         } else {
+            screenHeaderHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+         }
+        
+//        description
+        if let descript = flow.typeDescription, descript != "" {
+            flowDiscriptionTextLabel.text = descript
+        } else {
+            hideDescriptionHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            flowDescriptionView.isHidden = true
+        }
+        
+//        level decription
+        if let level = flow.typeLevelDescriptiom, level != "" {
+            flowLevelTextLabel.text = level
+        } else {
+            hideLevelHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            flowLevelView.isHidden = true
+        }
     }
 }

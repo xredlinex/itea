@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class FilterViewController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
@@ -40,21 +39,24 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var designCheckInternalView: UIView!
     @IBOutlet weak var qaCheckInternalView: UIView!
     @IBOutlet weak var otherCheckInternalView: UIView!
+    @IBOutlet weak var resetFilterButton: UIButton!
     
     var flow: [CourseFlow] = []
     var sortbyDate: [CourseFlow] = []
     var sortbyType: [CourseFlow] = []
     var filterFlow: [CourseFlow] = []
+    var setDaultOfDefailts: [CourseFlow] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setDaultOfDefailts = flow
 //      recieve course data
         setDefaultsFilterCourse(courses: flow)
-
 //      set defaults buttons tap FUNC
         defaultFilterButtons()
         uidesignFilter()
+        saveFilterButton.iteaButton()
+        resetFilterButton.iteaButton()
 
 //  MARK: - MAKE RADIO BUTTONS
         let radioButtons: [UIView] = [nightCheckExternalView,
@@ -88,7 +90,7 @@ class FilterViewController: UIViewController {
             uiDesignFilterTapRadioBattonsView(view: view)
         }
 
-//  MARK: - SET TAP GESTURE RECOGNIZER
+//  MARK: - SET TAP GESTURE RECOGNIZER - 
         nightCheckView.isUserInteractionEnabled = true
         dayCheckView.isUserInteractionEnabled = true
         allFlowView.isUserInteractionEnabled = true
@@ -141,155 +143,16 @@ class FilterViewController: UIViewController {
             defaultFilterButtons()
         }
     }
-}
-
-extension FilterViewController {
-
     
-//    TODO: - MAKE FUNCTIOM FOR BUTTONS CHANGE
-//    func chngeRadioButtons(activeFilter: Bool, notActive: Bool) {
-//        var active: CGColor = UIColor.black.cgColor
-//        var notActive: CGColor = UIColor.white.cgColor
-//        
-//    
-//        if
-//        
-//        allFlowCheckInternalView.layer.backgroundColor = UIColor.black.cgColor
-//        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-//        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-//        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-//        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-//        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-//    }
-}
-
-
-extension FilterViewController {
-    
-    @objc func didNightTapAction() {
-        filterSaved(state: false)
-        sortbyDate = []
-        nightCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        dayCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-
-        for  flowItems in flow {
-            if flowItems.courseTime == "night" {
-                sortbyDate.append(flowItems)
-            }
+    @IBAction func didTapResetFilterActionButton(_ sender: Any) {
+        let resetFilterAlert = UIAlertController(title: "Фильтр", message: "Сбросить настройки Фильтра?", preferredStyle: .alert)
+        let resetAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.flow = self.setDaultOfDefailts
         }
-    }
-    
-    @objc func didDayTapAction() {
-        filterSaved(state: false)
-        sortbyDate = []
-        dayCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        nightCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        
-        for flowItems in flow {
-            if flowItems.courseTime == "day" {
-                sortbyDate.append(flowItems)
-            }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
         }
-    }
-    
-    @objc func didallFlowAction() {
-        filterSaved(state: false)
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        
-        for flowItems in flow {
-                sortbyType.append(flowItems)
-        }
-    }
-    
-    @objc func didProgramingAction() {
-        filterSaved(state: false)
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        
-        for flowItems in flow {
-            if flowItems.courseType == "programming" {
-                sortbyType.append(flowItems)
-            }
-        }
-    }
-    
-    @objc func didFrontEndAction() {
-        filterSaved(state: false)
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        
-        
-        for flowItems in flow {
-            if flowItems.courseType == "front" {
-                sortbyType.append(flowItems)
-            }
-        }
-    }
-    
-    @objc func didDesignAction() {
-        filterSaved(state: false)
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        
-        for flowItems in flow {
-            if flowItems.courseType == "design" {
-                sortbyType.append(flowItems)
-            }
-        }
-    }
-    
-    @objc func didQaAction() {
-        filterSaved(state: false)
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-
-        for flowItems in flow {
-            if flowItems.courseType == "qa" {
-                sortbyType.append(flowItems)
-            }
-        }
-    }
-    
-    @objc func didOtherAction() {
-        filterSaved(state: false)
-        sortbyType = []
-        allFlowCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        programmingCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        frontEndCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        designCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        qaCheckInternalView.layer.backgroundColor = UIColor.clear.cgColor
-        otherCheckInternalView.layer.backgroundColor = UIColor.white.cgColor
-        
-        for flowItems in flow {
-            if flowItems.courseType == "other" {
-                sortbyType.append(flowItems)
-            }
-        }        
+        resetFilterAlert.addAction(resetAction)
+        resetFilterAlert.addAction(cancel)
+        present(resetFilterAlert, animated: true, completion: nil)
     }
 }

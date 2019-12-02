@@ -15,49 +15,17 @@ class IteaStudent {
     var city: String?
     var birthday: String?
     var mail: String?
+    var phoneNumber: String?
     var password: String?
     var userPicture: String?
+    var studentNextCourse: String?
+    var studenCurrentCourse: String?
+    var studentLastCourses: [String]?
+    var workPlace: String?
     var studentCourses: [StudentCourses]?
-    
-    
-//    var nextCourse: [Courses]?  /* OBJECT*/
-//    var completedCourses: [Courses]?       /* ARRAY OF OBJECTS*/
 }
-
-
-func iteaStudent() -> IteaStudent {
-        
-    let student = IteaStudent()
-    student.name = "Name"
-    student.lastName = "Last NAME"
-   
-    
-    return student
-}
-
 
 class StudentCourses {
-    var nextCourse: [Courses]?
-    var completedCourse: [Courses]?
-    
-    
-    init(nextCourse: [Courses], completedCourses: [Courses]) {
-        self.nextCourse = nextCourse
-        self.completedCourse = completedCourses
-        
-    }
+    var courseProgress: String?
+    var courses: [Courses]?
 }
-
-
-
-
-//func studentCourse() -> [StudentCourse] {
-//
-//    let nextCourses = StudentCourse()
-//    nextCourses.courses = []
-//    let completedCourse = StudentCourse()
-//    completedCourse.courses = []
-//
-//    return [nextCourses, completedCourse]
-//}
-

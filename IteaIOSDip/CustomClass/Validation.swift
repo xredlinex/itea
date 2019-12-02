@@ -19,7 +19,7 @@ class Validation {
         return validate
     }
     
-//  MARK: - VALIDATE NAME
+//  MARK: - VALIDATE NAME -
     func validateName(name: String) -> Bool {
         var validate = false
         if name != "" && name.count > 2 {
@@ -28,7 +28,7 @@ class Validation {
         return validate
     }
     
-//  MARK: - VALIDATE LAST NAME
+//  MARK: - VALIDATE LAST NAME -
     func validateLastNAme(lastName: String) -> Bool {
         var validate = false
         if lastName != "" && lastName.count > 2 {
@@ -37,7 +37,7 @@ class Validation {
         return validate
     }
 
-//  MARK: - VALIDATE AGE
+//  MARK: - VALIDATE AGE -
     func validateAge(age: Int) -> Bool {
         var validate = false
             if age >= 18 && age <= 100 {
@@ -46,7 +46,7 @@ class Validation {
             return validate
         }
     
-// MARK: - VALIDATE EMAIL
+// MARK: - VALIDATE EMAIL -
     func validateMail(mail: String) -> Bool {
         var validate = false
         if mail.count > 8 && mail.contains("@") == true && mail.contains(".") {
@@ -55,7 +55,7 @@ class Validation {
         return validate
     }
     
-//  MARK: - VALIDATE PASSWORD
+//  MARK: - VALIDATE PASSWORD -
     func validatePassword(password: String) -> Bool {
         var validate = false
         if password.count >= 5 && password.count <= 16 {
@@ -64,7 +64,7 @@ class Validation {
         return validate
     }
     
-// MARK: - VALIDATE PHONE NUMBER
+// MARK: - VALIDATE PHONE NUMBER - 
     func validatePhone(phone: String) -> Bool {
         var validate = false
         if phone.count == 13 && phone.hasPrefix("+") {

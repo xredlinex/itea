@@ -12,55 +12,31 @@ class LastCoursesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var student = IteaStudent()
+    var studentCourses = [StudentCourses]()
+    var recieveCourses = [StudentCourses]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        studentCourses = recieveCourses
         
-        student = iteaStudent()
         tableView.register(UINib(nibName: "CoursesTableViewCell", bundle: nil), forCellReuseIdentifier: "CoursesTableViewCell")
-        
         tableView.reloadData()
+        backgroundView(image: "profileBg", color: UIColor.init(red: 19/255, green: 58/255, blue: 85/255, alpha: 1), alpha: 0.7)
     }
     
     @IBAction func didTapGoBackButton(_ sender: Any) {
+        navigationController?.popViewController(animated: false)
     }
-  
-
 }
 
-extension LastCoursesViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return student.studentCourses?.count ?? 0
+//  TODO: DELEGATE NOT WORK
+//  MARK: - DELEGATE CELL - TAP AND GO TO DESCRIPTION -
+extension LastCoursesViewController : CoursesTableViewCellProtocol {
+    func courseInfo(index: Int) {
+        let storyboard = UIStoryboard(name: "Courses", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailedCourseViewController") as! DetailedCourseViewController
+//        viewController.recieveCourse = student.studentCourses.self[index]
+        navigationController?.pushViewController(viewController, animated: true)
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesTableViewCell") as! CoursesTableViewCell
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-          let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
-          let label = UILabel(frame: view.frame)
-          
-        label.text = "blaaa"
-          label.textAlignment = .center
-          label.layer.backgroundColor = UIColor.white.cgColor
-          label.font = label.font.withSize(25)
-          label.text = label.text?.uppercased()
-      
-          view.addSubview(label)
-          return view
-      }
-    
-    
-    
-    
-    
-    
 }

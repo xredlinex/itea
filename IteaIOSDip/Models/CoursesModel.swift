@@ -34,7 +34,7 @@ class Courses {
     var courseSkills: String?
     var courseProgram: String?
     var courseDescription: String?
-    
+    var courseID: String?
 }
 
 class CoursesTypeDescription {
