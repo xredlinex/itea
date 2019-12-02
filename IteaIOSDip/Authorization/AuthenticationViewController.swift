@@ -30,6 +30,8 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var iteaLogoTView: UIView!
     @IBOutlet weak var iteaLogoEView: UIView!
     
+    @IBOutlet weak var personImageView: UIImageView!
+    @IBOutlet weak var passwordImageView: UIImageView!
     var iteaStudents: [IteaStudent] = []
     var newStudent = IteaStudent()
     var validationErrors = ValidationErrors()

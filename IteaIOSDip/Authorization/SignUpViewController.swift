@@ -63,7 +63,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordWhiteHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var confirmPasswordWhiteHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
-
+    
+    
+    @IBOutlet weak var showPasswordImageView: UIImageView!
+    @IBOutlet weak var showConfirmPasswordImageView: UIImageView!
+    
     var checkPolicy = false
     var validate = false
     var validation = Validation()
@@ -137,6 +141,12 @@ class SignUpViewController: UIViewController {
         } else {
             errorAlert(title: validationErrors.errorKey(.error), message: validationErrors.errorKey(.invalidPolicy))
         }
+    }
+    @IBAction func didTapShowPasswordActionButton(_ sender: Any) {
+        showPassword()
+    }
+    @IBAction func didTapShowConfirmPasswordActionButton(_ sender: Any) {
+        showConfirmPassword()
     }
 }
 

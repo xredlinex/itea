@@ -240,3 +240,25 @@ extension SignUpViewController {
         policyImageView.image = UIImage(systemName: "square")
     }
 }
+
+//  MARK: - SHOW HIDE PASSWORD BUTTON -
+extension SignUpViewController {
+    func showPassword() {
+        if passwordTextField.isSecureTextEntry == true {
+            passwordTextField.isSecureTextEntry = false
+            showPasswordImageView.image = UIImage(systemName: "eye.slash")
+        } else {
+            passwordTextField.isSecureTextEntry = true
+            showPasswordImageView.image = UIImage(systemName: "eye")
+        }
+    }
+    func showConfirmPassword() {
+        if confirmPasswordTextField.isSecureTextEntry == true {
+            confirmPasswordTextField.isSecureTextEntry = false
+            showConfirmPasswordImageView.image = UIImage(systemName: "eye.slash")
+        } else {
+            confirmPasswordTextField.isSecureTextEntry = true
+            showConfirmPasswordImageView.image = UIImage(systemName: "eye")
+        }
+    }
+}
