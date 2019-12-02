@@ -18,7 +18,6 @@ func makeCshapr() -> CourseFlow {
     fundomentals.courseProgram = phpCoursesDescrioption()[0].courseProgram
     fundomentals.courseImage = "fundomentals"
     fundomentals.courseHeaderImage = "fundHeader"
-    fundomentals.courseID = "1000"
  
     let base = Courses()
     base.courseName = "Базовый курс C# /.NET"
