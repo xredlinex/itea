@@ -39,7 +39,7 @@ extension CoursesTableViewCell {
         courseImageView.image = UIImage(named: course.courseImage ?? "noCourseImage")
         courseImageView.clipsToBounds = true
         courseImageView.layer.cornerRadius = 12
-        courseImageView.contentMode = .scaleAspectFill
+//        courseImageView.contentMode = .scaleAspectFill
         viewForImageView.clipsToBounds = true
         viewForImageView.layer.masksToBounds = false
         viewForImageView.layer.cornerRadius = 12

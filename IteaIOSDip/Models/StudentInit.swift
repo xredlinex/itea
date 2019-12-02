@@ -17,6 +17,7 @@ func makeIteaStudents() -> [IteaStudent] {
     student.mail = "redik.line@gmail.com"
     student.studentNextCourse = "1002"
     student.studenCurrentCourse = "1001"
+    student.studentLastCourses = ["1000"]
     student.userPicture = "redi"
     student.phoneNumber = "+380630771072"
     return [student]

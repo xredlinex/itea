@@ -72,9 +72,11 @@ extension AuthenticationViewController: UITextFieldDelegate {
         switch textField {
         case userNameTextField:
             showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 900)
+            personImageView.image = UIImage(systemName: "person.circle.fill")
             hideValidationErrors()
         case userPasswordTextField:
             userPasswordTextField.text = ""
+            passwordImageView.image = UIImage(systemName: "lock.circle.fill")
             showMassonsEyeImageView.image = UIImage(systemName: "eye.slash")
             showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 900)
             hideValidationErrors()
@@ -87,8 +89,10 @@ extension AuthenticationViewController: UITextFieldDelegate {
         switch textField {
         case userNameTextField:
             showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            personImageView.image = UIImage(systemName: "person.circle")
         case userPasswordTextField:
             showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
+            passwordImageView.image = UIImage(systemName: "lock.circle")
         default:
             showLineRespondPasswordFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
             showLineRespontMailFieldHeightConstraint.priority = UILayoutPriority(rawValue: 600)
@@ -100,6 +104,8 @@ extension AuthenticationViewController: UITextFieldDelegate {
 extension AuthenticationViewController {
     
     func hideValidationErrors() {
+        emailValidationErrorTextLabel.text = ""
+        passwordValidationErrorTextLabel.text = ""
         showMailValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
         showPassValidErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
         showEmailErrorHeightConstraint.priority = UILayoutPriority(rawValue: 600)
@@ -125,27 +131,12 @@ extension AuthenticationViewController {
     func updateAuthUi() {
         iteaLogoMainView.layer.borderColor = UIColor.white.cgColor
         iteaLogoMainView.layer.borderWidth = 2.0
-        
         iteaLogoIView.layer.borderColor = UIColor.white.cgColor
         iteaLogoIView.layer.borderWidth = 2.0
         iteaLogoTView.layer.borderColor = UIColor.white.cgColor
         iteaLogoTView.layer.borderWidth = 2.0
         iteaLogoEView.layer.borderColor = UIColor.white.cgColor
-        
         iteaLogoEView.layer.borderWidth = 2.0
-        signUpButtonView.clipsToBounds = true
-        signUpButtonView.layer.masksToBounds = false
-        signUpButtonView.layer.shadowColor = UIColor.black.cgColor
-        signUpButtonView.layer.shadowOpacity = 0.5
-        signUpButtonView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        signUpButtonView.layer.shadowRadius = 12.0
-        
-        logInButtonView.clipsToBounds = true
-        logInButtonView.layer.masksToBounds = false
-        logInButtonView.layer.shadowColor = UIColor.black.cgColor
-        logInButtonView.layer.shadowOpacity = 0.5
-        logInButtonView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        logInButtonView.layer.shadowRadius = 12.0
     }
 }
 

@@ -41,11 +41,10 @@ import UIKit
         frontendAdvanced.courseHeaderImage = "html"
         frontendAdvanced.courseImage = "frontendOne"
         
-        
       let frontend = CourseFlow()
         frontend.name = "FRONTEND DEVELOPMENT"
         frontend.courseType = "front"
-        frontend.courseTime = "day"
+        frontend.courseTime = "night"
         frontend.coursesImage = "frontend-350"
         frontend.flowHeaderImage = "html"
         frontend.typeDescription = FrontEndDescription().typeDescription

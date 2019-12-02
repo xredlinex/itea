@@ -17,8 +17,13 @@ class IteaCourse {
         let cplus = makeCPlusProgrammingCourses()
         let javaScript = makeJavaScriptCourses()
         let frontEnd = makeFrontEndCourses()
+        let php = makePhpCourseFlow()
+        let design = makeWebDesign()
+        let python = makePython()
+        let data = makeDataScience()
+        let sharp = makeCshapr()
         
-        return [mobile, qa, javaProgramming, cplus, javaScript, frontEnd]
+        return [mobile, qa, javaProgramming, cplus, javaScript, frontEnd, php, design, python, data, sharp]
     }
 }
 

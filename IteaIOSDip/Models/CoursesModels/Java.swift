@@ -10,6 +10,13 @@ import UIKit
 
 
 func makeJsProgrammingCourses() -> CourseFlow {
+    let fundomentals = Courses()
+    fundomentals.courseName = "Основы Программирования"
+    fundomentals.courseDescription = phpCoursesDescrioption()[0].courseDescriotion
+    fundomentals.courseSkills = phpCoursesDescrioption()[0].courseSkills
+    fundomentals.courseProgram = phpCoursesDescrioption()[0].courseProgram
+    fundomentals.courseImage = "fundomentals"
+    fundomentals.courseHeaderImage = "fundHeader"
  
     let javaBase = Courses()
     javaBase.courseName = "Базовый курс Java"
@@ -46,7 +53,7 @@ func makeJsProgrammingCourses() -> CourseFlow {
     javaProgramming.coursesImage = "java-350"
     javaProgramming.typeDescription = javaProgrammingTypeDescription().typeDescription
     javaProgramming.typeLevelDescriptiom = javaProgrammingTypeDescription().typeLevelDescription
-    javaProgramming.courses = [javaBase, javaAdvanced, javaWebApps, scalaProgramming]
+    javaProgramming.courses = [fundomentals, javaBase, javaAdvanced, javaWebApps, scalaProgramming]
         
      return javaProgramming
 }

@@ -19,6 +19,13 @@
 		972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */; };
 		972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */; };
 		972CB6F42382AB5200E68BAC /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F32382AB5200E68BAC /* Validation.swift */; };
+		9739FF37239507D700F0620D /* PhpDescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF36239507D700F0620D /* PhpDescript.swift */; };
+		9739FF3A23950A8400F0620D /* Php.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3923950A8400F0620D /* Php.swift */; };
+		9739FF3C23951B6C00F0620D /* WebDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3B23951B6C00F0620D /* WebDesign.swift */; };
+		9739FF3F23951F3200F0620D /* WebDes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3E23951F3200F0620D /* WebDes.swift */; };
+		9739FF4123952E2000F0620D /* PythonDescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF4023952E2000F0620D /* PythonDescript.swift */; };
+		9739FF442395301F00F0620D /* Python.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF432395301F00F0620D /* Python.swift */; };
+		9739FF4623953D4D00F0620D /* ScienceMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF4523953D4D00F0620D /* ScienceMachine.swift */; };
 		973DDEC5239082A200FA79ED /* CourseSignUpViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */; };
 		973DDEC92390A26400FA79ED /* ValidationErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 973DDEC82390A26400FA79ED /* ValidationErrors.strings */; };
 		973DDECB2390B1D700FA79ED /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDECA2390B1D700FA79ED /* ValidationErrors.swift */; };
@@ -68,6 +75,9 @@
 		97BD3291238DA07E002A2F06 /* Kittchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BD3290238DA07E002A2F06 /* Kittchen.swift */; };
 		97C8F08B239284A4000D54D3 /* ProfileViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8F08A239284A4000D54D3 /* ProfileViewController+Extension.swift */; };
 		97C8F0922392B2BD000D54D3 /* StudentInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8F0912392B2BD000D54D3 /* StudentInit.swift */; };
+		97DC34A22395427D0080E20E /* DataScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34A12395427D0080E20E /* DataScience.swift */; };
+		97DC34A6239548260080E20E /* CsharpDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34A5239548260080E20E /* CsharpDescription.swift */; };
+		97DC34A923954A2E0080E20E /* Csharp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC34A823954A2E0080E20E /* Csharp.swift */; };
 		97DF63442382979C00C6D5A6 /* FlowCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF63432382979C00C6D5A6 /* FlowCourses.swift */; };
 		97DF634623829A2700C6D5A6 /* Qa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF634523829A2700C6D5A6 /* Qa.swift */; };
 		97EB1ADE239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */; };
@@ -88,6 +98,13 @@
 		972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		972CB6F32382AB5200E68BAC /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		9739FF36239507D700F0620D /* PhpDescript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhpDescript.swift; sourceTree = "<group>"; };
+		9739FF3923950A8400F0620D /* Php.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Php.swift; sourceTree = "<group>"; };
+		9739FF3B23951B6C00F0620D /* WebDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDesign.swift; sourceTree = "<group>"; };
+		9739FF3E23951F3200F0620D /* WebDes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDes.swift; sourceTree = "<group>"; };
+		9739FF4023952E2000F0620D /* PythonDescript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonDescript.swift; sourceTree = "<group>"; };
+		9739FF432395301F00F0620D /* Python.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Python.swift; sourceTree = "<group>"; };
+		9739FF4523953D4D00F0620D /* ScienceMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceMachine.swift; sourceTree = "<group>"; };
 		973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseSignUpViewController+Extension.swift"; sourceTree = "<group>"; };
 		973DDEC82390A26400FA79ED /* ValidationErrors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ValidationErrors.strings; sourceTree = "<group>"; };
 		973DDECA2390B1D700FA79ED /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
@@ -137,6 +154,9 @@
 		97BD3290238DA07E002A2F06 /* Kittchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kittchen.swift; sourceTree = "<group>"; };
 		97C8F08A239284A4000D54D3 /* ProfileViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+Extension.swift"; sourceTree = "<group>"; };
 		97C8F0912392B2BD000D54D3 /* StudentInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInit.swift; sourceTree = "<group>"; };
+		97DC34A12395427D0080E20E /* DataScience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScience.swift; sourceTree = "<group>"; };
+		97DC34A5239548260080E20E /* CsharpDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsharpDescription.swift; sourceTree = "<group>"; };
+		97DC34A823954A2E0080E20E /* Csharp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Csharp.swift; sourceTree = "<group>"; };
 		97DF63432382979C00C6D5A6 /* FlowCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCourses.swift; sourceTree = "<group>"; };
 		97DF634523829A2700C6D5A6 /* Qa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qa.swift; sourceTree = "<group>"; };
 		97EB1ADD239457F900F99FB1 /* ProgrammingFlowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgrammingFlowViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -162,6 +182,11 @@
 				977F1165238E6C57003B522B /* Cplus */,
 				9769314523947B560048792F /* JavaScript */,
 				97693150239496F30048792F /* Frontend */,
+				9739FF38239507FB00F0620D /* Php */,
+				9739FF3D23951B7100F0620D /* WebDesign */,
+				9739FF4223952E2600F0620D /* Python */,
+				9739FF4723953D5200F0620D /* MachineLern */,
+				97DC34A7239548290080E20E /* C4 */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -195,7 +220,7 @@
 			children = (
 				9717BD062381F360000A2357 /* AppDelegate.swift */,
 				9717BD082381F360000A2357 /* SceneDelegate.swift */,
-				977F115C238E66D9003B522B /* Kitchen */,
+				977F115C238E66D9003B522B /* WrkOut */,
 				977AC37E238D8F1E003C2800 /* CustomClass */,
 				972CB6EC2382A6E800E68BAC /* Models */,
 				970EEC7A23829DB700424F9E /* Description */,
@@ -241,6 +266,38 @@
 				9717BD4F23821EA3000A2357 /* Aauthorization.storyboard */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		9739FF38239507FB00F0620D /* Php */ = {
+			isa = PBXGroup;
+			children = (
+				9739FF36239507D700F0620D /* PhpDescript.swift */,
+			);
+			path = Php;
+			sourceTree = "<group>";
+		};
+		9739FF3D23951B7100F0620D /* WebDesign */ = {
+			isa = PBXGroup;
+			children = (
+				9739FF3B23951B6C00F0620D /* WebDesign.swift */,
+			);
+			path = WebDesign;
+			sourceTree = "<group>";
+		};
+		9739FF4223952E2600F0620D /* Python */ = {
+			isa = PBXGroup;
+			children = (
+				9739FF4023952E2000F0620D /* PythonDescript.swift */,
+			);
+			path = Python;
+			sourceTree = "<group>";
+		};
+		9739FF4723953D5200F0620D /* MachineLern */ = {
+			isa = PBXGroup;
+			children = (
+				9739FF4523953D4D00F0620D /* ScienceMachine.swift */,
+			);
+			path = MachineLern;
 			sourceTree = "<group>";
 		};
 		9748B18523894AD300C3CB21 /* Java */ = {
@@ -309,16 +366,13 @@
 			path = Models/Courses;
 			sourceTree = "<group>";
 		};
-		977F115C238E66D9003B522B /* Kitchen */ = {
+		977F115C238E66D9003B522B /* WrkOut */ = {
 			isa = PBXGroup;
 			children = (
-				977F115A238E66D6003B522B /* KitModelsDiscr.swift */,
-				977F115F238E691C003B522B /* KitModelObj.swift */,
-				973DDEC82390A26400FA79ED /* ValidationErrors.strings */,
-				97BD3290238DA07E002A2F06 /* Kittchen.swift */,
-				977F1161238E6A02003B522B /* Factory.swift */,
+				97DC34A3239542C00080E20E /* Factory */,
+				97DC34A4239542CE0080E20E /* Kitchen */,
 			);
-			path = Kitchen;
+			path = WrkOut;
 			sourceTree = "<group>";
 		};
 		977F1165238E6C57003B522B /* Cplus */ = {
@@ -350,6 +404,11 @@
 				97B41F4623911D240025D3C9 /* CplusModel.swift */,
 				9769314123947AA00048792F /* JavaScript.swift */,
 				9769314C2394962E0048792F /* FrontEnd.swift */,
+				9739FF3923950A8400F0620D /* Php.swift */,
+				9739FF3E23951F3200F0620D /* WebDes.swift */,
+				9739FF432395301F00F0620D /* Python.swift */,
+				97DC34A12395427D0080E20E /* DataScience.swift */,
+				97DC34A823954A2E0080E20E /* Csharp.swift */,
 			);
 			path = CoursesModels;
 			sourceTree = "<group>";
@@ -416,6 +475,33 @@
 				97C8F0912392B2BD000D54D3 /* StudentInit.swift */,
 			);
 			name = StudentsInit;
+			sourceTree = "<group>";
+		};
+		97DC34A3239542C00080E20E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				977F115A238E66D6003B522B /* KitModelsDiscr.swift */,
+				977F115F238E691C003B522B /* KitModelObj.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		97DC34A4239542CE0080E20E /* Kitchen */ = {
+			isa = PBXGroup;
+			children = (
+				973DDEC82390A26400FA79ED /* ValidationErrors.strings */,
+				97BD3290238DA07E002A2F06 /* Kittchen.swift */,
+				977F1161238E6A02003B522B /* Factory.swift */,
+			);
+			path = Kitchen;
+			sourceTree = "<group>";
+		};
+		97DC34A7239548290080E20E /* C4 */ = {
+			isa = PBXGroup;
+			children = (
+				97DC34A5239548260080E20E /* CsharpDescription.swift */,
+			);
+			path = C4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,14 +587,19 @@
 				977AC370238D71E0003C2800 /* CoursesFlowViewController+Extension.swift in Sources */,
 				977AC35F238D705F003C2800 /* CoursesFlowViewController.swift in Sources */,
 				972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */,
+				97DC34A6239548260080E20E /* CsharpDescription.swift in Sources */,
 				9769314923948C6E0048792F /* Angular.swift in Sources */,
+				9739FF3A23950A8400F0620D /* Php.swift in Sources */,
 				973DDECD2390B59D00FA79ED /* Class+Extension.swift in Sources */,
 				977F1160238E691C003B522B /* KitModelObj.swift in Sources */,
+				9739FF442395301F00F0620D /* Python.swift in Sources */,
 				9769314F239496EC0048792F /* Front.swift in Sources */,
+				9739FF4123952E2000F0620D /* PythonDescript.swift in Sources */,
 				9717BD072381F360000A2357 /* AppDelegate.swift in Sources */,
 				97693147239488110048792F /* React.swift in Sources */,
 				9769314D2394962E0048792F /* FrontEnd.swift in Sources */,
 				97DF634623829A2700C6D5A6 /* Qa.swift in Sources */,
+				9739FF37239507D700F0620D /* PhpDescript.swift in Sources */,
 				977AC37B238D738E003C2800 /* ProgrammingFlowTableViewCell.swift in Sources */,
 				97B41F4723911D240025D3C9 /* CplusModel.swift in Sources */,
 				972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */,
@@ -522,7 +613,9 @@
 				970E7F55238F2B3F00369718 /* FlowViewController+Extension.swift in Sources */,
 				977AC376238D71E0003C2800 /* DetailedCourseViewController.swift in Sources */,
 				977F1164238E6C50003B522B /* Adnroid.swift in Sources */,
+				97DC34A923954A2E0080E20E /* Csharp.swift in Sources */,
 				977AC372238D71E0003C2800 /* FilterViewController.swift in Sources */,
+				9739FF4623953D4D00F0620D /* ScienceMachine.swift in Sources */,
 				9717BD322381FB42000A2357 /* qaDescription.swift in Sources */,
 				977AC371238D71E0003C2800 /* CourseSignUpViewController.swift in Sources */,
 				97AF5A0923884716008E57F2 /* LastCoursesViewController.swift in Sources */,
@@ -542,14 +635,17 @@
 				9769314423947B510048792F /* JavaScriptDescript.swift in Sources */,
 				977AC364238D705F003C2800 /* FlowViewController.swift in Sources */,
 				97BD3288238D967A002A2F06 /* CoursesCollectionViewCell.swift in Sources */,
+				97DC34A22395427D0080E20E /* DataScience.swift in Sources */,
 				9748B18923894B0300C3CB21 /* Java.swift in Sources */,
 				9769314223947AA00048792F /* JavaScript.swift in Sources */,
 				977AC363238D705F003C2800 /* ProgrammingFlowViewController.swift in Sources */,
+				9739FF3C23951B6C00F0620D /* WebDesign.swift in Sources */,
 				97AF5A1323887C21008E57F2 /* Mobile.swift in Sources */,
 				97AF5A1023886EFB008E57F2 /* MobileDevelopmentDescription.swift in Sources */,
 				97C8F0922392B2BD000D54D3 /* StudentInit.swift in Sources */,
 				9717BD4C238219F9000A2357 /* CoursesModel.swift in Sources */,
 				977F115B238E66D6003B522B /* KitModelsDiscr.swift in Sources */,
+				9739FF3F23951F3200F0620D /* WebDes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

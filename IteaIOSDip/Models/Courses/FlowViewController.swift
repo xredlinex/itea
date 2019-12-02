@@ -43,10 +43,17 @@ class FlowViewController: UIViewController {
     }
     
     @IBAction func didTapGoToCoursesAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Courses", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesViewController") as! CoursesViewController
-        viewController.recieveFlow = recieveFlow
-        navigationController?.pushViewController(viewController, animated: true)
+        if recieveFlow.isProgrammingLanguage == true{
+            let storyboard = UIStoryboard(name: "Courses", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "ProgrammingFlowViewController") as! ProgrammingFlowViewController
+            viewController.recieveFlow = recieveFlow
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let storyboard = UIStoryboard(name: "Courses", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "CoursesViewController") as! CoursesViewController
+            viewController.recieveFlow = recieveFlow
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     @IBAction func didTapGoToCoursesActionButton(_ sender: Any) {
