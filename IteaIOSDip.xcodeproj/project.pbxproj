@@ -19,6 +19,8 @@
 		972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */; };
 		972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */; };
 		972CB6F42382AB5200E68BAC /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CB6F32382AB5200E68BAC /* Validation.swift */; };
+		9739FF37239507D700F0620D /* PhpDescript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF36239507D700F0620D /* PhpDescript.swift */; };
+		9739FF3A23950A8400F0620D /* Php.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9739FF3923950A8400F0620D /* Php.swift */; };
 		973DDEC5239082A200FA79ED /* CourseSignUpViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */; };
 		973DDEC92390A26400FA79ED /* ValidationErrors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 973DDEC82390A26400FA79ED /* ValidationErrors.strings */; };
 		973DDECB2390B1D700FA79ED /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973DDECA2390B1D700FA79ED /* ValidationErrors.swift */; };
@@ -88,6 +90,8 @@
 		972CB6EE2382A9D300E68BAC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		972CB6F02382AA0E00E68BAC /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		972CB6F32382AB5200E68BAC /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		9739FF36239507D700F0620D /* PhpDescript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhpDescript.swift; sourceTree = "<group>"; };
+		9739FF3923950A8400F0620D /* Php.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Php.swift; sourceTree = "<group>"; };
 		973DDEC4239082A200FA79ED /* CourseSignUpViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CourseSignUpViewController+Extension.swift"; sourceTree = "<group>"; };
 		973DDEC82390A26400FA79ED /* ValidationErrors.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ValidationErrors.strings; sourceTree = "<group>"; };
 		973DDECA2390B1D700FA79ED /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				977F1165238E6C57003B522B /* Cplus */,
 				9769314523947B560048792F /* JavaScript */,
 				97693150239496F30048792F /* Frontend */,
+				9739FF38239507FB00F0620D /* Php */,
 			);
 			path = Description;
 			sourceTree = "<group>";
@@ -241,6 +246,14 @@
 				9717BD4F23821EA3000A2357 /* Aauthorization.storyboard */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		9739FF38239507FB00F0620D /* Php */ = {
+			isa = PBXGroup;
+			children = (
+				9739FF36239507D700F0620D /* PhpDescript.swift */,
+			);
+			path = Php;
 			sourceTree = "<group>";
 		};
 		9748B18523894AD300C3CB21 /* Java */ = {
@@ -350,6 +363,7 @@
 				97B41F4623911D240025D3C9 /* CplusModel.swift */,
 				9769314123947AA00048792F /* JavaScript.swift */,
 				9769314C2394962E0048792F /* FrontEnd.swift */,
+				9739FF3923950A8400F0620D /* Php.swift */,
 			);
 			path = CoursesModels;
 			sourceTree = "<group>";
@@ -502,6 +516,7 @@
 				977AC35F238D705F003C2800 /* CoursesFlowViewController.swift in Sources */,
 				972CB6F12382AA0E00E68BAC /* AuthenticationViewController.swift in Sources */,
 				9769314923948C6E0048792F /* Angular.swift in Sources */,
+				9739FF3A23950A8400F0620D /* Php.swift in Sources */,
 				973DDECD2390B59D00FA79ED /* Class+Extension.swift in Sources */,
 				977F1160238E691C003B522B /* KitModelObj.swift in Sources */,
 				9769314F239496EC0048792F /* Front.swift in Sources */,
@@ -509,6 +524,7 @@
 				97693147239488110048792F /* React.swift in Sources */,
 				9769314D2394962E0048792F /* FrontEnd.swift in Sources */,
 				97DF634623829A2700C6D5A6 /* Qa.swift in Sources */,
+				9739FF37239507D700F0620D /* PhpDescript.swift in Sources */,
 				977AC37B238D738E003C2800 /* ProgrammingFlowTableViewCell.swift in Sources */,
 				97B41F4723911D240025D3C9 /* CplusModel.swift in Sources */,
 				972CB6EF2382A9D300E68BAC /* SignUpViewController.swift in Sources */,

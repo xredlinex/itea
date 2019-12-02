@@ -10,6 +10,15 @@ import UIKit
 
 func makeMobileCourses() -> CourseFlow {
     
+    let fundomentals = Courses()
+    fundomentals.courseName = "Основы Программирования"
+    fundomentals.courseDescription = phpCoursesDescrioption()[0].courseDescriotion
+    fundomentals.courseSkills = phpCoursesDescrioption()[0].courseSkills
+    fundomentals.courseProgram = phpCoursesDescrioption()[0].courseProgram
+    fundomentals.courseImage = "fundomentals"
+    fundomentals.courseHeaderImage = "fundHeader"
+    fundomentals.courseID = "1000"
+    
     let iosBase = Courses()
     iosBase.courseName = "Базовый курс IOS"
     iosBase.courseDescription = mobileCoursesDescrioption()[0].courseDescriotion
@@ -54,6 +63,12 @@ func makeMobileCourses() -> CourseFlow {
     android.flowImage = "android"
     android.courses = [androidBase, androidAdvanced]
     
+    
+    let basic = TypesOfProgrammingFlow()
+    basic.name = "Основы Программирования"
+    basic.flowImage = "fundHeader"
+    basic.courses = [fundomentals]
+    
     let mobile = CourseFlow()
     mobile.name = "Mobile development"
     mobile.courseType = "programming"
@@ -63,7 +78,7 @@ func makeMobileCourses() -> CourseFlow {
     mobile.typeDescription = mobileTypeDescription().typeDescription
     mobile.typeLevelDescriptiom = mobileTypeDescription().typeLevelDescription
     mobile.isProgrammingLanguage = true
-    mobile.programmingFlow = [ios, android]
+    mobile.programmingFlow = [basic, ios, android]
     
      return mobile
 }
